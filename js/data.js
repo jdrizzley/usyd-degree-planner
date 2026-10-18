@@ -5,7 +5,7 @@
 
 const cache = new Map();
 
-export function chooseRoot(search = location.search) {
+export function chooseRoot(search = globalThis.location?.search ?? "") {
   return new URLSearchParams(search).get("data") === "sample" ? "data/planner-sample" : "data/planner";
 }
 
