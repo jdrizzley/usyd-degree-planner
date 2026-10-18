@@ -70,3 +70,130 @@ a { color: inherit; }
     animation-duration: 0ms !important;
   }
 }
+
+/* ---------------------------------------------------------------- shared */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.back {
+  color: var(--ink-muted);
+  font-size: 15px;
+  text-decoration: none;
+  padding: 6px 8px;
+  margin-left: -8px;
+  border-radius: 8px;
+  transition: background-color var(--fast) var(--ease), color var(--fast) var(--ease);
+}
+.back:hover { background: var(--tile-hover); color: var(--ink); }
+
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 24px 0 8px;
+}
+
+.note {
+  color: var(--ink-muted);
+  font-size: 15px;
+  margin: 4px 0;
+}
+
+.loading,
+.message {
+  color: var(--ink-muted);
+  text-align: center;
+  padding-top: 30vh;
+  margin: 0;
+}
+.message p { margin: 0 0 8px; }
+.message a { color: var(--ink); }
+
+.dashboard {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ---------------------------------------------------------------- home */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Wordmark + box sit about 38% down; the suggestion list grows downward. */
+  padding-top: calc(38vh - 90px);
+}
+
+.wordmark {
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0 0 32px;
+  text-align: center;
+}
+
+.search {
+  width: 100%;
+  max-width: 584px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-box);
+  transition: box-shadow var(--fast) var(--ease);
+}
+.search:hover,
+.search:focus-within { box-shadow: var(--shadow-focus); }
+
+.search-input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 0 24px;
+  border: 0;
+  background: transparent;
+  outline: none;
+  font-size: 17px;
+}
+/* The box itself shows focus with its shadow; no ring inside a rounded field. */
+.search-input:focus-visible { outline: none; }
+
+.suggestions-wrap { display: none; }
+.search.open .suggestions-wrap {
+  display: block;
+  border-top: 1px solid var(--line);
+  margin: 0 20px;
+  padding: 6px 0 10px;
+}
+
+.suggestions {
+  list-style: none;
+  margin: 0 -20px;
+  padding: 0;
+}
+
+.suggestion {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  min-height: 44px;
+  padding: 11px 24px;
+  cursor: pointer;
+  transition: background-color var(--fast) var(--ease);
+}
+.suggestion[aria-selected="true"] { background: var(--tile-hover); }
+.suggestion.empty { color: var(--ink-muted); cursor: default; }
+
+.suggestion-name { color: var(--ink); }
+.suggestion-abbr { color: var(--ink-muted); font-size: 15px; white-space: nowrap; }
+
+@media (max-width: 600px) {
+  .wordmark { font-size: 40px; margin-bottom: 24px; }
+  .home { padding-top: calc(30vh - 70px); }
+}
