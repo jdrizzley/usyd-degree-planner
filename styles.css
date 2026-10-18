@@ -21,7 +21,9 @@
   --radius-tile: 10px;
   --shadow-focus: 0 1px 6px rgba(32, 33, 36, 0.18);
 
-  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, sans-serif;
+  /* SF Pro can only be used on Apple devices, where the system font is SF Pro.
+     Everywhere else Inter (loaded from Google Fonts) stands in. */
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", system-ui, sans-serif;
   --ease: cubic-bezier(0.2, 0, 0, 1);
   --fast: 150ms;
 
@@ -95,7 +97,7 @@ a { color: inherit; }
 
 .page-title {
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.02em;
   margin: 24px 0 8px;
 }
@@ -133,8 +135,8 @@ a { color: inherit; }
 
 .wordmark {
   font-size: 56px;
-  font-weight: 600;
-  letter-spacing: -0.03em;
+  font-weight: 500;
+  letter-spacing: -0.025em;
   line-height: 1.1;
   margin: 0 0 32px;
   text-align: center;
