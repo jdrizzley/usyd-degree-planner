@@ -25,7 +25,7 @@ GitHub Actions                                     GitHub Pages
 | Path | What |
 |---|---|
 | `index.html`, `styles.css`, `js/` | the website |
-| `js/tests/` | engine tests (`node --test js/tests/`) |
+| `js/tests/` | engine tests (`node --test "js/tests/*.test.js"`) |
 | `data/planner/` | published data, written by the scraper bot. Don't edit by hand |
 | `data/planner-sample/` | real data for 3 degrees (BSc, BE(Hons) Software, BCom), used while the scraper is built |
 | `planner_scraper/` | the scraper, rule parser and data validator |
@@ -47,7 +47,7 @@ the sample if that hasn't been published yet.
 pip install -r planner_scraper/requirements.txt
 python -m pytest planner_scraper/tests -q
 python -m planner_scraper.validate data/planner-sample
-node --test js/tests/
+node --test "js/tests/*.test.js"
 ```
 
 ## Rebuilding the sample data

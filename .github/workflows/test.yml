@@ -34,4 +34,4 @@ jobs:
         with:
           node-version: "22"
       - name: Engine tests
-        run: node --test js/tests/
+        run: node --test "js/tests/*.test.js"
