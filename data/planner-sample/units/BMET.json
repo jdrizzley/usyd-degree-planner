@@ -1,0 +1,94 @@
+{
+ "prefix": "BMET",
+ "units": {
+  "BMET1960": {
+   "academicUnit": "Biomedical Engineering",
+   "code": "BMET1960",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Biomedical Engineering 1A",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "HSC Mathematics Extension 1"
+       },
+       {
+        "text": "3 Unit"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "HSC Mathematics Extension 1 (3 Unit)"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ENGG1960"
+       },
+       {
+        "unit": "ENGG1800"
+       },
+       {
+        "unit": "CIVL1900"
+       },
+       {
+        "unit": "CHNG1108"
+       },
+       {
+        "unit": "MECH1560"
+       },
+       {
+        "unit": "AERO1560"
+       },
+       {
+        "unitPattern": "MTRX1701"
+       },
+       {
+        "unit": "AMME1960"
+       },
+       {
+        "unit": "ELEC1004"
+       },
+       {
+        "unit": "ELEC1005"
+       },
+       {
+        "unit": "ENVE1001"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ENGG1960 or ENGG1800 or CIVL1900 or CHNG1108 or MECH1560 or AERO1560 or MTRX1701 or AMME1960 or ELEC1004 or ELEC1005 or ENVE1001"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  }
+ }
+}

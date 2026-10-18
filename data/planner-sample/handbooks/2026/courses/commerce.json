@@ -1,0 +1,111 @@
+{
+ "abbr": "BCom",
+ "choices": [
+  {
+   "id": "m",
+   "label": "Major",
+   "options": [
+    {
+     "component": "business-school/finance",
+     "id": "finance-major",
+     "kind": "major",
+     "name": "Finance"
+    },
+    {
+     "component": "business-school/accounting",
+     "id": "accounting-major",
+     "kind": "major",
+     "name": "Accounting"
+    }
+   ],
+   "required": true
+  },
+  {
+   "id": "s",
+   "label": "Second major or minor",
+   "options": [
+    {
+     "component": "business-school/accounting",
+     "id": "accounting-minor",
+     "kind": "minor",
+     "name": "Accounting"
+    },
+    {
+     "component": "business-school/accounting",
+     "id": "accounting-major",
+     "kind": "major",
+     "name": "Accounting"
+    },
+    {
+     "component": "business-school/finance",
+     "id": "finance-major",
+     "kind": "major",
+     "name": "Finance"
+    }
+   ],
+   "required": true
+  }
+ ],
+ "confidence": "high",
+ "faculty": "business-school",
+ "handbookYear": 2026,
+ "name": "Bachelor of Commerce",
+ "requirements": {
+  "children": [
+   {
+    "id": "core",
+    "label": "Commerce core",
+    "share": true,
+    "type": "units",
+    "units": [
+     "BUSS1000",
+     "BUSS1020",
+     "BUSS1030",
+     "BUSS2000"
+    ]
+   },
+   {
+    "choice": "m",
+    "id": "maj",
+    "label": "Major",
+    "type": "choice"
+   },
+   {
+    "choice": "s",
+    "id": "sec",
+    "label": "Second major or minor",
+    "type": "choice"
+   },
+   {
+    "cp": 6,
+    "id": "ole",
+    "label": "Open Learning Environment",
+    "pool": {
+     "pools": [
+      "table-o"
+     ]
+    },
+    "type": "cp"
+   },
+   {
+    "cp": 0,
+    "fill": true,
+    "id": "elec",
+    "label": "Electives",
+    "pool": {
+     "any": true
+    },
+    "type": "cp"
+   }
+  ],
+  "cp": 144,
+  "id": "root",
+  "label": "Bachelor of Commerce",
+  "type": "all"
+ },
+ "sample": true,
+ "semesters": 6,
+ "slug": "commerce",
+ "sourceUrl": "https://www.sydney.edu.au/handbooks/business-school/coursework/commerce/commerce-course-resolutions.html",
+ "totalCp": 144
+}

@@ -1,0 +1,94 @@
+{
+ "prefix": "CHNG",
+ "units": {
+  "CHNG1108": {
+   "academicUnit": "Chemical and Biomolecular Engineering",
+   "code": "CHNG1108",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Introduction to Chemical Engineering",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "HSC Mathematics"
+       },
+       {
+        "text": "Chemistry"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "HSC Mathematics and Chemistry"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ENGG1800"
+       },
+       {
+        "unit": "CIVL1900"
+       },
+       {
+        "unit": "MECH1560"
+       },
+       {
+        "unit": "AERO1560"
+       },
+       {
+        "unit": "AMME1960"
+       },
+       {
+        "unit": "BMET1960"
+       },
+       {
+        "unitPattern": "MTRX1701"
+       },
+       {
+        "unit": "ENGG1960"
+       },
+       {
+        "unit": "ELEC1004"
+       },
+       {
+        "unit": "ELEC1005"
+       },
+       {
+        "unit": "ENVE1001"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ENGG1800 or CIVL1900 or MECH1560 or AERO1560 or AMME1960 or BMET1960 or MTRX1701 or ENGG1960 or ELEC1004 or ELEC1005 or ENVE1001"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  }
+ }
+}

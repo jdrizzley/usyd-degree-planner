@@ -1,0 +1,72 @@
+{
+ "prefix": "BANK",
+ "units": {
+  "BANK3011": {
+   "academicUnit": "Finance",
+   "code": "BANK3011",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Bank Financial Management",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "BANK2011"
+       },
+       {
+        "unit": "ECOS2004"
+       },
+       {
+        "unit": "FINC2011"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "BANK2011 or ECOS2004 or FINC2011"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "FINC3018"
+     },
+     "raw": "FINC3018"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  }
+ }
+}

@@ -1,0 +1,1095 @@
+{
+ "prefix": "FINC",
+ "units": {
+  "FINC2011": {
+   "academicUnit": "Finance",
+   "code": "FINC2011",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Corporate Finance I",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S1CIFE": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CIJL": [
+     2020,
+     2023,
+     2024
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "unit": "BUSS1030"
+     },
+     "raw": "BUSS1030"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "BUSS1020"
+         },
+         {
+          "unit": "ECMT1010"
+         },
+         {
+          "unitPattern": "ENVX1001"
+         },
+         {
+          "unitPattern": "ENVX1002"
+         },
+         {
+          "unit": "DATA1001"
+         },
+         {
+          "args": [
+           {
+            "args": [
+             {
+              "unit": "MATH1005"
+             },
+             {
+              "unit": "MATH1015"
+             }
+            ],
+            "op": "or"
+           },
+           {
+            "unit": "MATH1115"
+           }
+          ],
+          "op": "and"
+         },
+         {
+          "args": [
+           {
+            "text": "6 credit points in MATH units including MATH1905"
+           },
+           {
+            "cp": 6
+           },
+           {
+            "unit": "MATH1905"
+           }
+          ],
+          "op": "and"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unit": "BUSS1040"
+         },
+         {
+          "unit": "ECON1001"
+         },
+         {
+          "unit": "ECON1002"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "{(BUSS1020 or ECMT1010 or ENVX1001 or ENVX1002 or DATA1001) or [(MATH1005 or MATH1015) and MATH1115] or 6 credit points in MATH units including MATH1905} and (BUSS1040 or ECON1001 or ECON1002)"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "FINC2012": {
+   "academicUnit": "Finance",
+   "code": "FINC2012",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Corporate Finance II",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CIJL": [
+     2020,
+     2021
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "FINC2011"
+     },
+     "raw": "FINC2011"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "FINC3011": {
+   "academicUnit": "Finance",
+   "code": "FINC3011",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "International Financial Management",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "FINC2012"
+     },
+     "raw": "FINC2012"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "FINC3012": {
+   "academicUnit": "Finance",
+   "code": "FINC3012",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Derivative Securities",
+   "offeringPattern": {
+    "S1C": [
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "FINC2012"
+     },
+     "raw": "FINC2012"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "FINC3013": {
+   "academicUnit": "Finance",
+   "code": "FINC3013",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Mergers and Acquisitions",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Calculation of free cash flows"
+       },
+       {
+        "text": "trading multiples"
+       },
+       {
+        "text": "discounted cash flow valuation methodology"
+       },
+       {
+        "text": "valuation sensitivities"
+       },
+       {
+        "text": "regression analysis"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Calculation of free cash flows, trading multiples, discounted cash flow valuation methodology, valuation sensitivities, regression analysis"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "FINC2012"
+     },
+     "raw": "FINC2012"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "FINC3014": {
+   "academicUnit": "Finance",
+   "code": "FINC3014",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Trading and Dealing in Security Markets",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "FINC2012"
+     },
+     "raw": "FINC2012"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "FINC3015": {
+   "academicUnit": "Finance",
+   "code": "FINC3015",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Financial Valuation: Case Study Approach",
+   "offeringPattern": {
+    "S1C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "FINC2012"
+     },
+     "raw": "FINC2012"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "FINC3005"
+     },
+     "raw": "FINC3005"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "FINC3017": {
+   "academicUnit": "Finance",
+   "code": "FINC3017",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Investments and Portfolio Management",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "text": "Introductory statistics"
+       },
+       {
+        "args": [
+         {
+          "text": "calculus"
+         },
+         {
+          "text": "microeconomics"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Introductory statistics, calculus and microeconomics"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "FINC2012"
+     },
+     "raw": "FINC2012"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "FINC3019": {
+   "academicUnit": "Finance",
+   "code": "FINC3019",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2024,
+   "level": 3000,
+   "name": "Fixed Income Securities",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "FINC2012"
+     },
+     "raw": "FINC2012"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": []
+  },
+  "FINC3020": {
+   "academicUnit": "Finance",
+   "code": "FINC3020",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2024,
+   "level": 3000,
+   "name": "Financial Risk Management",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2023,
+     2024
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "unit": "FINC3017"
+     },
+     "raw": "FINC3017"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "FINC2012"
+     },
+     "raw": "FINC2012"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": []
+  },
+  "FINC3023": {
+   "academicUnit": "Finance",
+   "code": "FINC3023",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Behavioural Finance",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2023
+    ],
+    "S2C": [
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "FINC2012"
+     },
+     "raw": "FINC2012"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "FINC3026": {
+   "academicUnit": "Finance",
+   "code": "FINC3026",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Entrepreneurial Finance",
+   "offeringPattern": {
+    "S2C": [
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "cp": 96
+     },
+     "raw": "Completion of 96 credit points"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "FINC3027": {
+   "academicUnit": "Finance",
+   "code": "FINC3027",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Digital and Sustainable Finance",
+   "offeringPattern": {
+    "S2C": [
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "FINC2011"
+     },
+     "raw": "FINC2011"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "FINC3301": {
+   "academicUnit": "Finance",
+   "code": "FINC3301",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Applied Portfolio Management A",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": {
+      "unit": "FINC3015"
+     },
+     "raw": "FINC3015"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "FINC2012"
+     },
+     "raw": "FINC2012"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "BUSS4922"
+     },
+     "raw": "BUSS4922"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "FINC3302": {
+   "academicUnit": "Finance",
+   "code": "FINC3302",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Applied Portfolio Management B",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": {
+      "unit": "FINC3017"
+     },
+     "raw": "FINC3017"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "FINC3301"
+     },
+     "raw": "FINC3301"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "BUSS4923"
+     },
+     "raw": "BUSS4923"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "FINC3400": {
+   "academicUnit": "Finance",
+   "code": "FINC3400",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Industry and Community Project",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S1CIFE": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CIAU": [
+     2023
+    ],
+    "S2CIJL": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CIOC": [
+     2023,
+     2024,
+     2025
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "BUSS1020"
+         },
+         {
+          "unit": "DATA1001"
+         },
+         {
+          "unit": "ECMT1010"
+         },
+         {
+          "unitPattern": "ENVX1002"
+         },
+         {
+          "args": [
+           {
+            "args": [
+             {
+              "unit": "MATH1005"
+             },
+             {
+              "unit": "MATH1015"
+             }
+            ],
+            "op": "or"
+           },
+           {
+            "unit": "MATH1115"
+           }
+          ],
+          "op": "and"
+         },
+         {
+          "args": [
+           {
+            "text": "6 credit points of MATH coded 1000-level units including MATH1905"
+           },
+           {
+            "cp": 6,
+            "level": 1000
+           },
+           {
+            "unit": "MATH1905"
+           }
+          ],
+          "op": "and"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unit": "BUSS1040"
+         },
+         {
+          "unit": "ECON1001"
+         },
+         {
+          "unit": "ECON1002"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "unit": "FINC2011"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "(BUSS1020 or DATA1001 or ECMT1010 or ENVX1002 or ((MATH1005 or MATH1015) and MATH1115) or 6 credit points of MATH coded 1000-level units including MATH1905) and (BUSS1040 or ECON1001 or ECON1002) and FINC2011"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "cp": 72
+     },
+     "raw": "72 credit points"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "BUSS3110"
+       },
+       {
+        "unit": "ACCT3400"
+       },
+       {
+        "unit": "BANK3400"
+       },
+       {
+        "unit": "CLAW3400"
+       },
+       {
+        "unit": "IBUS3400"
+       },
+       {
+        "unit": "INFS3400"
+       },
+       {
+        "unit": "MKTG3400"
+       },
+       {
+        "unit": "QBUS3400"
+       },
+       {
+        "unit": "SIEN3400"
+       },
+       {
+        "unit": "WORK3400"
+       },
+       {
+        "unit": "WORK3401"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "BUSS3110 or ACCT3400 or BANK3400 or CLAW3400 or IBUS3400 or INFS3400 or MKTG3400 or QBUS3400 or SIEN3400 or WORK3400 or WORK3401"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "FINC3600": {
+   "academicUnit": "Finance",
+   "code": "FINC3600",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Finance in Practice",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "All other requirements for the major"
+       },
+       {
+        "text": "program associated with this capstone must be completed prior to"
+       },
+       {
+        "args": [
+         {
+          "text": "concurrently with"
+         },
+         {
+          "text": "if enrolment rules permit"
+         },
+         {
+          "text": "this unit of study. Capstones must be completed at the University of Sydney Business School only"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "All other requirements for the major or program associated with this capstone must be completed prior to or concurrently with (if enrolment rules permit) this unit of study. Capstones must be completed at the University of Sydney Business School only."
+    },
+    "corequisites": {
+     "parsed": {
+      "unit": "FINC3017"
+     },
+     "raw": "FINC3017"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "cp": 112
+       },
+       {
+        "unit": "FINC2011"
+       },
+       {
+        "unit": "FINC2012"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Completion of at least 112 credit points including FINC2011 and FINC2012"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  }
+ }
+}

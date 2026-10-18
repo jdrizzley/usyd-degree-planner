@@ -1,0 +1,22 @@
+{
+ "handbookYear": 2026,
+ "id": "science-degree-core",
+ "name": "Science Table A degree core",
+ "sourceUrl": "https://www.sydney.edu.au/handbooks/science/table-a/overview/core.html",
+ "units": [
+  "MATH1061",
+  "MATH1062",
+  "MATH1961",
+  "MATH1962",
+  "MATH1971",
+  "MATH1972",
+  "MATH1050",
+  "MATH1064",
+  "MATH1964",
+  "MATH1111",
+  "DATA1001",
+  "DATA1901",
+  "SCIE1001",
+  "ENVX1002"
+ ]
+}

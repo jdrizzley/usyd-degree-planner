@@ -1,0 +1,362 @@
+{
+ "prefix": "INFO",
+ "units": {
+  "INFO1110": {
+   "academicUnit": "Computer Science",
+   "code": "INFO1110",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Introduction to Programming",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO1910"
+       },
+       {
+        "unit": "INFO1103"
+       },
+       {
+        "unit": "INFO1903"
+       },
+       {
+        "unit": "INFO1105"
+       },
+       {
+        "unit": "INFO1905"
+       },
+       {
+        "unit": "ENGG1810"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO1910 or INFO1103 or INFO1903 or INFO1105 or INFO1905 or ENGG1810"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "INFO1113": {
+   "academicUnit": "Computer Science",
+   "code": "INFO1113",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Object-Oriented Programming",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO1110"
+       },
+       {
+        "unit": "INFO1910"
+       },
+       {
+        "unit": "ENGG1810"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO1110 or INFO1910 or ENGG1810"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO1103"
+       },
+       {
+        "unit": "INFO1105"
+       },
+       {
+        "unit": "INFO1905"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO1103 or INFO1105 or INFO1905"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "INFO1910": {
+   "academicUnit": "Computer Science",
+   "code": "INFO1910",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2025,
+   "level": 1000,
+   "name": "Introduction to Programming (Advanced)",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025
+    ],
+    "S2C": [
+     2021,
+     2022,
+     2023
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "ATAR sufficient to enter Dalyell program"
+       },
+       {
+        "text": "passing an online programming knowledge test"
+       },
+       {
+        "text": "which will be administered during the O-week prior to the commencement of the semester"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ATAR sufficient to enter Dalyell program, or passing an online programming knowledge test, which will be administered during the O-week prior to the commencement of the semester"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO1110"
+       },
+       {
+        "unit": "INFO1103"
+       },
+       {
+        "unit": "INFO1903"
+       },
+       {
+        "unit": "INFO1105"
+       },
+       {
+        "unit": "INFO1905"
+       },
+       {
+        "unit": "ENGG1810"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO1110 or INFO1103 or INFO1903 or INFO1105 or INFO1905 or ENGG1810"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "INFO3616": {
+   "academicUnit": "Computer Science",
+   "code": "INFO3616",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Principles of Security Engineering",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "INFO1110"
+         },
+         {
+          "unit": "INFO1910"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "unit": "INFO1112"
+       },
+       {
+        "unit": "INFO1113"
+       },
+       {
+        "unitPattern": "MATH1X64"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "(INFO1110 or INFO1910) and INFO1112 and INFO1113 and MATH1X64. Knowledge equivalent to the above units is assumed. This means good programming skills in Python or a C-related language, basic networking knowledge, and skills from discrete mathematics. A technical orientation is absolutely required, especially capacity to become familiar with new technology without explicit supervision"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ELEC5616"
+       },
+       {
+        "unit": "INFO2315"
+       },
+       {
+        "unit": "CSEC3616"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ELEC5616 or INFO2315 or CSEC3616"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "INFO4994": {
+   "academicUnit": "Computer Science",
+   "code": "INFO4994",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 4000,
+   "name": "AI Literacy and Competency",
+   "offeringPattern": {
+    "S1C": [
+     2021,
+     2022,
+     2026
+    ],
+    "S2C": [
+     2021,
+     2022,
+     2023,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  }
+ }
+}

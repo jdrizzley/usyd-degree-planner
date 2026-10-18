@@ -1,0 +1,213 @@
+{
+ "prefix": "ISYS",
+ "units": {
+  "ISYS2110": {
+   "academicUnit": "Computer Science",
+   "code": "ISYS2110",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Analysis and Design of Web Info Systems",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO1113"
+       },
+       {
+        "unit": "INFO1103"
+       },
+       {
+        "unit": "INFO1105"
+       },
+       {
+        "unit": "INFO1905"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO1113 or INFO1103 or INFO1105 or INFO1905"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "INFO2110"
+     },
+     "raw": "INFO2110"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "ISYS2120": {
+   "academicUnit": "Computer Science",
+   "code": "ISYS2120",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Data and Information Management",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "text": "6 credit points of MATH"
+         },
+         {
+          "cp": 6
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "text": "STAT units"
+       },
+       {
+        "unit": "DATA1001"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "6 credit points of MATH or STAT units or DATA1001"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO1110"
+       },
+       {
+        "unit": "INFO1910"
+       },
+       {
+        "unit": "ENGG1810"
+       },
+       {
+        "unit": "DATA1002"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO1110 or INFO1910 or ENGG1810 or DATA1002"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO2120"
+       },
+       {
+        "unit": "INFO2820"
+       },
+       {
+        "unit": "COMP5138"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO2120 or INFO2820 or COMP5138"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "ISYS2160": {
+   "academicUnit": "Computer Science",
+   "code": "ISYS2160",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2024,
+   "level": 2000,
+   "name": "Information Systems in the Internet Age",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO1003"
+       },
+       {
+        "unit": "INFO1103"
+       },
+       {
+        "unit": "INFO1903"
+       },
+       {
+        "unit": "INFO1113"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO1003 OR INFO1103 OR INFO1903 OR INFO1113"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "ISYS2140"
+     },
+     "raw": "ISYS2140"
+    }
+   },
+   "sessions": []
+  }
+ }
+}

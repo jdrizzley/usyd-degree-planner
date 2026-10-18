@@ -1,0 +1,186 @@
+{
+ "prefix": "OLES",
+ "units": {
+  "OLES1603": {
+   "academicUnit": "Physics Academic Operations",
+   "code": "OLES1603",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Astronomy: Exploring the Universe",
+   "offeringPattern": {
+    "S1C": [
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "OLES2137": {
+   "academicUnit": "Chinese Studies",
+   "code": "OLES2137",
+   "creditPoints": 6,
+   "faculty": "Arts and Social Sciences",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Experience China",
+   "offeringPattern": {
+    "S1CIJN": [
+     2021
+    ],
+    "S2CINO": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "OLES2139": {
+   "academicUnit": "Germanic Studies",
+   "code": "OLES2139",
+   "creditPoints": 6,
+   "faculty": "Arts and Social Sciences",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Experience Germany",
+   "offeringPattern": {
+    "S1CIFE": [
+     2021
+    ],
+    "S1CIJN": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CIDE": [
+     2024,
+     2025,
+     2026
+    ],
+    "S2CINO": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "OLES2617": {
+   "academicUnit": "Psychology Academic Operations",
+   "code": "OLES2617",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Design Your Future",
+   "offeringPattern": {
+    "S1C": [
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  }
+ }
+}

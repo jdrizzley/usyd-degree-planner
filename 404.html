@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Degree Planner</title>
+  <script>
+    // GitHub Pages serves this for unknown paths. Send everything to the app root,
+    // keeping any hash route.
+    var base = location.pathname.split("/").slice(0, 2).join("/") + "/";
+    location.replace(base + location.search + location.hash);
+  </script>
+</head>
+<body></body>
+</html>

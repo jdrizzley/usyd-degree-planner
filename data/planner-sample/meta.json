@@ -1,0 +1,16 @@
+{
+ "counts": {
+  "components": 6,
+  "courses": 3,
+  "missing": 0,
+  "pools": 3,
+  "units": 178
+ },
+ "formatVersion": 1,
+ "generatedAt": "2026-10-18T12:20:08Z",
+ "handbookYears": [
+  2026
+ ],
+ "note": "Hand-picked sample for 3 degrees, built by tools/make_sample.py. Not complete.",
+ "sample": true
+}

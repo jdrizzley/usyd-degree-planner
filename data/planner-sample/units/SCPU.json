@@ -1,0 +1,201 @@
+{
+ "prefix": "SCPU",
+ "units": {
+  "SCPU3001": {
+   "academicUnit": "Science Faculty",
+   "code": "SCPU3001",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Science Interdisciplinary Project",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S1CIFE": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CIAU": [
+     2023
+    ],
+    "S2CIJL": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CIOC": [
+     2023,
+     2024,
+     2025
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ANAT3888"
+       },
+       {
+        "unit": "ANSC3888"
+       },
+       {
+        "unit": "AVBS3888"
+       },
+       {
+        "unit": "AMED3888"
+       },
+       {
+        "unit": "BCMB3888"
+       },
+       {
+        "unit": "BIOL3888"
+       },
+       {
+        "unit": "CHEM3888"
+       },
+       {
+        "unit": "COMP3888"
+       },
+       {
+        "unit": "COMP3988"
+       },
+       {
+        "unit": "DATA3888"
+       },
+       {
+        "unit": "ENVI3888"
+       },
+       {
+        "unit": "FMAT3888"
+       },
+       {
+        "unit": "FOOD3888"
+       },
+       {
+        "unit": "GEGE3888"
+       },
+       {
+        "unit": "GEOG3888"
+       },
+       {
+        "unit": "GEOL3888"
+       },
+       {
+        "unit": "HPSC3888"
+       },
+       {
+        "unit": "IMPA3888"
+       },
+       {
+        "unit": "INFD3888"
+       },
+       {
+        "unit": "MARS3888"
+       },
+       {
+        "unit": "MATH3888"
+       },
+       {
+        "unit": "MEDS3888"
+       },
+       {
+        "unit": "MCHM3888"
+       },
+       {
+        "unit": "MICR3888"
+       },
+       {
+        "unit": "MICR3988"
+       },
+       {
+        "unit": "NUTM3888"
+       },
+       {
+        "unit": "PCOL3888"
+       },
+       {
+        "unit": "PHYS3888"
+       },
+       {
+        "unit": "PHSI3888"
+       },
+       {
+        "unit": "AGRI3888"
+       },
+       {
+        "unit": "PLNT3888"
+       },
+       {
+        "unit": "PSYC3888"
+       },
+       {
+        "unit": "SOFT3888"
+       },
+       {
+        "unit": "SOIL3888"
+       },
+       {
+        "unit": "STAT3888"
+       },
+       {
+        "unit": "SUST3888"
+       },
+       {
+        "unit": "WILD3888"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ANAT3888 or ANSC3888 or AVBS3888 or AMED3888 or BCMB3888 or BIOL3888 or CHEM3888 or COMP3888 or COMP3988 or DATA3888 or ENVI3888 or FMAT3888 or FOOD3888 or GEGE3888 or GEOG3888 or GEOL3888 or HPSC3888 or IMPA3888 or INFD3888 or MARS3888 or MATH3888 or MEDS3888 or MCHM3888 or MICR3888 or MICR3988 or NUTM3888 or PCOL3888 or PHYS3888 or PHSI3888 or AGRI3888 or PLNT3888 or PSYC3888 or SOFT3888 or SOIL3888 or STAT3888 or SUST3888 or WILD3888"
+    },
+    "prerequisites": {
+     "parsed": {
+      "cp": 96
+     },
+     "raw": "96 credit points"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "HSBH3026"
+     },
+     "raw": "HSBH3026"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  }
+ }
+}

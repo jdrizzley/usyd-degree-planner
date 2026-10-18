@@ -1,0 +1,1946 @@
+{
+ "prefix": "ELEC",
+ "units": {
+  "ELEC1004": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC1004",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Practical Intro to Electrical Engineering",
+   "offeringPattern": {
+    "S1C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "HSC Physics"
+       },
+       {
+        "text": "Mathematics"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "HSC Physics and Mathematics"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ENGG1800"
+       },
+       {
+        "unit": "CHNG1108"
+       },
+       {
+        "unit": "MECH1560"
+       },
+       {
+        "unit": "AERO1560"
+       },
+       {
+        "unit": "BMET1960"
+       },
+       {
+        "unitPattern": "MTRX1701"
+       },
+       {
+        "unit": "ELEC1005"
+       },
+       {
+        "unit": "ENVE1001"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ENGG1800 or CHNG1108 or MECH1560 or AERO1560 or BMET1960 or MTRX1701 or ELEC1005 or ENVE1001"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "ELEC1005": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC1005",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Introduction to Software Engineering",
+   "offeringPattern": {
+    "S1C": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ENGG1800"
+       },
+       {
+        "unit": "CHNG1108"
+       },
+       {
+        "unit": "MECH1560"
+       },
+       {
+        "unit": "AERO1560"
+       },
+       {
+        "unit": "BMET1960"
+       },
+       {
+        "unitPattern": "MTRX1701"
+       },
+       {
+        "unit": "ELEC1004"
+       },
+       {
+        "unit": "ENVE1001"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ENGG1800 or CHNG1108 or MECH1560 or AERO1560 or BMET1960 or MTRX1701 or ELEC1004 or ENVE1001"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "ELEC1601": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC1601",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Introduction to Computer Systems",
+   "offeringPattern": {
+    "S1C": [
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "HSC Mathematics extension 1"
+       },
+       {
+        "text": "2"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "HSC Mathematics extension 1 or 2"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "ELEC2100": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC2100",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Fundamentals of Elec and Electronic Eng",
+   "offeringPattern": {
+    "S1C": [
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Basic knowledge of differentiation"
+       },
+       {
+        "text": "integration. Electromagnetism"
+       },
+       {
+        "text": "circuit components as covered in PHYS1003 are also useful"
+       },
+       {
+        "unit": "PHYS1003"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Basic knowledge of differentiation and integration. Electromagnetism and circuit components as covered in PHYS1003 are also useful"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "ELEC1103"
+     },
+     "raw": "ELEC1103"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "ELEC2103": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC2103",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Simulation and Numerical Solutions in Eng",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ELEC1103"
+       },
+       {
+        "unit": "ELEC2100"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ELEC1103 or ELEC2100. Understanding of the fundamental concepts and building blocks of electrical and electronics circuits and aspects of professional project management, teamwork, and ethics"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "COSC1001"
+       },
+       {
+        "unit": "COSC1901"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "COSC1001 or COSC1901"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "ELEC2104": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC2104",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Electronic Devices and Circuits",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "unit": "ELEC1103"
+       },
+       {
+        "args": [
+         {
+          "text": "ELEC2100. Ohm's Law"
+         },
+         {
+          "unit": "ELEC2100"
+         },
+         {
+          "text": "Kirchoff's Laws"
+         },
+         {
+          "text": "action of Current"
+         },
+         {
+          "text": "Voltage sources"
+         },
+         {
+          "text": "network analysis"
+         },
+         {
+          "text": "the superposition theorem"
+         },
+         {
+          "text": "Thevenin"
+         },
+         {
+          "text": "Norton equivalent circuits"
+         },
+         {
+          "text": "inductors"
+         },
+         {
+          "text": "capacitors"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "text": "transient response of RL"
+       },
+       {
+        "args": [
+         {
+          "text": "RC"
+         },
+         {
+          "text": "RLC circuits"
+         },
+         {
+          "text": "the ability to use power supplies"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "text": "oscilloscopes"
+       },
+       {
+        "text": "function generators"
+       },
+       {
+        "text": "meters"
+       },
+       {
+        "text": "etc"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ELEC1103 or ELEC2100. Ohm's Law and Kirchoff's Laws; action of Current and Voltage sources; network analysis and the superposition theorem; Thevenin and Norton equivalent circuits; inductors and capacitors, transient response of RL, RC and RLC circuits; the ability to use power supplies, oscilloscopes, function generators, meters, etc"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "ELEC2302": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC2302",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Signals and Systems",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "MATH1021"
+         },
+         {
+          "unit": "MATH1002"
+         },
+         {
+          "unit": "MATH1023"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH1061"
+         },
+         {
+          "unit": "MATH1062"
+         },
+         {
+          "text": "Basic knowledge of differentiation"
+         },
+         {
+          "text": "integration"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "text": "differential equations"
+         },
+         {
+          "text": "linear algebra"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "(MATH1021 and MATH1002 and MATH1023) or (MATH1061 and MATH1062). Basic knowledge of differentiation and integration, differential equations, and linear algebra."
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "ELEC2602": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC2602",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Digital Logic",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "unit": "ELEC1601"
+     },
+     "raw": "ELEC1601. This unit of study assumes some knowledge of digital data representation and basic computer organisation"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "ELEC3104": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC3104",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Engineering Electromagnetics",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "text": "Differential calculus"
+       },
+       {
+        "text": "integral calculus"
+       },
+       {
+        "args": [
+         {
+          "text": "vector integral calculus"
+         },
+         {
+          "text": "electrical circuit theory"
+         },
+         {
+          "text": "analysis using lumped elements"
+         },
+         {
+          "text": "fundamental electromagnetic laws"
+         },
+         {
+          "text": "their use in the calculation of static fields"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Differential calculus, integral calculus, vector integral calculus; electrical circuit theory and analysis using lumped elements; fundamental electromagnetic laws and their use in the calculation of static fields"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "ELEC3203": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC3203",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Electricity Networks",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "args": [
+         {
+          "text": "This unit of study assumes a competence in 1000 level MATH"
+         },
+         {
+          "args": [
+           {
+            "text": "in particular"
+           },
+           {
+            "text": "the ability to work with complex numbers"
+           }
+          ],
+          "op": "or"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "text": "in elementary circuit theory"
+         },
+         {
+          "text": "in basic electromagnetics"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "This unit of study assumes a competence in 1000 level MATH (in particular, the ability to work with complex numbers), in elementary circuit theory and in basic electromagnetics"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "ELEC3204": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC3204",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Power Electronics and Applications",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "text": "1. Differential equations"
+       },
+       {
+        "text": "linear algebra"
+       },
+       {
+        "text": "complex variables"
+       },
+       {
+        "args": [
+         {
+          "text": "analysis of linear circuits. 2. Fourier theory applied to periodic"
+         },
+         {
+          "text": "non-periodic signals. 3. Software such as MATLAB to perform signal analysis"
+         },
+         {
+          "text": "filter design. 4. Familiarity with the use of basic laboratory equipment such as oscilloscope"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "text": "function generator"
+       },
+       {
+        "text": "power supply"
+       },
+       {
+        "args": [
+         {
+          "text": "etc. 5. Basic electric circuit theory"
+         },
+         {
+          "text": "analysis"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "1. Differential equations, linear algebra, complex variables, analysis of linear circuits. 2. Fourier theory applied to periodic and non-periodic signals. 3. Software such as MATLAB to perform signal analysis and filter design. 4. Familiarity with the use of basic laboratory equipment such as oscilloscope, function generator, power supply, etc. 5. Basic electric circuit theory and analysis"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "ELEC2104"
+     },
+     "raw": "ELEC2104"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "ELEC3206": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC3206",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Electrical Energy Conversion Systems",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "text": "Following concepts are assumed knowledge for this unit of study: familiarity with circuit theory"
+       },
+       {
+        "text": "electronic devices"
+       },
+       {
+        "text": "ac power"
+       },
+       {
+        "args": [
+         {
+          "text": "capacitors"
+         },
+         {
+          "text": "inductors"
+         },
+         {
+          "text": "electric circuits such as three-phase circuits"
+         },
+         {
+          "text": "circuits with switches"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "text": "the use of basic laboratory equipment such as oscilloscope"
+         },
+         {
+          "text": "power supply"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Following concepts are assumed knowledge for this unit of study: familiarity with circuit theory, electronic devices, ac power, capacitors and inductors, and electric circuits such as three-phase circuits and circuits with switches, the use of basic laboratory equipment such as oscilloscope and power supply"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "ELEC3304": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC3304",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Control",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "text": "Specifically the following concepts are assumed knowledge for this unit: familiarity with basic Algebra"
+       },
+       {
+        "args": [
+         {
+          "text": "Differential"
+         },
+         {
+          "text": "Integral Calculus"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "text": "Physics"
+         },
+         {
+          "text": "solution of linear differential equations"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "text": "Matrix Theory"
+       },
+       {
+        "args": [
+         {
+          "text": "eigenvalues"
+         },
+         {
+          "text": "eigenvectors"
+         },
+         {
+          "text": "linear electrical circuits"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "text": "ideal op-amps"
+         },
+         {
+          "text": "continuous linear time-invariant systems"
+         },
+         {
+          "text": "their time"
+         },
+         {
+          "text": "frequency domain representations"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "text": "Laplace transform"
+       },
+       {
+        "text": "Fourier transform"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Specifically the following concepts are assumed knowledge for this unit: familiarity with basic Algebra, Differential and Integral Calculus, Physics; solution of linear differential equations, Matrix Theory, eigenvalues and eigenvectors; linear electrical circuits, ideal op-amps; continuous linear time-invariant systems and their time and frequency domain representations, Laplace transform, Fourier transform"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ELEC2302"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2061"
+         },
+         {
+          "unit": "MATH2067"
+         },
+         {
+          "unit": "MATH2021"
+         },
+         {
+          "unit": "MATH2961"
+         },
+         {
+          "unit": "AMME2000"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "ELEC2302 and (MATH2061 or MATH2067 or MATH2021 or MATH2961 or AMME2000)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "AMME3500"
+     },
+     "raw": "AMME3500"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "ELEC3305": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC3305",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Digital Signal Processing",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "text": "Familiarity with basic Algebra"
+       },
+       {
+        "args": [
+         {
+          "text": "Differential"
+         },
+         {
+          "text": "Integral Calculus"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "text": "continuous linear time-invariant systems"
+         },
+         {
+          "text": "their time"
+         },
+         {
+          "text": "frequency domain representations"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "text": "Fourier transform"
+       },
+       {
+        "text": "sampling of continuous time signals"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Familiarity with basic Algebra, Differential and Integral Calculus, continuous linear time-invariant systems and their time and frequency domain representations, Fourier transform, sampling of continuous time signals"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "ELEC3404": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC3404",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Electronic Circuit Design",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "A background in basic electronics"
+       },
+       {
+        "text": "circuit theory is assumed"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "A background in basic electronics and circuit theory is assumed"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "ELEC3405": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC3405",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Communications Electronics and Photonics",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "ELEC2104. A background in basic electronics"
+       },
+       {
+        "unit": "ELEC2104"
+       },
+       {
+        "text": "circuit theory is assumed"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "ELEC2104. A background in basic electronics and circuit theory is assumed"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "ELEC3505": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC3505",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Communications",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "ELEC2302"
+     },
+     "raw": "ELEC2302"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "ELEC3506": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC3506",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Communications Networks",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "args": [
+         {
+          "text": "Students should be familiar with fundamental digital technologies"
+         },
+         {
+          "text": "representations"
+         },
+         {
+          "ambiguous": true,
+          "args": [
+           {
+            "text": "e.g"
+           },
+           {
+            "args": [
+             {
+              "text": "bit complement"
+             },
+             {
+              "text": "internal word representation"
+             }
+            ],
+            "op": "and"
+           }
+          ],
+          "op": "or"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "text": "have a basic understanding of the physical properties of communication channels"
+       },
+       {
+        "args": [
+         {
+          "text": "techniques"
+         },
+         {
+          "text": "limitations"
+         },
+         {
+          "text": "be able to apply fundamental mathematical skills"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Students should be familiar with fundamental digital technologies and representations (e.g., bit complement and internal word representation), have a basic understanding of the physical properties of communication channels, techniques and limitations, and be able to apply fundamental mathematical skills."
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "ELEC3607": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC3607",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Embedded Systems",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ELEC1601"
+       },
+       {
+        "unit": "ELEC2602"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "ELEC1601 and ELEC2602. Logic operations, theorems and Boolean algebra, data representation, number operations (binary, hex, integers and floating point), combinational logic analysis and synthesis, sequential logic, registers, counters, bus systems, state machines, simple CAD tools for logic design, basic computer organisation, the CPU, peripheral devices, software organisation, machine language, assembly language, operating systems, data communications and computer networks"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ELEC1601"
+       },
+       {
+        "unit": "ELEC2602"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "ELEC1601 and ELEC2602"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "ELEC3608": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC3608",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Computer Architecture",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "unit": "ELEC3607"
+     },
+     "raw": "ELEC3607. Knowledge of microprocessor systems (embedded systems architecture, design methodology, interfacing and programming) is required"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "ELEC2602"
+     },
+     "raw": "ELEC2602"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "ELEC3609": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC3609",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Internet Software Platforms",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "INFO1103"
+         },
+         {
+          "unit": "INFO1110"
+         },
+         {
+          "unit": "INFO1910"
+         },
+         {
+          "unit": "ENGG1810"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unit": "INFO2110"
+         },
+         {
+          "unit": "ISYS2110"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unit": "INFO2120"
+         },
+         {
+          "unit": "INFO2820"
+         },
+         {
+          "unit": "ISYS2120"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "(INFO1103 or INFO1110 or INFO1910 or ENGG1810) and (INFO2110 or ISYS2110) and (INFO2120 or INFO2820 or ISYS2120)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "EBUS4001"
+     },
+     "raw": "EBUS4001"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "ELEC3610": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC3610",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2025,
+   "level": 3000,
+   "name": "E-Business Analysis and Design",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "EBUS3003"
+     },
+     "raw": "EBUS3003"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "ELEC3612": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC3612",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Pattern Recognition and Machine Intelligence",
+   "offeringPattern": {
+    "S1C": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "args": [
+         {
+          "text": "1st year mathematics"
+         },
+         {
+          "text": "1st year Software Engineering/Electrical Engineering. Linear Algebra"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "text": "Basic Programming skill"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "1st year mathematics and 1st year Software Engineering/Electrical Engineering. Linear Algebra, Basic Programming skill"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unitPattern": "MATH1X61"
+         },
+         {
+          "unit": "MATH1971"
+         },
+         {
+          "unitPattern": "MATH1X02"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unitPattern": "MATH1X62"
+         },
+         {
+          "unit": "MATH1972"
+         },
+         {
+          "unitPattern": "MATH1X05"
+         },
+         {
+          "unit": "BUSS1020"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "[(MATH1X61 or MATH1971) or MATH1X02] and [(MATH1X62 or MATH1972) or (MATH1X05 or BUSS1020)]"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "ELEC4712": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC4712",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 4000,
+   "name": "Thesis A",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "text": "36 credit points of 3000- or higher level BE units of study"
+       },
+       {
+        "cp": 36
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "36 credit points of 3000- or higher level BE units of study"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "ELEC4714"
+     },
+     "raw": "ELEC4714"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "ELEC4713": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC4713",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 4000,
+   "name": "Thesis B",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "ELEC4712"
+     },
+     "raw": "ELEC4712"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "ELEC4714"
+     },
+     "raw": "ELEC4714"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "ELEC5618": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC5618",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 5000,
+   "name": "Software Quality Engineering",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "text": "Writing programs with multiple functions"
+       },
+       {
+        "args": [
+         {
+          "text": "methods in multiple files"
+         },
+         {
+          "text": "design of complex data structures"
+         },
+         {
+          "text": "combination in non trivial algorithms"
+         },
+         {
+          "text": "use of an integrated development environment"
+         },
+         {
+          "text": "software version control systems"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Writing programs with multiple functions or methods in multiple files; design of complex data structures and combination in non trivial algorithms; use of an integrated development environment; software version control systems"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "ELEC5619": {
+   "academicUnit": "School of Electrical and Computer Engineering",
+   "code": "ELEC5619",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 5000,
+   "name": "Object Oriented Application Frameworks",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Java programming"
+       },
+       {
+        "text": "some web development experience are essential. Databases strongly recommended"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Java programming, and some web development experience are essential. Databases strongly recommended"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  }
+ }
+}

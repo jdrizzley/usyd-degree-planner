@@ -1,0 +1,214 @@
+{
+ "prefix": "STAT",
+ "units": {
+  "STAT2011": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "STAT2011",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Probability and Estimation Theory",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unitPattern": "MATH1X61"
+         },
+         {
+          "unit": "MATH1971"
+         },
+         {
+          "unitPattern": "MATH1X21"
+         },
+         {
+          "unit": "MATH1931"
+         },
+         {
+          "unitPattern": "MATH1X01"
+         },
+         {
+          "unit": "MATH1906"
+         },
+         {
+          "unit": "MATH1011"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unitPattern": "DATA1X01"
+         },
+         {
+          "unitPattern": "MATH1X62"
+         },
+         {
+          "unit": "MATH1972"
+         },
+         {
+          "unitPattern": "MATH10X5"
+         },
+         {
+          "unit": "MATH1905"
+         },
+         {
+          "unit": "STAT1021"
+         },
+         {
+          "unit": "ECMT1010"
+         },
+         {
+          "unit": "BUSS1020"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "(MATH1X61 or MATH1971 or MATH1X21 or MATH1931 or MATH1X01 or MATH1906 or MATH1011) and (DATA1X01 or MATH1X62 or MATH1972 or MATH10X5 or MATH1905 or STAT1021 or ECMT1010 or BUSS1020)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "STAT2911"
+     },
+     "raw": "STAT2911"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "STAT2911": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "STAT2911",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Probability and Statistical Models (Adv)",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unitPattern": "MATH1X61"
+         },
+         {
+          "unit": "MATH1971"
+         },
+         {
+          "unitPattern": "MATH1X21"
+         },
+         {
+          "unit": "MATH1931"
+         },
+         {
+          "unitPattern": "MATH1X01"
+         },
+         {
+          "unit": "MATH1906"
+         },
+         {
+          "unit": "MATH1011"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "text": "a mark of 65 or greater in"
+       },
+       {
+        "args": [
+         {
+          "unitPattern": "DATA1X01"
+         },
+         {
+          "unitPattern": "MATH10X5"
+         },
+         {
+          "unit": "MATH1905"
+         },
+         {
+          "unit": "STAT1021"
+         },
+         {
+          "unit": "ECMT1010"
+         },
+         {
+          "unit": "BUSS1020"
+         },
+         {
+          "unitPattern": "MATH1X62"
+         },
+         {
+          "unit": "MATH1972"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "(MATH1X61 or MATH1971 or MATH1X21 or MATH1931 or MATH1X01 or MATH1906 or MATH1011) and a mark of 65 or greater in (DATA1X01 or MATH10X5 or MATH1905 or STAT1021 or ECMT1010 or BUSS1020 or MATH1X62 or MATH1972)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "STAT2011"
+     },
+     "raw": "STAT2011"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  }
+ }
+}

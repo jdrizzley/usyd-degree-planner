@@ -1,0 +1,56 @@
+{
+ "prefix": "SCIE",
+ "units": {
+  "SCIE1001": {
+   "academicUnit": "History and Philosophy of Science Academic Operations",
+   "code": "SCIE1001",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Sydney Science 2050: Towards the Future",
+   "offeringPattern": {
+    "S1C": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CIJL": [
+     2021
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  }
+ }
+}

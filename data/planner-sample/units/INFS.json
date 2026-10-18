@@ -1,0 +1,75 @@
+{
+ "prefix": "INFS",
+ "units": {
+  "INFS3110": {
+   "academicUnit": "Accounting, Governance and Regulation",
+   "code": "INFS3110",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Information Systems for Accountants",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFS1000"
+       },
+       {
+        "unit": "INFO1000"
+       },
+       {
+        "unit": "INFO1003"
+       },
+       {
+        "unit": "INFO1903"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFS1000 or INFO1000 or INFO1003 or INFO1903"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "INFS2001"
+     },
+     "raw": "INFS2001"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  }
+ }
+}

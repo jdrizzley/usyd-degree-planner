@@ -1,0 +1,149 @@
+{
+ "abbr": "BE(Hons)",
+ "choices": [
+  {
+   "id": "st",
+   "label": "Stream",
+   "options": [
+    {
+     "component": "engineering/software",
+     "id": "software-stream",
+     "kind": "stream",
+     "name": "Software",
+     "prefer": [
+      "INFO1110",
+      "ELEC1005",
+      "COMP2123",
+      "COMP2022",
+      "ELEC4712",
+      "ELEC4713"
+     ]
+    }
+   ],
+   "required": true
+  }
+ ],
+ "confidence": "high",
+ "faculty": "engineering",
+ "handbookYear": 2026,
+ "name": "Bachelor of Engineering Honours",
+ "requirements": {
+  "children": [
+   {
+    "children": [
+     {
+      "cp": 6,
+      "id": "found-comp",
+      "label": "Introductory computing",
+      "pool": {
+       "component": "engineering/core",
+       "sections": [
+        "computing-units"
+       ]
+      },
+      "type": "cp"
+     },
+     {
+      "cp": 12,
+      "id": "found-math",
+      "label": "Mathematics",
+      "pool": {
+       "component": "engineering/core",
+       "sections": [
+        "mathematics-units"
+       ]
+      },
+      "type": "cp"
+     }
+    ],
+    "id": "found",
+    "label": "Engineering foundations",
+    "type": "all"
+   },
+   {
+    "children": [
+     {
+      "cp": 6,
+      "id": "proj-1",
+      "label": "Project 1",
+      "pool": {
+       "component": "engineering/core",
+       "sections": [
+        "project-1"
+       ]
+      },
+      "type": "cp"
+     },
+     {
+      "cp": 12,
+      "id": "proj-23",
+      "label": "Projects 2 and 3",
+      "pool": {
+       "component": "engineering/core",
+       "sections": [
+        "project-2-3"
+       ]
+      },
+      "type": "cp"
+     },
+     {
+      "cp": 12,
+      "id": "proj-thesis",
+      "label": "Thesis",
+      "pool": {
+       "component": "engineering/core",
+       "sections": [
+        "thesis-units"
+       ]
+      },
+      "type": "cp"
+     }
+    ],
+    "id": "proj",
+    "label": "Engineering projects",
+    "type": "all"
+   },
+   {
+    "id": "pep",
+    "label": "Professional Engagement Program",
+    "type": "units",
+    "units": [
+     "ENGP1001",
+     "ENGP1002",
+     "ENGP1003",
+     "ENGP2001",
+     "ENGP2002",
+     "ENGP2003",
+     "ENGP3001",
+     "ENGP3002"
+    ]
+   },
+   {
+    "choice": "st",
+    "id": "stream",
+    "label": "Stream",
+    "type": "choice"
+   },
+   {
+    "cp": 0,
+    "fill": true,
+    "id": "open",
+    "label": "Open electives",
+    "maxCp": 24,
+    "pool": {
+     "any": true
+    },
+    "type": "cp"
+   }
+  ],
+  "cp": 192,
+  "id": "root",
+  "label": "Bachelor of Engineering Honours",
+  "type": "all"
+ },
+ "sample": true,
+ "semesters": 8,
+ "slug": "engineering-honours",
+ "sourceUrl": "https://www.sydney.edu.au/handbooks/engineering/engineering-honours/course-resolutions.html",
+ "totalCp": 192
+}

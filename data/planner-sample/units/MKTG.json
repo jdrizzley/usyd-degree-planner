@@ -1,0 +1,61 @@
+{
+ "prefix": "MKTG",
+ "units": {
+  "MKTG1001": {
+   "academicUnit": "Marketing",
+   "code": "MKTG1001",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Marketing Principles",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CIJL": [
+     2022,
+     2024
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  }
+ }
+}

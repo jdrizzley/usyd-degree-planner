@@ -1,0 +1,81 @@
+{
+ "prefix": "ENVX",
+ "units": {
+  "ENVX1002": {
+   "academicUnit": "Life and Environmental Sciences Academic Operations",
+   "code": "ENVX1002",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Statistics in Life and Environmental Sciences",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unitPattern": "ENVX1001"
+       },
+       {
+        "unit": "MATH1005"
+       },
+       {
+        "unit": "MATH1905"
+       },
+       {
+        "unit": "MATH1015"
+       },
+       {
+        "unit": "MATH1115"
+       },
+       {
+        "unit": "DATA1001"
+       },
+       {
+        "unit": "DATA1901"
+       },
+       {
+        "unit": "BUSS1020"
+       },
+       {
+        "unit": "STAT1021"
+       },
+       {
+        "unit": "ECMT1010"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ENVX1001 or MATH1005 or MATH1905 or MATH1015 or MATH1115 or DATA1001 or DATA1901 or BUSS1020 or STAT1021 or ECMT1010"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  }
+ }
+}

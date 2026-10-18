@@ -1,0 +1,194 @@
+{
+ "faculty": "science",
+ "handbookYear": 2026,
+ "id": "science/mathematics",
+ "kinds": {
+  "major": {
+   "name": "Mathematics major",
+   "requirements": [
+    {
+     "cp": 12,
+     "id": "i",
+     "label": "1000-level units",
+     "pool": {
+      "sections": [
+       "1000-level"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 12,
+     "id": "ii",
+     "label": "2000-level core",
+     "pool": {
+      "sections": [
+       "2000-level-core"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 6,
+     "id": "iii",
+     "label": "2000-level selective",
+     "pool": {
+      "sections": [
+       "2000-level-selective"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 6,
+     "id": "iv",
+     "label": "Interdisciplinary project",
+     "pool": {
+      "sections": [
+       "3000-level-interdisciplinary-project-units"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 12,
+     "id": "v",
+     "label": "3000-level selective",
+     "pool": {
+      "sections": [
+       "3000-level-selective"
+      ]
+     },
+     "type": "cp"
+    }
+   ],
+   "totalCp": 48
+  },
+  "minor": {
+   "name": "Mathematics minor",
+   "requirements": [
+    {
+     "cp": 12,
+     "id": "i",
+     "label": "1000-level units",
+     "pool": {
+      "sections": [
+       "1000-level"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 12,
+     "id": "ii",
+     "label": "2000-level core",
+     "pool": {
+      "sections": [
+       "2000-level-core"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 6,
+     "id": "iii",
+     "label": "2000-level selective",
+     "pool": {
+      "sections": [
+       "2000-level-selective"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 6,
+     "id": "iv",
+     "label": "3000-level selective",
+     "pool": {
+      "sections": [
+       "3000-level-selective"
+      ]
+     },
+     "type": "cp"
+    }
+   ],
+   "totalCp": 36
+  }
+ },
+ "name": "Mathematics",
+ "preamble": [
+  "Mathematics major",
+  "Mathematics minor"
+ ],
+ "scrapedAt": "2026-10-18T12:20:08Z",
+ "sections": [
+  {
+   "id": "1000-level",
+   "label": "1000-level",
+   "level": 1000,
+   "units": [
+    "MATH1061",
+    "MATH1062",
+    "MATH1961",
+    "MATH1962",
+    "MATH1971",
+    "MATH1972"
+   ]
+  },
+  {
+   "id": "2000-level-core",
+   "label": "2000-level Core",
+   "level": 2000,
+   "units": [
+    "MATH2021",
+    "MATH2921",
+    "MATH2022",
+    "MATH2922"
+   ]
+  },
+  {
+   "id": "2000-level-selective",
+   "label": "2000-level Selective",
+   "level": 2000,
+   "units": [
+    "MATH2023",
+    "MATH2923",
+    "MATH2088",
+    "MATH2988"
+   ]
+  },
+  {
+   "id": "3000-level-interdisciplinary-project-units",
+   "label": "3000-level Interdisciplinary project units",
+   "level": 3000,
+   "units": [
+    "MATH3888",
+    "SCPU3001"
+   ]
+  },
+  {
+   "id": "3000-level-selective",
+   "label": "3000-level Selective",
+   "level": 3000,
+   "units": [
+    "MATH3061",
+    "MATH3961",
+    "MATH3962",
+    "MATH3063",
+    "MATH3963",
+    "MATH3066",
+    "MATH3076",
+    "MATH3976",
+    "MATH3078",
+    "MATH3978",
+    "MATH3968",
+    "MATH3969",
+    "MATH3974",
+    "MATH3977",
+    "MATH3979"
+   ]
+  }
+ ],
+ "slug": "mathematics",
+ "sourceUrl": "https://www.sydney.edu.au/handbooks/science/table-a/subject-areas/mathematics/unit-of-study-table.html"
+}

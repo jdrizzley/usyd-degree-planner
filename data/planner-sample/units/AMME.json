@@ -1,0 +1,166 @@
+{
+ "prefix": "AMME",
+ "units": {
+  "AMME4111": {
+   "academicUnit": "Aerospace, Mechanical and Mechatronic",
+   "code": "AMME4111",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 4000,
+   "name": "Thesis A",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "text": "36 credit points of any 3000-level or higher Engineering units of study"
+       },
+       {
+        "cp": 36,
+        "level": 3000
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "36 credit points of any 3000-level or higher Engineering units of study"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "AMME4010"
+       },
+       {
+        "unit": "AMME4122"
+       },
+       {
+        "unit": "AMME4121"
+       },
+       {
+        "unit": "BMET4111"
+       },
+       {
+        "unit": "BMET4112"
+       },
+       {
+        "unit": "BMET4010"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "AMME4010 or AMME4122 or AMME4121 or BMET4111 or BMET4112 or BMET4010"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "AMME4112": {
+   "academicUnit": "Aerospace, Mechanical and Mechatronic",
+   "code": "AMME4112",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 4000,
+   "name": "Thesis B",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "AMME4111"
+     },
+     "raw": "AMME4111"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "AMME4121"
+       },
+       {
+        "unit": "AMME4122"
+       },
+       {
+        "unit": "AMME4010"
+       },
+       {
+        "unit": "BMET4111"
+       },
+       {
+        "unit": "BMET4112"
+       },
+       {
+        "unit": "BMET4010"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "AMME4121 or AMME4122 or AMME4010 or BMET4111 or BMET4112 or BMET4010"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  }
+ }
+}

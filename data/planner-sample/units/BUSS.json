@@ -1,0 +1,362 @@
+{
+ "prefix": "BUSS",
+ "units": {
+  "BUSS1000": {
+   "academicUnit": "",
+   "code": "BUSS1000",
+   "creditPoints": 6,
+   "faculty": "",
+   "landingPage": false,
+   "lastOffered": null,
+   "level": 1000,
+   "name": "Future of Business",
+   "offeringPattern": null,
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": null
+  },
+  "BUSS1020": {
+   "academicUnit": "Business Analytics",
+   "code": "BUSS1020",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Quantitative Business Analysis",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S1CIFE": [
+     2022,
+     2023,
+     2024,
+     2025
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CIJL": [
+     2022
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ECMT1010"
+       },
+       {
+        "unit": "MATH1005"
+       },
+       {
+        "unit": "MATH1905"
+       },
+       {
+        "unit": "MATH1015"
+       },
+       {
+        "unit": "MATH1115"
+       },
+       {
+        "unit": "STAT1021"
+       },
+       {
+        "unitPattern": "ENVX1001"
+       },
+       {
+        "unitPattern": "ENVX1002"
+       },
+       {
+        "unit": "DATA1001"
+       },
+       {
+        "unit": "DATA1901"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ECMT1010 or MATH1005 or MATH1905 or MATH1015 or MATH1115 or STAT1021 or ENVX1001 or ENVX1002 or DATA1001 or DATA1901"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "BUSS1030": {
+   "academicUnit": "Accounting, Governance and Regulation",
+   "code": "BUSS1030",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Accounting for Decision Making",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ACCT1001"
+       },
+       {
+        "unit": "ACCT1002"
+       },
+       {
+        "unit": "ACCT1003"
+       },
+       {
+        "unit": "ACCT1004"
+       },
+       {
+        "unit": "ACCT1005"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ACCT1001 or ACCT1002 or ACCT1003 or ACCT1004 or ACCT1005"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "BUSS1040": {
+   "academicUnit": "Business School Student Mobility and Research Units",
+   "code": "BUSS1040",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Economics for Business Decision Making",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "text": "Mathematics"
+         },
+         {
+          "args": [
+           {
+            "text": "equivalent of band 4 in the NSW HSC subject Advanced Mathematics"
+           },
+           {
+            "text": "band E3 in Mathematics Extension 1"
+           },
+           {
+            "text": "2"
+           }
+          ],
+          "op": "or"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "unit": "MATH1111"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Mathematics (equivalent of band 4 in the NSW HSC subject Advanced Mathematics or band E3 in Mathematics Extension 1 or 2) or MATH1111"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ECON1001"
+       },
+       {
+        "unit": "ECON1040"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ECON1001 or ECON1040"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "BUSS2000": {
+   "academicUnit": "Work and Organisational Studies",
+   "code": "BUSS2000",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Leading and Influencing in Business",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "cp": 48
+       },
+       {
+        "args": [
+         {
+          "unit": "BUSS1000"
+         },
+         {
+          "unit": "BUSS1001"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Completion of at least 48 credit points (including BUSS1000 or BUSS1001)"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  }
+ }
+}

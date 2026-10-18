@@ -1,0 +1,14 @@
+# Private planning docs
+planning/
+
+# scraper cache and scratch
+.cache/
+data.previous/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# local tooling
+.DS_Store
+node_modules/

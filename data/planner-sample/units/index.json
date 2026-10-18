@@ -1,0 +1,1820 @@
+{
+ "units": [
+  {
+   "c": "ACCT1006",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Accounting and Financial Management",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ACCT2011",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Reporting on Business Performance",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ACCT2019",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Accounting Analysis for Management Decisions",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ACCT3011",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Reporting on Business Groups",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ACCT3013",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Financial Statement Analysis",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "ACCT3015",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Accounting Data Analytics",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "ACCT3016",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Sustainability Management and Reporting",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "ACCT3020",
+   "cp": 6,
+   "last": 2021,
+   "lv": 3000,
+   "n": "Advanced Issues in Management Accounting",
+   "s": []
+  },
+  {
+   "c": "ACCT3031",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "International Corporate Governance",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "ACCT3400",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Industry and Community Project",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ACCT3600",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Accounting and Auditing in Practice",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "AERO1560",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Introduction to Aerospace Engineering",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "AMME4111",
+   "cp": 6,
+   "last": 2026,
+   "lv": 4000,
+   "n": "Thesis A",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "AMME4112",
+   "cp": 6,
+   "last": 2026,
+   "lv": 4000,
+   "n": "Thesis B",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "BANK3011",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Bank Financial Management",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "BMET1960",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Biomedical Engineering 1A",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "BUSS1000",
+   "cp": 6,
+   "last": null,
+   "lv": 1000,
+   "n": "Future of Business",
+   "s": null
+  },
+  {
+   "c": "BUSS1020",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Quantitative Business Analysis",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "BUSS1030",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Accounting for Decision Making",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "BUSS1040",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Economics for Business Decision Making",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "BUSS2000",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Leading and Influencing in Business",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "CHNG1108",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Introduction to Chemical Engineering",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "CIVL1900",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Introduction to Civil Engineering",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "CLAW3201",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Australian Taxation System",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "COMP2017",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Systems Programming",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "COMP2022",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Models of Computation",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "COMP2123",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Data Structures and Algorithms",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "COMP2823",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Data Structures and Algorithms (Adv)",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "COMP2922",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Models of Computation (Adv)",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "COMP3027",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Algorithm Design",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "COMP3109",
+   "cp": 6,
+   "last": 2020,
+   "lv": 3000,
+   "n": "Programming Languages and Paradigms",
+   "s": []
+  },
+  {
+   "c": "COMP3221",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Distributed Systems",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "COMP3308",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Introduction to Artificial Intelligence",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "COMP3419",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Graphics and Multimedia",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "COMP3520",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Operating Systems Internals",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "COMP3530",
+   "cp": 6,
+   "last": 2023,
+   "lv": 3000,
+   "n": "Discrete Optimization",
+   "s": []
+  },
+  {
+   "c": "COMP3608",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Introduction to Artificial Intelligence (Adv)",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "COMP3888",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Computer Science Project",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "COMP3927",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Algorithm Design (Adv)",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "COMP3988",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Computer Science Project (Advanced)",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "DATA1001",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Foundations of Data Science",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "DATA1002",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Informatics: Data and Computation",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "DATA1901",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Foundations of Data Science (Adv)",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "DATA2001",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Data Science, Big Data and Data Variety",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "DATA2002",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Data Analytics: Learning from Data",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "DATA2901",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Big Data and Data Diversity (Advanced)",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "DATA2902",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Data Analytics: Learning from Data (Adv)",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "DATA3404",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Scalable Data Management",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "DATA3406",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Human-in-the-Loop Data Analytics",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "ELEC1004",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Practical Intro to Electrical Engineering",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "ELEC1005",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Introduction to Software Engineering",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "ELEC1601",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Introduction to Computer Systems",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ELEC2100",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Fundamentals of Elec and Electronic Eng",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "ELEC2103",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Simulation and Numerical Solutions in Eng",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "ELEC2104",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Electronic Devices and Circuits",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "ELEC2302",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Signals and Systems",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "ELEC2602",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Digital Logic",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "ELEC3104",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Engineering Electromagnetics",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "ELEC3203",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Electricity Networks",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "ELEC3204",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Power Electronics and Applications",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "ELEC3206",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Electrical Energy Conversion Systems",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "ELEC3304",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Control",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "ELEC3305",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Digital Signal Processing",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "ELEC3404",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Electronic Circuit Design",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "ELEC3405",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Communications Electronics and Photonics",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "ELEC3505",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Communications",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "ELEC3506",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Communications Networks",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "ELEC3607",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Embedded Systems",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "ELEC3608",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Computer Architecture",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "ELEC3609",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Internet Software Platforms",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "ELEC3610",
+   "cp": 6,
+   "last": 2025,
+   "lv": 3000,
+   "n": "E-Business Analysis and Design",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "ELEC3612",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Pattern Recognition and Machine Intelligence",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "ELEC4712",
+   "cp": 6,
+   "last": 2026,
+   "lv": 4000,
+   "n": "Thesis A",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ELEC4713",
+   "cp": 6,
+   "last": 2026,
+   "lv": 4000,
+   "n": "Thesis B",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ELEC5618",
+   "cp": 6,
+   "last": 2026,
+   "lv": 5000,
+   "n": "Software Quality Engineering",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "ELEC5619",
+   "cp": 6,
+   "last": 2026,
+   "lv": 5000,
+   "n": "Object Oriented Application Frameworks",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "ENGG1810",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Introduction to Engineering Computing",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ENGG2112",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Multi-disciplinary Engineering",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ENGG3112",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Interdisciplinary Engineering",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ENGP1001",
+   "cp": 0,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Professional Engagement Program 1A",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ENGP1002",
+   "cp": 0,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Professional Engagement Program 1B",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ENGP1003",
+   "cp": 0,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Professional Engagement Program 1C",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ENGP2001",
+   "cp": 0,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Professional Engagement Program 2A",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ENGP2002",
+   "cp": 0,
+   "last": null,
+   "lv": 2000,
+   "n": "Professional Engagement Program 2B",
+   "s": null
+  },
+  {
+   "c": "ENGP2003",
+   "cp": 0,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Professional Engagement Program 2C",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ENGP3001",
+   "cp": 0,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Professional Engagement Program 3A",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ENGP3002",
+   "cp": 0,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Professional Engagement Program 3B",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ENVE1001",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Introduction to Environmental Engineering",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "ENVX1002",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Statistics in Life and Environmental Sciences",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "FINC2011",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Corporate Finance I",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "FINC2012",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Corporate Finance II",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "FINC3011",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "International Financial Management",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "FINC3012",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Derivative Securities",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "FINC3013",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Mergers and Acquisitions",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "FINC3014",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Trading and Dealing in Security Markets",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "FINC3015",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Financial Valuation: Case Study Approach",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "FINC3017",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Investments and Portfolio Management",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "FINC3019",
+   "cp": 6,
+   "last": 2024,
+   "lv": 3000,
+   "n": "Fixed Income Securities",
+   "s": []
+  },
+  {
+   "c": "FINC3020",
+   "cp": 6,
+   "last": 2024,
+   "lv": 3000,
+   "n": "Financial Risk Management",
+   "s": []
+  },
+  {
+   "c": "FINC3023",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Behavioural Finance",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "FINC3026",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Entrepreneurial Finance",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "FINC3027",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Digital and Sustainable Finance",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "FINC3301",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Applied Portfolio Management A",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "FINC3302",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Applied Portfolio Management B",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "FINC3400",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Industry and Community Project",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "FINC3600",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Finance in Practice",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "INFO1110",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Introduction to Programming",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "INFO1113",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Object-Oriented Programming",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "INFO1910",
+   "cp": 6,
+   "last": 2025,
+   "lv": 1000,
+   "n": "Introduction to Programming (Advanced)",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "INFO3616",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Principles of Security Engineering",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "INFO4994",
+   "cp": 6,
+   "last": 2026,
+   "lv": 4000,
+   "n": "AI Literacy and Competency",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "INFS3110",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Information Systems for Accountants",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "ISYS2110",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Analysis and Design of Web Info Systems",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "ISYS2120",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Data and Information Management",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "ISYS2160",
+   "cp": 6,
+   "last": 2024,
+   "lv": 2000,
+   "n": "Information Systems in the Internet Age",
+   "s": []
+  },
+  {
+   "c": "MATH1050",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Mathematics Toolbox for Science",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH1061",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Mathematics 1A",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH1062",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Mathematics 1B",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH1064",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Discrete Mathematics for Computation",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH1111",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Introduction to Calculus",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH1961",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Mathematics 1A (Advanced)",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH1962",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Mathematics 1B (Advanced)",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH1964",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Discrete Mathematics for Computation (Adv)",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH1971",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Mathematics 1A (SSP)",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "MATH1972",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Mathematics 1B (SSP)",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH2021",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Vector Calculus and Differential Equations",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "MATH2022",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Linear and Abstract Algebra",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "MATH2023",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Analysis",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH2061",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Linear Mathematics and Vector Calculus",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "MATH2069",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Discrete Mathematics and Graph Theory",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "MATH2088",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Number Theory and Cryptography",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH2921",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Vector Calculus and Differential Eqs (Adv)",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "MATH2922",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Linear and Abstract Algebra (Advanced)",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "MATH2923",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Analysis (Advanced)",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH2988",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Number Theory and Cryptography Adv",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH3061",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Geometry and Topology",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH3063",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Nonlinear ODEs with Applications",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "MATH3066",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Algebra and Logic",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "MATH3076",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Mathematical Computing",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "MATH3078",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "PDEs and Waves",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH3888",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Projects in Mathematics",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH3961",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Metric Spaces (Advanced)",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "MATH3962",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Rings, Fields and Galois Theory (Adv)",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "MATH3963",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Nonlinear ODEs with Applications (Adv)",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "MATH3968",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Differential Geometry (Advanced)",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH3969",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Measure Theory and Fourier Analysis (Adv)",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH3974",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Fluid Dynamics (Advanced)",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "MATH3976",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Mathematical Computing (Advanced)",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "MATH3977",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Lagrangian and Hamiltonian Dynamics (Adv)",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH3978",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "PDEs and Waves (Advanced)",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "MATH3979",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Complex Analysis (Advanced)",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "MECH1560",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Introduction to Mechanical Engineering",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "MKTG1001",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Marketing Principles",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "MTRX1701",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Introduction to Mechatronic Engineering",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "OLES1603",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Astronomy: Exploring the Universe",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "OLES2137",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Experience China",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "OLES2139",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Experience Germany",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "OLES2617",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Design Your Future",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "OLET1101",
+   "cp": 2,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Aboriginal Sydney",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "OLET1115",
+   "cp": 2,
+   "last": 2026,
+   "lv": 1000,
+   "n": "(Im)Politeness in Global Society",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "OLET1137",
+   "cp": 2,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Australian Perspectives: Rugby League",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "OLET1205",
+   "cp": 2,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Business Ethics: Interactive Cases",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "OLET1208",
+   "cp": 2,
+   "last": 2025,
+   "lv": 1000,
+   "n": "Cryptocurrency Markets and Investments",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "OLET1231",
+   "cp": 2,
+   "last": 2025,
+   "lv": 1000,
+   "n": "Community Engagement for Change",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "OLET1605",
+   "cp": 2,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Communication in STEM",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "OLET1634",
+   "cp": 2,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Anxiety and its Disorders",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "OLET1901",
+   "cp": 2,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Creating Powerful Presentations",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "PHYS1001",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Physics 1 (Regular)",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "PHYS1003",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Physics 1 (Technological)",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "PHYS2213",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Physics 2EE",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "SCIE1001",
+   "cp": 6,
+   "last": 2026,
+   "lv": 1000,
+   "n": "Sydney Science 2050: Towards the Future",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "SCPU3001",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Science Interdisciplinary Project",
+   "s": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "c": "SOFT2201",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Software Construction and Design 1",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "SOFT2412",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Agile Software Development Practices",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "SOFT3202",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Software Construction and Design 2",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "SOFT3888",
+   "cp": 6,
+   "last": 2026,
+   "lv": 3000,
+   "n": "Software Development Project",
+   "s": [
+    "S2"
+   ]
+  },
+  {
+   "c": "STAT2011",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Probability and Estimation Theory",
+   "s": [
+    "S1"
+   ]
+  },
+  {
+   "c": "STAT2911",
+   "cp": 6,
+   "last": 2026,
+   "lv": 2000,
+   "n": "Probability and Statistical Models (Adv)",
+   "s": [
+    "S1"
+   ]
+  }
+ ]
+}

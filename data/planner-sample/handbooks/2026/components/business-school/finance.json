@@ -1,0 +1,114 @@
+{
+ "faculty": "business-school",
+ "handbookYear": 2026,
+ "id": "business-school/finance",
+ "kinds": {
+  "major": {
+   "name": "Finance major",
+   "requirements": [
+    {
+     "cp": 12,
+     "id": "i",
+     "label": "1000-level core",
+     "pool": {
+      "sections": [
+       "1000-level-core"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 12,
+     "id": "ii",
+     "label": "2000-level core",
+     "pool": {
+      "sections": [
+       "2000-level-core"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 12,
+     "id": "iii",
+     "label": "3000-level core",
+     "pool": {
+      "sections": [
+       "3000-level-core"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 12,
+     "id": "iv",
+     "label": "3000-level selective",
+     "pool": {
+      "sections": [
+       "3000-level-selective"
+      ]
+     },
+     "type": "cp"
+    }
+   ],
+   "totalCp": 48
+  }
+ },
+ "name": "Finance",
+ "preamble": [
+  "Finance major"
+ ],
+ "scrapedAt": "2026-10-18T12:20:08Z",
+ "sections": [
+  {
+   "id": "1000-level-core",
+   "label": "1000-level Core*",
+   "level": 1000,
+   "units": [
+    "BUSS1020",
+    "BUSS1040"
+   ]
+  },
+  {
+   "id": "2000-level-core",
+   "label": "2000-level Core",
+   "level": 2000,
+   "units": [
+    "FINC2011",
+    "FINC2012"
+   ]
+  },
+  {
+   "id": "3000-level-core",
+   "label": "3000-level Core",
+   "level": 3000,
+   "units": [
+    "FINC3017",
+    "FINC3600"
+   ]
+  },
+  {
+   "id": "3000-level-selective",
+   "label": "3000-level Selective",
+   "level": 3000,
+   "units": [
+    "BANK3011",
+    "FINC3011",
+    "FINC3012",
+    "FINC3013",
+    "FINC3014",
+    "FINC3015",
+    "FINC3019",
+    "FINC3020",
+    "FINC3023",
+    "FINC3400",
+    "FINC3026",
+    "FINC3027",
+    "FINC3301",
+    "FINC3302"
+   ]
+  }
+ ],
+ "slug": "finance",
+ "sourceUrl": "https://www.sydney.edu.au/handbooks/business-school/commerce-subject-areas/finance/unit-of-study-table.html"
+}

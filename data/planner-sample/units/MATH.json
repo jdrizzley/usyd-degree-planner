@@ -1,0 +1,3753 @@
+{
+ "prefix": "MATH",
+ "units": {
+  "MATH1050": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH1050",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Mathematics Toolbox for Science",
+   "offeringPattern": {
+    "S1C": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "text": "NSW HSC Mathematics Advanced"
+     },
+     "raw": "NSW HSC Mathematics Advanced"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH1061"
+       },
+       {
+        "unit": "MATH1961"
+       },
+       {
+        "unit": "MATH1971"
+       },
+       {
+        "unit": "MATH1062"
+       },
+       {
+        "unit": "MATH1962"
+       },
+       {
+        "unit": "MATH1972"
+       },
+       {
+        "unit": "MATH1002"
+       },
+       {
+        "unit": "MATH1021"
+       },
+       {
+        "unit": "MATH1023"
+       },
+       {
+        "unit": "MATH1921"
+       },
+       {
+        "unit": "MATH1902"
+       },
+       {
+        "unit": "MATH1923"
+       },
+       {
+        "unit": "MATH1933"
+       },
+       {
+        "unit": "MATH1931"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH1011"
+         },
+         {
+          "unit": "MATH1014"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH1013"
+         },
+         {
+          "unit": "MATH1014"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH1011"
+         },
+         {
+          "unit": "MATH1013"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "unit": "MATH1001"
+       },
+       {
+        "unit": "MATH1003"
+       },
+       {
+        "unit": "MATH1901"
+       },
+       {
+        "unit": "MATH1906"
+       },
+       {
+        "unit": "MATH1903"
+       },
+       {
+        "unit": "MATH1907"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH1061 or MATH1961 or MATH1971 or MATH1062 or MATH1962 or MATH1972 or MATH1002 or MATH1021 or MATH1023 or MATH1921 or MATH1902 or MATH1923 or MATH1933 or MATH1931 or (MATH1011 and MATH1014) or (MATH1013 and MATH1014) or (MATH1011 and MATH1013) or MATH1001 or MATH1003 or MATH1901 or MATH1906 or MATH1903 or MATH1907"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "MATH1061": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH1061",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Mathematics 1A",
+   "offeringPattern": {
+    "S1C": [
+     2024,
+     2025,
+     2026
+    ],
+    "S1CIJA": [
+     2025,
+     2026
+    ],
+    "S2C": [
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "text": "NSW HSC Extension 1 Mathematics or equivalent"
+     },
+     "raw": "NSW HSC Extension 1 Mathematics or equivalent"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH1901"
+       },
+       {
+        "unit": "MATH1902"
+       },
+       {
+        "unit": "MATH1921"
+       },
+       {
+        "unit": "MATH1906"
+       },
+       {
+        "unit": "MATH1931"
+       },
+       {
+        "unit": "MATH1001"
+       },
+       {
+        "unit": "MATH1021"
+       },
+       {
+        "unit": "MATH1961"
+       },
+       {
+        "unit": "MATH1971"
+       },
+       {
+        "unit": "MATH1002"
+       },
+       {
+        "unit": "MATH1014"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH1901 or MATH1902 or MATH1921 or MATH1906 or MATH1931 or MATH1001 or MATH1021 or MATH1961 or MATH1971 or MATH1002 or MATH1014"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "MATH1062": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH1062",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Mathematics 1B",
+   "offeringPattern": {
+    "S1C": [
+     2024,
+     2025,
+     2026
+    ],
+    "S1CIJA": [
+     2025,
+     2026
+    ],
+    "S2C": [
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "args": [
+         {
+          "text": "Knowledge of complex numbers"
+         },
+         {
+          "text": "methods of differential"
+         },
+         {
+          "text": "integral calculus including integration by partial fractions"
+         },
+         {
+          "text": "integration by parts as for example in MATH1021"
+         },
+         {
+          "unit": "MATH1021"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "unit": "MATH1921"
+       },
+       {
+        "unit": "MATH1931"
+       },
+       {
+        "unit": "MATH1061"
+       },
+       {
+        "text": "HSC Mathematics Extension 2"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Knowledge of complex numbers and methods of differential and integral calculus including integration by partial fractions and integration by parts as for example in MATH1021 or MATH1921 or MATH1931 or MATH1061 or HSC Mathematics Extension 2"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH1905"
+       },
+       {
+        "unit": "MATH1903"
+       },
+       {
+        "unit": "MATH1907"
+       },
+       {
+        "unit": "MATH1923"
+       },
+       {
+        "unit": "MATH1933"
+       },
+       {
+        "unit": "MATH1972"
+       },
+       {
+        "unit": "MATH1962"
+       },
+       {
+        "unit": "MATH1003"
+       },
+       {
+        "unit": "MATH1023"
+       },
+       {
+        "unit": "MATH1005"
+       },
+       {
+        "unit": "MATH1015"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH1905 or MATH1903 or MATH1907 or MATH1923 or MATH1933 or MATH1972 or MATH1962 or MATH1003 or MATH1023 or MATH1005 or MATH1015"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "MATH1064": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH1064",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Discrete Mathematics for Computation",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "text": "Coordinate geometry"
+       },
+       {
+        "args": [
+         {
+          "text": "basic integral"
+         },
+         {
+          "text": "differential calculus"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "text": "polynomial equations"
+         },
+         {
+          "text": "algebraic manipulations"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "text": "equivalent to HSC Mathematics"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Coordinate geometry, basic integral and differential calculus, polynomial equations and algebraic manipulations, equivalent to HSC Mathematics"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH1004"
+       },
+       {
+        "unit": "MATH1904"
+       },
+       {
+        "unit": "MATH1964"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH1004 or MATH1904 or MATH1964"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "MATH1111": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH1111",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Introduction to Calculus",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Knowledge of algebra"
+       },
+       {
+        "text": "trigonometry equivalent to NSW Year 10"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Knowledge of algebra and trigonometry equivalent to NSW Year 10"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH1011"
+       },
+       {
+        "unit": "MATH1906"
+       },
+       {
+        "unitPattern": "MATH1X01"
+       },
+       {
+        "unitPattern": "MATH1X21"
+       },
+       {
+        "unit": "MATH1931"
+       },
+       {
+        "unitPattern": "MATH1X61"
+       },
+       {
+        "unitPattern": "MATH1X62"
+       },
+       {
+        "unit": "MATH1971"
+       },
+       {
+        "unit": "MATH1972"
+       },
+       {
+        "unit": "MATH1050"
+       },
+       {
+        "text": "HSC Mathematics Extension 1"
+       },
+       {
+        "text": "HSC Mathematics Extension 2"
+       },
+       {
+        "unitPattern": "ENVX1001"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH1011 or MATH1906 or MATH1X01 or MATH1X21 or MATH1931 or MATH1X61 or MATH1X62 or MATH1971 or MATH1972 or MATH1050 or HSC Mathematics Extension 1 or HSC Mathematics Extension 2 or ENVX1001"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "MATH1961": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH1961",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Mathematics 1A (Advanced)",
+   "offeringPattern": {
+    "S1C": [
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "HSC Mathematics Extension 2"
+       },
+       {
+        "args": [
+         {
+          "text": "Band E4 in HSC Mathematics Extensions 1"
+         },
+         {
+          "text": "or equivalent"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "(HSC Mathematics Extension 2) or (Band E4 in HSC Mathematics Extensions 1) or equivalent"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH1901"
+       },
+       {
+        "unit": "MATH1902"
+       },
+       {
+        "unit": "MATH1921"
+       },
+       {
+        "unit": "MATH1906"
+       },
+       {
+        "unit": "MATH1931"
+       },
+       {
+        "unit": "MATH1001"
+       },
+       {
+        "unit": "MATH1021"
+       },
+       {
+        "unit": "MATH1061"
+       },
+       {
+        "unit": "MATH1971"
+       },
+       {
+        "unit": "MATH1002"
+       },
+       {
+        "unit": "MATH1014"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH1901 or MATH1902 or MATH1921 or MATH1906 or MATH1931 or MATH1001 or MATH1021 or MATH1061 or MATH1971 or MATH1002 or MATH1014"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "MATH1962": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH1962",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Mathematics 1B (Advanced)",
+   "offeringPattern": {
+    "S2C": [
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "HSC Mathematics Extension 2"
+       },
+       {
+        "text": "or equivalent"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "(HSC Mathematics Extension 2) or equivalent"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH1905"
+       },
+       {
+        "unit": "MATH1903"
+       },
+       {
+        "unit": "MATH1923"
+       },
+       {
+        "unit": "MATH1907"
+       },
+       {
+        "unit": "MATH1933"
+       },
+       {
+        "unit": "MATH1062"
+       },
+       {
+        "unit": "MATH1972"
+       },
+       {
+        "unit": "MATH1003"
+       },
+       {
+        "unit": "MATH1023"
+       },
+       {
+        "unit": "MATH1005"
+       },
+       {
+        "unit": "MATH1015"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH1905 or MATH1903 or MATH1923 or MATH1907 or MATH1933 or MATH1062 or MATH1972 or MATH1003 or MATH1023 or MATH1005 or MATH1015"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "MATH1964": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH1964",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Discrete Mathematics for Computation (Adv)",
+   "offeringPattern": {
+    "S2C": [
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "HSC Mathematics Extension 2"
+       },
+       {
+        "args": [
+         {
+          "text": "Band E4 in HSC Mathematics Extension 1"
+         },
+         {
+          "text": "or equivalent"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "(HSC Mathematics Extension 2) or (Band E4 in HSC Mathematics Extension 1) or equivalent"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH1004"
+       },
+       {
+        "unit": "MATH1904"
+       },
+       {
+        "unit": "MATH1064"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH1004 or MATH1904 or MATH1064"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "MATH1971": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH1971",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Mathematics 1A (SSP)",
+   "offeringPattern": {
+    "S1C": [
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "at least Band E4 in HSC Mathematics Extension 2"
+       },
+       {
+        "text": "or equivalent"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "(at least Band E4 in HSC Mathematics Extension 2) or equivalent"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH1901"
+       },
+       {
+        "unit": "MATH1902"
+       },
+       {
+        "unit": "MATH1921"
+       },
+       {
+        "unit": "MATH1906"
+       },
+       {
+        "unit": "MATH1931"
+       },
+       {
+        "unit": "MATH1001"
+       },
+       {
+        "unit": "MATH1021"
+       },
+       {
+        "unit": "MATH1061"
+       },
+       {
+        "unit": "MATH1961"
+       },
+       {
+        "unit": "MATH1002"
+       },
+       {
+        "unit": "MATH1014"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH1901 or MATH1902 or MATH1921 or MATH1906 or MATH1931 or MATH1001 or MATH1021 or MATH1061 or MATH1961 or MATH1002 or MATH1014"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "MATH1972": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH1972",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Mathematics 1B (SSP)",
+   "offeringPattern": {
+    "S2C": [
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "HSC Mathematics Extension 2"
+       },
+       {
+        "args": [
+         {
+          "text": "Band E4 in HSC Mathematics Extension 1"
+         },
+         {
+          "text": "or equivalent"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "(HSC Mathematics Extension 2) or (Band E4 in HSC Mathematics Extension 1) or equivalent"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH1905"
+       },
+       {
+        "unit": "MATH1903"
+       },
+       {
+        "unit": "MATH1907"
+       },
+       {
+        "unit": "MATH1923"
+       },
+       {
+        "unit": "MATH1933"
+       },
+       {
+        "unit": "MATH1062"
+       },
+       {
+        "unit": "MATH1962"
+       },
+       {
+        "unit": "MATH1003"
+       },
+       {
+        "unit": "MATH1023"
+       },
+       {
+        "unit": "MATH1005"
+       },
+       {
+        "unit": "MATH1015"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH1905 or MATH1903 or MATH1907 or MATH1923 or MATH1933 or MATH1062 or MATH1962 or MATH1003 or MATH1023 or MATH1005 or MATH1015"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "MATH2021": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH2021",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Vector Calculus and Differential Equations",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unitPattern": "MATH1X61"
+         },
+         {
+          "unit": "MATH1971"
+         },
+         {
+          "args": [
+           {
+            "args": [
+             {
+              "unitPattern": "MATH1X21"
+             },
+             {
+              "unit": "MATH1931"
+             },
+             {
+              "unitPattern": "MATH1X01"
+             },
+             {
+              "unit": "MATH1906"
+             }
+            ],
+            "op": "or"
+           },
+           {
+            "args": [
+             {
+              "unitPattern": "MATH1XX2"
+             },
+             {
+              "args": [
+               {
+                "text": "a mark of 65 or above in MATH1014"
+               },
+               {
+                "unit": "MATH1014"
+               }
+              ],
+              "op": "and"
+             }
+            ],
+            "op": "or"
+           }
+          ],
+          "op": "and"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unitPattern": "MATH1X62"
+         },
+         {
+          "unit": "MATH1972"
+         },
+         {
+          "unitPattern": "MATH1X23"
+         },
+         {
+          "unit": "MATH1933"
+         },
+         {
+          "unitPattern": "MATH1X03"
+         },
+         {
+          "unit": "MATH1907"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "{(MATH1X61 or MATH1971) or [(MATH1X21 or MATH1931 or MATH1X01 or MATH1906) and (MATH1XX2 or a mark of 65 or above in MATH1014)]} and [(MATH1X62 or MATH1972) or (MATH1X23 or MATH1933 or MATH1X03 or MATH1907)]"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH2921"
+       },
+       {
+        "unit": "MATH2065"
+       },
+       {
+        "unit": "MATH2965"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2061"
+         },
+         {
+          "unit": "MATH2022"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2061"
+         },
+         {
+          "unit": "MATH2922"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2961"
+         },
+         {
+          "unit": "MATH2022"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2961"
+         },
+         {
+          "unit": "MATH2922"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "unit": "MATH2067"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH2921 or MATH2065 or MATH2965 or (MATH2061 and MATH2022) or (MATH2061 and MATH2922) or (MATH2961 and MATH2022) or (MATH2961 and MATH2922) or MATH2067"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "MATH2022": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH2022",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Linear and Abstract Algebra",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH1061"
+       },
+       {
+        "unit": "MATH1961"
+       },
+       {
+        "unit": "MATH1971"
+       },
+       {
+        "unitPattern": "MATH1X02"
+       },
+       {
+        "args": [
+         {
+          "text": "a mark of 65 or above in MATH1014"
+         },
+         {
+          "unit": "MATH1014"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH1061 or MATH1961 or MATH1971 or MATH1X02 or (a mark of 65 or above in MATH1014)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH2922"
+       },
+       {
+        "unit": "MATH2968"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2061"
+         },
+         {
+          "unit": "MATH2021"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2061"
+         },
+         {
+          "unit": "MATH2921"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2961"
+         },
+         {
+          "unit": "MATH2021"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2961"
+         },
+         {
+          "unit": "MATH2921"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH2922 or MATH2968 or (MATH2061 and MATH2021) or (MATH2061 and MATH2921) or (MATH2961 and MATH2021) or (MATH2961 and MATH2921)"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "MATH2023": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH2023",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Analysis",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unitPattern": "MATH1X61"
+         },
+         {
+          "unit": "MATH1971"
+         },
+         {
+          "args": [
+           {
+            "args": [
+             {
+              "unitPattern": "MATH1X21"
+             },
+             {
+              "unit": "MATH1011"
+             },
+             {
+              "unit": "MATH1931"
+             },
+             {
+              "unitPattern": "MATH1X01"
+             },
+             {
+              "unit": "MATH1906"
+             }
+            ],
+            "op": "or"
+           },
+           {
+            "args": [
+             {
+              "unit": "MATH1014"
+             },
+             {
+              "unitPattern": "MATH1X02"
+             }
+            ],
+            "op": "or"
+           }
+          ],
+          "op": "and"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unitPattern": "MATH1X62"
+         },
+         {
+          "unit": "MATH1972"
+         },
+         {
+          "unitPattern": "MATH1X23"
+         },
+         {
+          "unit": "MATH1933"
+         },
+         {
+          "unitPattern": "MATH1X03"
+         },
+         {
+          "unit": "MATH1907"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "{(MATH1X61 or MATH1971) or [(MATH1X21 or MATH1011 or MATH1931 or MATH1X01 or MATH1906) and (MATH1014 or MATH1X02)]} and [(MATH1X62 or MATH1972) or (MATH1X23 or MATH1933 or MATH1X03 or MATH1907)]"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH2923"
+       },
+       {
+        "unit": "MATH3068"
+       },
+       {
+        "unit": "MATH2962"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH2923 or MATH3068 or MATH2962"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "MATH2061": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH2061",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Linear Mathematics and Vector Calculus",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S1CIJA": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CIAU": [
+     2020
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unitPattern": "MATH1X61"
+         },
+         {
+          "unit": "MATH1971"
+         },
+         {
+          "args": [
+           {
+            "args": [
+             {
+              "unitPattern": "MATH1X21"
+             },
+             {
+              "unit": "MATH1931"
+             },
+             {
+              "unitPattern": "MATH1X01"
+             },
+             {
+              "unit": "MATH1906"
+             },
+             {
+              "unit": "MATH1011"
+             }
+            ],
+            "op": "or"
+           },
+           {
+            "args": [
+             {
+              "unit": "MATH1014"
+             },
+             {
+              "unitPattern": "MATH1X02"
+             }
+            ],
+            "op": "or"
+           }
+          ],
+          "op": "and"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unitPattern": "MATH1X62"
+         },
+         {
+          "unit": "MATH1972"
+         },
+         {
+          "unit": "MATH1013"
+         },
+         {
+          "unitPattern": "MATH1X23"
+         },
+         {
+          "unitPattern": "MATH1X03"
+         },
+         {
+          "unit": "MATH1933"
+         },
+         {
+          "unit": "MATH1907"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "{(MATH1X61 or MATH1971) or [(MATH1X21 or MATH1931 or MATH1X01 or MATH1906 or MATH1011) and (MATH1014 or MATH1X02)]} and (MATH1X62 or MATH1972 or MATH1013 or MATH1X23 or MATH1X03 or MATH1933 or MATH1907)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH2961"
+       },
+       {
+        "unit": "MATH2067"
+       },
+       {
+        "unit": "MATH2021"
+       },
+       {
+        "unit": "MATH2921"
+       },
+       {
+        "unit": "MATH2022"
+       },
+       {
+        "unit": "MATH2922"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH2961 or MATH2067 or MATH2021 or MATH2921 or MATH2022 or MATH2922"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "MATH2069": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH2069",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Discrete Mathematics and Graph Theory",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "text": "6 credit points of MATH1XXX except"
+       },
+       {
+        "cp": 6,
+        "pattern": "MATH1XXX"
+       },
+       {
+        "args": [
+         {
+          "unitPattern": "MATH1XX5"
+         },
+         {
+          "unit": "MATH1050"
+         },
+         {
+          "unit": "MATH1111"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "6 credit points of MATH1XXX except (MATH1XX5 or MATH1050 or MATH1111)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH2011"
+       },
+       {
+        "unit": "MATH2009"
+       },
+       {
+        "unit": "MATH2969"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH2011 or MATH2009 or MATH2969"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "MATH2088": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH2088",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Number Theory and Cryptography",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH1061"
+       },
+       {
+        "unit": "MATH1961"
+       },
+       {
+        "unit": "MATH1971"
+       },
+       {
+        "unit": "MATH1064"
+       },
+       {
+        "unit": "MATH1964"
+       },
+       {
+        "unit": "MATH1002"
+       },
+       {
+        "unit": "MATH1902"
+       },
+       {
+        "unit": "MATH1004"
+       },
+       {
+        "unit": "MATH1904"
+       },
+       {
+        "args": [
+         {
+          "text": "a mark of 65 or above in MATH1014"
+         },
+         {
+          "unit": "MATH1014"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH1061 or MATH1961 or MATH1971 or MATH1064 or MATH1964 or MATH1002 or MATH1902 or MATH1004 or MATH1904 or (a mark of 65 or above in MATH1014)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH2068"
+       },
+       {
+        "unit": "MATH2988"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH2068 or MATH2988"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "MATH2921": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH2921",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Vector Calculus and Differential Eqs (Adv)",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "MATH1961"
+         },
+         {
+          "unit": "MATH1971"
+         },
+         {
+          "args": [
+           {
+            "text": "a mark of 65 or above in MATH1061"
+           },
+           {
+            "unit": "MATH1061"
+           }
+          ],
+          "op": "and"
+         },
+         {
+          "args": [
+           {
+            "args": [
+             {
+              "unit": "MATH1921"
+             },
+             {
+              "unit": "MATH1931"
+             },
+             {
+              "unit": "MATH1901"
+             },
+             {
+              "unit": "MATH1906"
+             },
+             {
+              "args": [
+               {
+                "text": "a mark of 65 or above in MATH1021"
+               },
+               {
+                "unit": "MATH1021"
+               }
+              ],
+              "op": "and"
+             },
+             {
+              "unit": "MATH1001"
+             }
+            ],
+            "op": "or"
+           },
+           {
+            "args": [
+             {
+              "unit": "MATH1902"
+             },
+             {
+              "args": [
+               {
+                "text": "a mark of 65 or above in MATH1002"
+               },
+               {
+                "unit": "MATH1002"
+               }
+              ],
+              "op": "and"
+             }
+            ],
+            "op": "or"
+           }
+          ],
+          "op": "and"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH1962"
+         },
+         {
+          "unit": "MATH1972"
+         },
+         {
+          "unit": "MATH1923"
+         },
+         {
+          "unit": "MATH1933"
+         },
+         {
+          "unit": "MATH1903"
+         },
+         {
+          "unit": "MATH1907"
+         },
+         {
+          "args": [
+           {
+            "text": "a mark of 65 or above in MATH1062"
+           },
+           {
+            "unit": "MATH1062"
+           }
+          ],
+          "op": "and"
+         },
+         {
+          "unit": "MATH1023"
+         },
+         {
+          "unit": "MATH1003"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "{MATH1961 or MATH1971 or (a mark of 65 or above in MATH1061) or {[MATH1921 or MATH1931 or MATH1901 or MATH1906 or (a mark of 65 or above in MATH1021 or MATH1001)] and [MATH1902 or (a mark of 65 or above in MATH1002)]}} and {MATH1962 or MATH1972 or MATH1923 or MATH1933 or MATH1903 or MATH1907 or (a mark of 65 or above in MATH1062 or MATH1023 or MATH1003)}"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH2021"
+       },
+       {
+        "unit": "MATH2065"
+       },
+       {
+        "unit": "MATH2965"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2061"
+         },
+         {
+          "unit": "MATH2022"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2061"
+         },
+         {
+          "unit": "MATH2922"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2961"
+         },
+         {
+          "unit": "MATH2022"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2961"
+         },
+         {
+          "unit": "MATH2922"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "unit": "MATH2067"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH2021 or MATH2065 or MATH2965 or (MATH2061 and MATH2022) or (MATH2061 and MATH2922) or (MATH2961 and MATH2022) or (MATH2961 and MATH2922) or MATH2067"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "MATH2922": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH2922",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Linear and Abstract Algebra (Advanced)",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH1961"
+       },
+       {
+        "unit": "MATH1971"
+       },
+       {
+        "unit": "MATH1902"
+       },
+       {
+        "args": [
+         {
+          "text": "a mark of 65 or above in MATH1002"
+         },
+         {
+          "unit": "MATH1002"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "unit": "MATH1061"
+       },
+       {
+        "unit": "MATH1964"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH1961 or MATH1971 or MATH1902 or (a mark of 65 or above in MATH1002 or MATH1061) or MATH1964"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH2022"
+       },
+       {
+        "unit": "MATH2968"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2061"
+         },
+         {
+          "unit": "MATH2021"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2061"
+         },
+         {
+          "unit": "MATH2921"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2961"
+         },
+         {
+          "unit": "MATH2021"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2961"
+         },
+         {
+          "unit": "MATH2921"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH2022 or MATH2968 or (MATH2061 and MATH2021) or (MATH2061 and MATH2921) or (MATH2961 and MATH2021) or (MATH2961 and MATH2921)"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "MATH2923": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH2923",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Analysis (Advanced)",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "MATH1961"
+         },
+         {
+          "unit": "MATH1971"
+         },
+         {
+          "args": [
+           {
+            "text": "a mark of 65 or above in MATH1061"
+           },
+           {
+            "unit": "MATH1061"
+           }
+          ],
+          "op": "and"
+         },
+         {
+          "args": [
+           {
+            "args": [
+             {
+              "unit": "MATH1921"
+             },
+             {
+              "unit": "MATH1931"
+             },
+             {
+              "unit": "MATH1901"
+             },
+             {
+              "unit": "MATH1906"
+             },
+             {
+              "args": [
+               {
+                "text": "a mark of 65 or above in MATH1021"
+               },
+               {
+                "unit": "MATH1021"
+               }
+              ],
+              "op": "and"
+             },
+             {
+              "unit": "MATH1001"
+             }
+            ],
+            "op": "or"
+           },
+           {
+            "args": [
+             {
+              "unit": "MATH1902"
+             },
+             {
+              "args": [
+               {
+                "text": "a mark of 65 or above in MATH1002"
+               },
+               {
+                "unit": "MATH1002"
+               }
+              ],
+              "op": "and"
+             }
+            ],
+            "op": "or"
+           }
+          ],
+          "op": "and"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH1962"
+         },
+         {
+          "unit": "MATH1972"
+         },
+         {
+          "unit": "MATH1923"
+         },
+         {
+          "unit": "MATH1933"
+         },
+         {
+          "unit": "MATH1903"
+         },
+         {
+          "unit": "MATH1907"
+         },
+         {
+          "args": [
+           {
+            "text": "a mark of 65 or above in MATH1062"
+           },
+           {
+            "unit": "MATH1062"
+           }
+          ],
+          "op": "and"
+         },
+         {
+          "unit": "MATH1023"
+         },
+         {
+          "unit": "MATH1003"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "{MATH1961 or MATH1971 or (a mark of 65 or above in MATH1061) or {[MATH1921 or MATH1931 or MATH1901 or MATH1906 or (a mark of 65 or above in MATH1021 or MATH1001)] and [MATH1902 or (a mark of 65 or above in MATH1002)]}} and {MATH1962 or MATH1972 or MATH1923 or MATH1933 or MATH1903 or MATH1907 or (a mark of 65 or above in MATH1062 or MATH1023 or MATH1003)}"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH2023"
+       },
+       {
+        "unit": "MATH2962"
+       },
+       {
+        "unit": "MATH3068"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH2023 or MATH2962 or MATH3068"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "MATH2988": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH2988",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Number Theory and Cryptography Adv",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH1961"
+       },
+       {
+        "unit": "MATH1971"
+       },
+       {
+        "unit": "MATH1964"
+       },
+       {
+        "unit": "MATH1902"
+       },
+       {
+        "unit": "MATH1904"
+       },
+       {
+        "args": [
+         {
+          "text": "a mark of 65 or above in MATH1061"
+         },
+         {
+          "unit": "MATH1061"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "unit": "MATH1064"
+       },
+       {
+        "unit": "MATH1002"
+       },
+       {
+        "unit": "MATH1004"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH1961 or MATH1971 or MATH1964 or MATH1902 or MATH1904 or (a mark of 65 or above in MATH1061 or MATH1064 or MATH1002 or MATH1004)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH2068"
+       },
+       {
+        "unit": "MATH2088"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH2068 or MATH2088"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "MATH3061": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH3061",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Geometry and Topology",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "args": [
+         {
+          "text": "Theory"
+         },
+         {
+          "text": "methods of linear transformations"
+         },
+         {
+          "text": "vector spaces"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "text": "for example MATH2061"
+         },
+         {
+          "unit": "MATH2061"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "unit": "MATH2961"
+       },
+       {
+        "unit": "MATH2022"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Theory and methods of linear transformations and vector spaces, for example MATH2061, MATH2961 or MATH2022"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "cp": 12,
+      "pattern": "MATH2XXX"
+     },
+     "raw": "12 credit points of MATH2XXX"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH3001"
+       },
+       {
+        "unit": "MATH3006"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH3001 or MATH3006"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "MATH3063": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH3063",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Nonlinear ODEs with Applications",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH2061"
+       },
+       {
+        "unit": "MATH2961"
+       },
+       {
+        "args": [
+         {
+          "unitPattern": "MATH2X21"
+         },
+         {
+          "unitPattern": "MATH2X22"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH2061 or MATH2961 or [MATH2X21 and MATH2X22]"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "cp": 12,
+      "pattern": "MATH2XXX"
+     },
+     "raw": "12 credit points of MATH2XXX units of study"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH3963"
+       },
+       {
+        "unit": "MATH4063"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH3963 or MATH4063"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "MATH3066": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH3066",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Algebra and Logic",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "cp": 6,
+      "pattern": "MATH2XXX"
+     },
+     "raw": "6 credit points of MATH2XXX"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH3062"
+       },
+       {
+        "unit": "MATH3065"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH3062 or MATH3065"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "MATH3076": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH3076",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Mathematical Computing",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "cp": 12,
+        "pattern": "MATH2XXX"
+       },
+       {
+        "args": [
+         {
+          "cp": 6,
+          "pattern": "MATH2XXX"
+         },
+         {
+          "args": [
+           {
+            "cp": 6,
+            "pattern": "STAT2XXX"
+           },
+           {
+            "unitPattern": "DATA2X02"
+           }
+          ],
+          "op": "or"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "12 credit points of MATH2XXX or [6 credit points of MATH2XXX and (6 credit points of STAT2XXX or DATA2X02)]"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH3976"
+       },
+       {
+        "unit": "MATH4076"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH3976 or MATH4076"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "MATH3078": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH3078",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "PDEs and Waves",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unitPattern": "MATH2X61"
+         },
+         {
+          "unitPattern": "MATH2X65"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unitPattern": "MATH2X21"
+         },
+         {
+          "unitPattern": "MATH2X22"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "[MATH2X61 and MATH2X65] or [MATH2X21 and MATH2X22]"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "cp": 6
+       },
+       {
+        "args": [
+         {
+          "unitPattern": "MATH2X21"
+         },
+         {
+          "unitPattern": "MATH2X65"
+         },
+         {
+          "unit": "MATH2067"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "cp": 6
+       },
+       {
+        "args": [
+         {
+          "unitPattern": "MATH2X22"
+         },
+         {
+          "unitPattern": "MATH2X61"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "6 credit points from (MATH2X21 or MATH2X65 or MATH2067) and 6 credit points from (MATH2X22 or MATH2X61)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH3978"
+       },
+       {
+        "unit": "MATH4078"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH3978 or MATH4078"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "MATH3888": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH3888",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Projects in Mathematics",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "MATH2921"
+         },
+         {
+          "unit": "MATH2021"
+         },
+         {
+          "unit": "MATH2065"
+         },
+         {
+          "unit": "MATH2965"
+         },
+         {
+          "unit": "MATH2061"
+         },
+         {
+          "unit": "MATH2961"
+         },
+         {
+          "unit": "MATH2923"
+         },
+         {
+          "unit": "MATH2023"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2922"
+         },
+         {
+          "unit": "MATH2022"
+         },
+         {
+          "unit": "MATH2061"
+         },
+         {
+          "unit": "MATH2961"
+         },
+         {
+          "unit": "MATH2088"
+         },
+         {
+          "unit": "MATH2988"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "(MATH2921 or MATH2021 or MATH2065 or MATH2965 or MATH2061 or MATH2961 or MATH2923 or MATH2023) and (MATH2922 or MATH2022 or MATH2061 or MATH2961 or MATH2088 or MATH2988)"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "MATH3961": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH3961",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Metric Spaces (Advanced)",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Real analysis"
+       },
+       {
+        "text": "vector spaces. For example"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2922"
+         },
+         {
+          "unit": "MATH2961"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2923"
+         },
+         {
+          "unit": "MATH2962"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Real analysis and vector spaces. For example (MATH2922 or MATH2961) and (MATH2923 or MATH2962)"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "text": "An average mark of 65 or above in 12 credit points from the following units"
+       },
+       {
+        "cp": 12
+       },
+       {
+        "args": [
+         {
+          "unitPattern": "MATH2X21"
+         },
+         {
+          "unitPattern": "MATH2X22"
+         },
+         {
+          "unitPattern": "MATH2X23"
+         },
+         {
+          "unitPattern": "MATH2X80"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "An average mark of 65 or above in 12 credit points from the following units (MATH2X21 or MATH2X22 or MATH2X23 or MATH2X80)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "MATH4061"
+     },
+     "raw": "MATH4061"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "MATH3962": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH3962",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Rings, Fields and Galois Theory (Adv)",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH2961"
+       },
+       {
+        "unit": "MATH2922"
+       },
+       {
+        "args": [
+         {
+          "text": "a mark of 65 or greater in"
+         },
+         {
+          "args": [
+           {
+            "unit": "MATH2061"
+           },
+           {
+            "unit": "MATH2022"
+           }
+          ],
+          "op": "or"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH2961 or MATH2922 or a mark of 65 or greater in (MATH2061 or MATH2022)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH3062"
+       },
+       {
+        "unit": "MATH4062"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH3062 or MATH4062"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "MATH3963": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH3963",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Nonlinear ODEs with Applications (Adv)",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "text": "A mark of 65 or greater in 12 credit points of MATH2XXX units of study"
+         },
+         {
+          "cp": 12,
+          "pattern": "MATH2XXX"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "text": "A mark of 65 or greater in"
+         },
+         {
+          "cp": 6,
+          "pattern": "MATH2XXX"
+         },
+         {
+          "cp": 6,
+          "pattern": "STAT2XXX"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "(A mark of 65 or greater in 12 credit points of MATH2XXX units of study) or [A mark of 65 or greater in (6 credit points of MATH2XXX) and (6 credit points of STAT2XXX)]"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH3063"
+       },
+       {
+        "unit": "MATH4063"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH3063 or MATH4063"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "MATH3968": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH3968",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Differential Geometry (Advanced)",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "MATH2921"
+         },
+         {
+          "unit": "MATH2922"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "unit": "MATH2961"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "(MATH2921 and MATH2922) or MATH2961"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "text": "A mark of 65 or greater in 12 credit points of MATH2XXX units of study"
+       },
+       {
+        "cp": 12,
+        "pattern": "MATH2XXX"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "A mark of 65 or greater in 12 credit points of MATH2XXX units of study"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "MATH4068"
+     },
+     "raw": "MATH4068"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "MATH3969": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH3969",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Measure Theory and Fourier Analysis (Adv)",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Real analysis"
+       },
+       {
+        "text": "vector spaces. For example MATH2X21"
+       },
+       {
+        "unitPattern": "MATH2X21"
+       },
+       {
+        "unitPattern": "MATH2X23"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Real analysis and vector spaces. For example MATH2X21 and MATH2X23"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "text": "A mark of 65 or greater in 12 credit points of MATH2XXX units of study"
+       },
+       {
+        "cp": 12,
+        "pattern": "MATH2XXX"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "A mark of 65 or greater in 12 credit points of MATH2XXX units of study"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "MATH4069"
+     },
+     "raw": "MATH4069"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "MATH3974": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH3974",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Fluid Dynamics (Advanced)",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "MATH2961"
+         },
+         {
+          "unit": "MATH2965"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2921"
+         },
+         {
+          "unit": "MATH2922"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "[MATH2961 and MATH2965] or [MATH2921 and MATH2922]"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "text": "An average mark of 65 or more in"
+       },
+       {
+        "cp": 12,
+        "pattern": "MATH2XXX"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "An average mark of 65 or more in (12 credit points of MATH2XXX)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "MATH4074"
+     },
+     "raw": "MATH4074"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "MATH3976": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH3976",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Mathematical Computing (Advanced)",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "args": [
+         {
+          "text": "Strong skills in linear algebra"
+         },
+         {
+          "text": "the theory"
+         },
+         {
+          "text": "methods of ordinary"
+         },
+         {
+          "text": "partial differential equations for example"
+         },
+         {
+          "unit": "MATH2961"
+         },
+         {
+          "unit": "MATH2965"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH2921"
+         },
+         {
+          "unit": "MATH2922"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Strong skills in linear algebra and the theory and methods of ordinary and partial differential equations for example (MATH2961 and MATH2965) or (MATH2921 and MATH2922)"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "text": "A mark of 65 or above in"
+       },
+       {
+        "args": [
+         {
+          "cp": 12,
+          "pattern": "MATH2XXX"
+         },
+         {
+          "ambiguous": true,
+          "args": [
+           {
+            "args": [
+             {
+              "cp": 6,
+              "pattern": "MATH2XXX"
+             },
+             {
+              "cp": 6,
+              "pattern": "STAT2XXX"
+             }
+            ],
+            "op": "and"
+           },
+           {
+            "unitPattern": "DATA2X02"
+           }
+          ],
+          "op": "or"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "A mark of 65 or above in [(12 credit points of MATH2XXX) or (6 credit points of MATH2XXX and 6 credit points of STAT2XXX or DATA2X02)]"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH3076"
+       },
+       {
+        "unit": "MATH4076"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH3076 or MATH4076"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "MATH3977": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH3977",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Lagrangian and Hamiltonian Dynamics (Adv)",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "text": "A mark of 65 or greater in 12 credit points of MATH2XXX units of study"
+       },
+       {
+        "cp": 12,
+        "pattern": "MATH2XXX"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "A mark of 65 or greater in 12 credit points of MATH2XXX units of study"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "MATH4077"
+     },
+     "raw": "MATH4077"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "MATH3978": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH3978",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "PDEs and Waves (Advanced)",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unitPattern": "MATH2X61"
+         },
+         {
+          "unitPattern": "MATH2X65"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "unitPattern": "MATH2X21"
+         },
+         {
+          "unitPattern": "MATH2X22"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "[MATH2X61 and MATH2X65] or [MATH2X21 and MATH2X22]"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "text": "A mark of 65 or greater in 6 credit points from"
+       },
+       {
+        "cp": 6
+       },
+       {
+        "args": [
+         {
+          "unitPattern": "MATH2X21"
+         },
+         {
+          "unitPattern": "MATH2X65"
+         },
+         {
+          "unit": "MATH2067"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "text": "a mark of 65 or greater 6 credit points from"
+       },
+       {
+        "cp": 6
+       },
+       {
+        "args": [
+         {
+          "unitPattern": "MATH2X22"
+         },
+         {
+          "unitPattern": "MATH2X61"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "A mark of 65 or greater in 6 credit points from (MATH2X21 or MATH2X65 or MATH2067) and a mark of 65 or greater 6 credit points from (MATH2X22 or MATH2X61)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH3078"
+       },
+       {
+        "unit": "MATH4078"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH3078 or MATH4078"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "MATH3979": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "MATH3979",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Complex Analysis (Advanced)",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Good knowledge of analysis of functions of one real variable"
+       },
+       {
+        "text": "working knowledge of complex numbers"
+       },
+       {
+        "text": "including their topology"
+       },
+       {
+        "args": [
+         {
+          "text": "for example MATH2X23"
+         },
+         {
+          "unitPattern": "MATH2X23"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "unit": "MATH2962"
+       },
+       {
+        "unit": "MATH3068"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Good knowledge of analysis of functions of one real variable, working knowledge of complex numbers, including their topology, for example MATH2X23 or MATH2962 or MATH3068"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "text": "A mark of 65 or above in 12 credit points of MATH2XXX"
+       },
+       {
+        "cp": 12,
+        "pattern": "MATH2XXX"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "A mark of 65 or above in 12 credit points of MATH2XXX"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH4079"
+       },
+       {
+        "unit": "MATH3964"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH4079 or MATH3964"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  }
+ }
+}

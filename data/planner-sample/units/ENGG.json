@@ -1,0 +1,281 @@
+{
+ "prefix": "ENGG",
+ "units": {
+  "ENGG1810": {
+   "academicUnit": "Engineering",
+   "code": "ENGG1810",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Introduction to Engineering Computing",
+   "offeringPattern": {
+    "S1C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S1CIFE": [
+     2022,
+     2023,
+     2024
+    ],
+    "S2C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ENGG1801"
+       },
+       {
+        "unit": "INFO1110"
+       },
+       {
+        "unit": "INFO1910"
+       },
+       {
+        "unit": "INFO1103"
+       },
+       {
+        "unit": "INFO1903"
+       },
+       {
+        "unit": "INFO1105"
+       },
+       {
+        "unit": "INFO1905"
+       },
+       {
+        "unit": "COSC1003"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ENGG1801 or INFO1110 or INFO1910 or INFO1103 or INFO1903 or INFO1105 or INFO1905 or COSC1003"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "ENGG2112": {
+   "academicUnit": "Engineering",
+   "code": "ENGG2112",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Multi-disciplinary Engineering",
+   "offeringPattern": {
+    "S1C": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "INFO1110"
+         },
+         {
+          "unit": "INFO1910"
+         },
+         {
+          "unit": "ENGG1810"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unit": "MATH1005"
+         },
+         {
+          "unit": "MATH1905"
+         },
+         {
+          "unit": "MATH1062"
+         },
+         {
+          "unit": "MATH1962"
+         },
+         {
+          "unit": "MATH1972"
+         },
+         {
+          "unit": "BUSS1020"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unit": "AERO1560"
+         },
+         {
+          "unit": "BMET1960"
+         },
+         {
+          "unit": "CHNG1108"
+         },
+         {
+          "unit": "CIVL1900"
+         },
+         {
+          "unit": "ELEC1004"
+         },
+         {
+          "unit": "ELEC1005"
+         },
+         {
+          "unit": "ENVE1001"
+         },
+         {
+          "unit": "MECH1560"
+         },
+         {
+          "unitPattern": "MTRX1701"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "(INFO1110 or INFO1910 or ENGG1810) and (MATH1005 or MATH1905 or MATH1062 or MATH1962 or MATH1972 or BUSS1020) and (AERO1560 or BMET1960 or CHNG1108 or CIVL1900 or ELEC1004 or ELEC1005 or ENVE1001 or MECH1560 or MTRX1701)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ENGG1111"
+       },
+       {
+        "unit": "ENGF1112"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ENGG1111 or ENGF1112"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "ENGG3112": {
+   "academicUnit": "Engineering",
+   "code": "ENGG3112",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Interdisciplinary Engineering",
+   "offeringPattern": {
+    "S1C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Minimum of 84 credit points of engineering foundation/project/stream table units"
+       },
+       {
+        "cp": 84
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Minimum of 84 credit points of engineering foundation/project/stream table units"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "ENGG2111"
+     },
+     "raw": "ENGG2111"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  }
+ }
+}

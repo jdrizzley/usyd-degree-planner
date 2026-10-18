@@ -1,0 +1,258 @@
+{
+ "prefix": "PHYS",
+ "units": {
+  "PHYS1001": {
+   "academicUnit": "Physics Academic Operations",
+   "code": "PHYS1001",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Physics 1 (Regular)",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CIAU": [
+     2020
+    ],
+    "S2CIJL": [
+     2021
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "HSC Physics"
+       },
+       {
+        "unit": "PHYS1003"
+       },
+       {
+        "unit": "PHYS1004"
+       },
+       {
+        "args": [
+         {
+          "text": "PHYS1902 or equivalent. Students who have not completed HSC Physics"
+         },
+         {
+          "unit": "PHYS1902"
+         },
+         {
+          "text": "or equivalent"
+         },
+         {
+          "text": "are strongly advised to take the Physics Bridging Course"
+         },
+         {
+          "text": "offered in February"
+         },
+         {
+          "text": "Students are also encouraged to take MATH1X61"
+         },
+         {
+          "unitPattern": "MATH1X61"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "text": "MATH1971 concurrently"
+         },
+         {
+          "unit": "MATH1971"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "HSC Physics or PHYS1003 or PHYS1004 or PHYS1902 or equivalent. Students who have not completed HSC Physics (or equivalent) are strongly advised to take the Physics Bridging Course (offered in February). Students are also encouraged to take MATH1X61 or MATH1971 concurrently."
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "PHYS1002"
+       },
+       {
+        "unit": "PHYS1901"
+       },
+       {
+        "unit": "EDUH1017"
+       },
+       {
+        "unit": "PHYS1903"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "PHYS1002 or PHYS1901 or EDUH1017 or PHYS1903"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "PHYS1003": {
+   "academicUnit": "Physics Academic Operations",
+   "code": "PHYS1003",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Physics 1 (Technological)",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "HSC Physics"
+       },
+       {
+        "unit": "PHYS1001"
+       },
+       {
+        "unit": "PHYS1002"
+       },
+       {
+        "args": [
+         {
+          "text": "PHYS1901 or equivalent. Students who have not completed HSC Physics"
+         },
+         {
+          "unit": "PHYS1901"
+         },
+         {
+          "text": "or equivalent"
+         },
+         {
+          "text": "are strongly advised to take the Physics Bridging Course"
+         },
+         {
+          "text": "offered in February"
+         },
+         {
+          "text": "Students are also encouraged to take MATH1X62"
+         },
+         {
+          "unitPattern": "MATH1X62"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "unit": "MATH1972"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "HSC Physics or PHYS1001 or PHYS1002 or PHYS1901 or equivalent. Students who have not completed HSC Physics (or equivalent) are strongly advised to take the Physics Bridging Course (offered in February). Students are also encouraged to take MATH1X62 or MATH1972"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "PHYS1004"
+       },
+       {
+        "unit": "PHYS1902"
+       },
+       {
+        "unit": "PHYS1904"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "PHYS1004 or PHYS1902 or PHYS1904"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "PHYS2213": {
+   "academicUnit": "Physics Academic Operations",
+   "code": "PHYS2213",
+   "creditPoints": 6,
+   "faculty": "Details",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Physics 2EE",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  }
+ }
+}

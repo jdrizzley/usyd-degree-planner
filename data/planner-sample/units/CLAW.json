@@ -1,0 +1,70 @@
+{
+ "prefix": "CLAW",
+ "units": {
+  "CLAW3201": {
+   "academicUnit": "Accounting, Governance and Regulation",
+   "code": "CLAW3201",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Australian Taxation System",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "CLAW1003"
+       },
+       {
+        "unit": "CLAW2201"
+       },
+       {
+        "unit": "CLAW2214"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "CLAW1003 or CLAW2201 or CLAW2214"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  }
+ }
+}

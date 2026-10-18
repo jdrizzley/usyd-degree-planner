@@ -1,0 +1,869 @@
+{
+ "prefix": "DATA",
+ "units": {
+  "DATA1001": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "DATA1001",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Foundations of Data Science",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "text": "Year 10 mathematics or equivalent"
+     },
+     "raw": "Year 10 mathematics or equivalent"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "DATA1901"
+       },
+       {
+        "unit": "MATH1005"
+       },
+       {
+        "unit": "MATH1905"
+       },
+       {
+        "unit": "MATH1015"
+       },
+       {
+        "unit": "MATH1115"
+       },
+       {
+        "unitPattern": "ENVX1002"
+       },
+       {
+        "unit": "ECMT1010"
+       },
+       {
+        "unit": "BUSS1020"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "DATA1901 or MATH1005 or MATH1905 or MATH1015 or MATH1115 or ENVX1002 or ECMT1010 or BUSS1020"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "DATA1002": {
+   "academicUnit": "Computer Science",
+   "code": "DATA1002",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Informatics: Data and Computation",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO1903"
+       },
+       {
+        "unit": "DATA1902"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO1903 or DATA1902"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "DATA1901": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "DATA1901",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Foundations of Data Science (Adv)",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Year 10 Mathematics or equivalent"
+       },
+       {
+        "text": "An ATAR of 95 or more"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Year 10 Mathematics or equivalent; An ATAR of 95 or more"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "MATH1005"
+       },
+       {
+        "unit": "MATH1905"
+       },
+       {
+        "unitPattern": "ENVX1002"
+       },
+       {
+        "unit": "ECMT1010"
+       },
+       {
+        "unit": "BUSS1020"
+       },
+       {
+        "unit": "DATA1001"
+       },
+       {
+        "unit": "MATH1115"
+       },
+       {
+        "unit": "MATH1015"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "MATH1005 or MATH1905 or ENVX1002 or ECMT1010 or BUSS1020 or DATA1001 or MATH1115 or MATH1015"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "DATA2001": {
+   "academicUnit": "Computer Science",
+   "code": "DATA2001",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Data Science, Big Data and Data Variety",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "DATA1002"
+       },
+       {
+        "unit": "DATA1902"
+       },
+       {
+        "unit": "INFO1110"
+       },
+       {
+        "unit": "INFO1910"
+       },
+       {
+        "unit": "INFO1903"
+       },
+       {
+        "unit": "INFO1103"
+       },
+       {
+        "unit": "ENGG1810"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "DATA1002 or DATA1902 or INFO1110 or INFO1910 or INFO1903 or INFO1103 or ENGG1810"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "DATA2901"
+     },
+     "raw": "DATA2901"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "DATA2002": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "DATA2002",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Data Analytics: Learning from Data",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "text": "Successful completion of a first-year"
+       },
+       {
+        "text": "second-year unit in statistics"
+       },
+       {
+        "args": [
+         {
+          "text": "data science including a substantial coding component. The content from STAT2X11 will help but is not considered essential. Students who are not comfortable using the R software for statistical analysis should familiarise themselves before attempting the unit"
+         },
+         {
+          "unitPattern": "STAT2X11"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "text": "e.g. taking OLET1632: Shark Bites"
+         },
+         {
+          "unit": "OLET1632"
+         },
+         {
+          "text": "Other Data Stories"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Successful completion of a first-year or second-year unit in statistics or data science including a substantial coding component. The content from STAT2X11 will help but is not considered essential. Students who are not comfortable using the R software for statistical analysis should familiarise themselves before attempting the unit, e.g. taking OLET1632: Shark Bites and Other Data Stories"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unitPattern": "DATA1X01"
+       },
+       {
+        "unitPattern": "ENVX1002"
+       },
+       {
+        "unit": "BUSS1020"
+       },
+       {
+        "unit": "ECMT1010"
+       },
+       {
+        "unit": "MATH1062"
+       },
+       {
+        "unit": "MATH1962"
+       },
+       {
+        "unit": "MATH1972"
+       },
+       {
+        "args": [
+         {
+          "unitPattern": "MATH1X05"
+         },
+         {
+          "args": [
+           {
+            "unit": "MATH1001"
+           },
+           {
+            "unit": "MATH1002"
+           },
+           {
+            "unit": "MATH1003"
+           },
+           {
+            "unit": "MATH1004"
+           },
+           {
+            "unit": "MATH1021"
+           },
+           {
+            "unit": "MATH1023"
+           },
+           {
+            "unit": "MATH1115"
+           },
+           {
+            "unitPattern": "MATH19XX"
+           }
+          ],
+          "op": "or"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "DATA1X01 or ENVX1002 or BUSS1020 or ECMT1010 or MATH1062 or MATH1962 or MATH1972 or [MATH1X05 and (MATH1001 or MATH1002 or MATH1003 or MATH1004 or MATH1021 or MATH1023 or MATH1115 or MATH19XX)]"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "STAT2012"
+       },
+       {
+        "unit": "STAT2912"
+       },
+       {
+        "unit": "DATA2902"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "STAT2012 or STAT2912 or DATA2902"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "DATA2901": {
+   "academicUnit": "Computer Science",
+   "code": "DATA2901",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Big Data and Data Diversity (Advanced)",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "text": "75% or above from"
+       },
+       {
+        "args": [
+         {
+          "unit": "DATA1002"
+         },
+         {
+          "unit": "DATA1902"
+         },
+         {
+          "unit": "INFO1110"
+         },
+         {
+          "unit": "INFO1910"
+         },
+         {
+          "unit": "INFO1903"
+         },
+         {
+          "unit": "INFO1103"
+         },
+         {
+          "unit": "ENGG1810"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "75% or above from (DATA1002 or DATA1902 or INFO1110 or INFO1910 or INFO1903 or INFO1103 or ENGG1810)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "DATA2001"
+     },
+     "raw": "DATA2001"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "DATA2902": {
+   "academicUnit": "Mathematics and Statistics Academic Operations",
+   "code": "DATA2902",
+   "creditPoints": 6,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Data Analytics: Learning from Data (Adv)",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "text": "Successful completion of a first-year"
+       },
+       {
+        "text": "second-year unit in statistics"
+       },
+       {
+        "args": [
+         {
+          "text": "data science including a substantial coding component. The content from STAT2X11 will help but is not considered essential. Students who are not comfortable using the R software for statistical analysis should familiarise themselves before attempting the unit"
+         },
+         {
+          "unitPattern": "STAT2X11"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "args": [
+         {
+          "text": "e.g. taking OLET1632: Shark Bites"
+         },
+         {
+          "unit": "OLET1632"
+         },
+         {
+          "text": "Other Data Stories"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Successful completion of a first-year or second-year unit in statistics or data science including a substantial coding component. The content from STAT2X11 will help but is not considered essential. Students who are not comfortable using the R software for statistical analysis should familiarise themselves before attempting the unit, e.g. taking OLET1632: Shark Bites and Other Data Stories"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "text": "A mark of 65 or greater in"
+       },
+       {
+        "args": [
+         {
+          "unitPattern": "DATA1X01"
+         },
+         {
+          "unitPattern": "ENVX1002"
+         },
+         {
+          "unit": "BUSS1020"
+         },
+         {
+          "unit": "ECMT1010"
+         },
+         {
+          "unit": "MATH1062"
+         },
+         {
+          "unit": "MATH1962"
+         },
+         {
+          "unit": "MATH1972"
+         },
+         {
+          "args": [
+           {
+            "unitPattern": "MATH1X05"
+           },
+           {
+            "args": [
+             {
+              "unit": "MATH1001"
+             },
+             {
+              "unit": "MATH1002"
+             },
+             {
+              "unit": "MATH1003"
+             },
+             {
+              "unit": "MATH1004"
+             },
+             {
+              "unit": "MATH1021"
+             },
+             {
+              "unit": "MATH1023"
+             },
+             {
+              "unit": "MATH1115"
+             },
+             {
+              "unitPattern": "MATH19XX"
+             }
+            ],
+            "op": "or"
+           }
+          ],
+          "op": "and"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "A mark of 65 or greater in (DATA1X01 or ENVX1002 or BUSS1020 or ECMT1010 or MATH1062 or MATH1962 or MATH1972 or [MATH1X05 and (MATH1001 or MATH1002 or MATH1003 or MATH1004 or MATH1021 or MATH1023 or MATH1115 or MATH19XX)])"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "STAT2012"
+       },
+       {
+        "unit": "STAT2912"
+       },
+       {
+        "unit": "DATA2002"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "STAT2012 or STAT2912 or DATA2002"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "DATA3404": {
+   "academicUnit": "Computer Science",
+   "code": "DATA3404",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Scalable Data Management",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "args": [
+         {
+          "text": "This unit of study assumes that students have previous knowledge of database structures"
+         },
+         {
+          "text": "of SQL. The prerequisite material is covered in DATA2001"
+         },
+         {
+          "unit": "DATA2001"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "unit": "ISYS2120"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "This unit of study assumes that students have previous knowledge of database structures and of SQL. The prerequisite material is covered in DATA2001 or ISYS2120. Familiarity with a programming language (e.g. Java or C) is also expected"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "DATA2001"
+       },
+       {
+        "unit": "DATA2901"
+       },
+       {
+        "unit": "ISYS2120"
+       },
+       {
+        "unit": "INFO2120"
+       },
+       {
+        "unit": "INFO2820"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "DATA2001 or DATA2901 or ISYS2120 or INFO2120 or INFO2820"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO3504"
+       },
+       {
+        "unit": "INFO3404"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO3504 or INFO3404"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "DATA3406": {
+   "academicUnit": "Computer Science",
+   "code": "DATA3406",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Human-in-the-Loop Data Analytics",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "text": "Basic statistics"
+       },
+       {
+        "args": [
+         {
+          "text": "database management"
+         },
+         {
+          "text": "programming"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Basic statistics, database management, and programming"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "DATA2001"
+         },
+         {
+          "unit": "DATA2901"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unit": "DATA2002"
+         },
+         {
+          "unit": "DATA2902"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "(DATA2001 or DATA2901) and (DATA2002 or DATA2902)"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  }
+ }
+}

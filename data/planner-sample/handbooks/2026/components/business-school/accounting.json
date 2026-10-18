@@ -1,0 +1,161 @@
+{
+ "faculty": "business-school",
+ "handbookYear": 2026,
+ "id": "business-school/accounting",
+ "kinds": {
+  "major": {
+   "name": "Accounting major",
+   "requirements": [
+    {
+     "cp": 12,
+     "id": "i",
+     "label": "1000-level core",
+     "pool": {
+      "sections": [
+       "1000-level-core"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 12,
+     "id": "ii",
+     "label": "2000-level core",
+     "pool": {
+      "sections": [
+       "2000-level-core"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 12,
+     "id": "iii",
+     "label": "3000-level core",
+     "pool": {
+      "sections": [
+       "3000-level-core-major-only"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 12,
+     "id": "iv",
+     "label": "3000-level selective",
+     "pool": {
+      "sections": [
+       "3000-level-selective-for-major"
+      ]
+     },
+     "type": "cp"
+    }
+   ],
+   "totalCp": 48
+  },
+  "minor": {
+   "name": "Accounting minor",
+   "requirements": [
+    {
+     "cp": 12,
+     "id": "i",
+     "label": "1000-level core",
+     "pool": {
+      "sections": [
+       "1000-level-core"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 12,
+     "id": "ii",
+     "label": "2000-level core",
+     "pool": {
+      "sections": [
+       "2000-level-core"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 12,
+     "id": "iii",
+     "label": "3000-level selective",
+     "pool": {
+      "sections": [
+       "3000-level-selective-for-minor"
+      ]
+     },
+     "type": "cp"
+    }
+   ],
+   "totalCp": 36
+  }
+ },
+ "name": "Accounting",
+ "preamble": [
+  "Accounting major",
+  "Accounting minor"
+ ],
+ "scrapedAt": "2026-10-18T12:20:08Z",
+ "sections": [
+  {
+   "id": "1000-level-core",
+   "label": "1000-level Core",
+   "level": 1000,
+   "units": [
+    "BUSS1030",
+    "ACCT1006"
+   ]
+  },
+  {
+   "id": "2000-level-core",
+   "label": "2000-level Core",
+   "level": 2000,
+   "units": [
+    "ACCT2011",
+    "ACCT2019"
+   ]
+  },
+  {
+   "id": "3000-level-core-major-only",
+   "label": "3000-level Core (major only)",
+   "level": 3000,
+   "units": [
+    "ACCT3011",
+    "ACCT3600"
+   ]
+  },
+  {
+   "id": "3000-level-selective-for-major",
+   "label": "3000-level Selective (for major)",
+   "level": 3000,
+   "units": [
+    "ACCT3013",
+    "ACCT3015",
+    "ACCT3016",
+    "ACCT3020",
+    "ACCT3031",
+    "CLAW3201",
+    "INFS3110",
+    "ACCT3400"
+   ]
+  },
+  {
+   "id": "3000-level-selective-for-minor",
+   "label": "3000-level Selective (for minor)",
+   "level": 3000,
+   "units": [
+    "ACCT3011",
+    "ACCT3013",
+    "ACCT3015",
+    "ACCT3016",
+    "ACCT3020",
+    "ACCT3031"
+   ]
+  }
+ ],
+ "slug": "accounting",
+ "sourceUrl": "https://www.sydney.edu.au/handbooks/business-school/commerce-subject-areas/accounting/unit-of-study-table.html"
+}

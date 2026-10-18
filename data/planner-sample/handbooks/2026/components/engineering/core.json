@@ -1,0 +1,85 @@
+{
+ "faculty": "engineering",
+ "handbookYear": 2026,
+ "id": "engineering/core",
+ "kinds": {},
+ "name": "Bachelor of Engineering Honours core",
+ "preamble": [
+  "Bachelor of Engineering Honours Core"
+ ],
+ "scrapedAt": "2026-10-18T12:20:08Z",
+ "sections": [
+  {
+   "id": "computing-units",
+   "label": "Computing Units",
+   "level": null,
+   "units": [
+    "INFO1110",
+    "INFO1910",
+    "ENGG1810"
+   ]
+  },
+  {
+   "id": "mathematics-units",
+   "label": "Mathematics Units",
+   "level": null,
+   "units": [
+    "MATH1061",
+    "MATH1062"
+   ]
+  },
+  {
+   "id": "professional-engagement-program",
+   "label": "Professional Engagement Program",
+   "level": null,
+   "units": [
+    "ENGP1001",
+    "ENGP1002",
+    "ENGP1003",
+    "ENGP2001",
+    "ENGP2002",
+    "ENGP2003",
+    "ENGP3001",
+    "ENGP3002"
+   ]
+  },
+  {
+   "id": "project-1",
+   "label": "Project 1",
+   "level": null,
+   "units": [
+    "AERO1560",
+    "BMET1960",
+    "CHNG1108",
+    "CIVL1900",
+    "ELEC1004",
+    "ELEC1005",
+    "ENVE1001",
+    "MECH1560",
+    "MTRX1701"
+   ]
+  },
+  {
+   "id": "project-2-3",
+   "label": "Project 2 & 3",
+   "level": null,
+   "units": [
+    "ENGG2112",
+    "ENGG3112"
+   ]
+  },
+  {
+   "id": "thesis-units",
+   "label": "Thesis Units",
+   "level": null,
+   "units": [
+    "AMME4111",
+    "AMME4112",
+    "ELEC4712",
+    "ELEC4713"
+   ]
+  }
+ ],
+ "slug": "core",
+ "sourceUrl": "https://www.sydney.edu.au/handbooks/engineering/engineering-honours/core-unit-of-study-table.html"
+}

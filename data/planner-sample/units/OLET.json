@@ -1,0 +1,414 @@
+{
+ "prefix": "OLET",
+ "units": {
+  "OLET1101": {
+   "academicUnit": "Education",
+   "code": "OLET1101",
+   "creditPoints": 2,
+   "faculty": "Arts and Social Sciences",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Aboriginal Sydney",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021
+    ],
+    "S2CIAU": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "OLET1115": {
+   "academicUnit": "International Comparative Literature and Translation Studies",
+   "code": "OLET1115",
+   "creditPoints": 2,
+   "faculty": "Arts and Social Sciences",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "(Im)Politeness in Global Society",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S1CIJA": [
+     2022
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "OLET1137": {
+   "academicUnit": "Education",
+   "code": "OLET1137",
+   "creditPoints": 2,
+   "faculty": "Arts and Social Sciences",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Australian Perspectives: Rugby League",
+   "offeringPattern": {
+    "S1C": [
+     2022,
+     2023,
+     2024
+    ],
+    "S1CIAP": [
+     2020,
+     2021
+    ],
+    "S1CRA": [
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "OLET1205": {
+   "academicUnit": "Accounting, Governance and Regulation",
+   "code": "OLET1205",
+   "creditPoints": 2,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Business Ethics: Interactive Cases",
+   "offeringPattern": {
+    "S2CIAU": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CIJL": [
+     2020,
+     2021
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "OLET1208": {
+   "academicUnit": "Finance",
+   "code": "OLET1208",
+   "creditPoints": 2,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2025,
+   "level": 1000,
+   "name": "Cryptocurrency Markets and Investments",
+   "offeringPattern": {
+    "S2CIDE": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025
+    ],
+    "S2CIJL": [
+     2020
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "OLET1231": {
+   "academicUnit": "Education",
+   "code": "OLET1231",
+   "creditPoints": 2,
+   "faculty": "Arts and Social Sciences",
+   "landingPage": true,
+   "lastOffered": 2025,
+   "level": 1000,
+   "name": "Community Engagement for Change",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "OLET1605": {
+   "academicUnit": "Chemistry Academic Operations",
+   "code": "OLET1605",
+   "creditPoints": 2,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Communication in STEM",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "OLET1634": {
+   "academicUnit": "Psychology Academic Operations",
+   "code": "OLET1634",
+   "creditPoints": 2,
+   "faculty": "Science",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Anxiety and its Disorders",
+   "offeringPattern": {
+    "S2CIOC": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "OLET1901": {
+   "academicUnit": "Analysis, History and Cultural Studies",
+   "code": "OLET1901",
+   "creditPoints": 2,
+   "faculty": "Sydney Conservatorium of Music",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Creating Powerful Presentations",
+   "offeringPattern": {
+    "S1CIMY": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CIAU": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CINO": [
+     2020
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  }
+ }
+}

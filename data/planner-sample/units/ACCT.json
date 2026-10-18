@@ -1,0 +1,872 @@
+{
+ "prefix": "ACCT",
+ "units": {
+  "ACCT1006": {
+   "academicUnit": "Accounting, Governance and Regulation",
+   "code": "ACCT1006",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Accounting and Financial Management",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "text": "HSC Mathematics"
+     },
+     "raw": "HSC Mathematics"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "BUSS1030"
+       },
+       {
+        "unit": "ACCT1005"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "BUSS1030 or ACCT1005"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ACCT1001"
+       },
+       {
+        "unit": "ACCT1002"
+       },
+       {
+        "unit": "ACCT1003"
+       },
+       {
+        "unit": "ACCT1004"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ACCT1001 or ACCT1002 or ACCT1003 or ACCT1004"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "ACCT2011": {
+   "academicUnit": "Accounting, Governance and Regulation",
+   "code": "ACCT2011",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Reporting on Business Performance",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "ACCT1001"
+         },
+         {
+          "unit": "ACCT1005"
+         },
+         {
+          "unit": "BUSS1030"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unit": "ACCT1002"
+         },
+         {
+          "unit": "ACCT1006"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "(ACCT1001 or ACCT1005 or BUSS1030) and (ACCT1002 or ACCT1006)"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "ACCT2019": {
+   "academicUnit": "Accounting, Governance and Regulation",
+   "code": "ACCT2019",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Accounting Analysis for Management Decisions",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "ACCT1001"
+         },
+         {
+          "unit": "ACCT1005"
+         },
+         {
+          "unit": "BUSS1030"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unit": "ACCT1002"
+         },
+         {
+          "unit": "ACCT1006"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "(ACCT1001 or ACCT1005 or BUSS1030) and (ACCT1002 or ACCT1006)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "ACCT2012"
+     },
+     "raw": "ACCT2012"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "ACCT3011": {
+   "academicUnit": "Accounting, Governance and Regulation",
+   "code": "ACCT3011",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Reporting on Business Groups",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "ACCT2011"
+     },
+     "raw": "ACCT2011"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "ACCT3013": {
+   "academicUnit": "Accounting, Governance and Regulation",
+   "code": "ACCT3013",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Financial Statement Analysis",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "ACCT2011"
+     },
+     "raw": "ACCT2011"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "ACCT3015": {
+   "academicUnit": "Accounting, Governance and Regulation",
+   "code": "ACCT3015",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Accounting Data Analytics",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFS3110"
+       },
+       {
+        "unit": "INFS2001"
+       },
+       {
+        "text": "is desirable"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Completion of INFS3110 (or INFS2001) is desirable"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ACCT2011"
+       },
+       {
+        "args": [
+         {
+          "unit": "ACCT2012"
+         },
+         {
+          "unit": "ACCT2019"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "ACCT2011 and (ACCT2012 or ACCT2019)"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "ACCT3016": {
+   "academicUnit": "Accounting, Governance and Regulation",
+   "code": "ACCT3016",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Sustainability Management and Reporting",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ACCT2011"
+       },
+       {
+        "args": [
+         {
+          "unit": "ACCT2012"
+         },
+         {
+          "unit": "ACCT2019"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "ACCT2011 and (ACCT2012 or ACCT2019)"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "ACCT3020": {
+   "academicUnit": "Accounting, Governance and Regulation",
+   "code": "ACCT3020",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2021,
+   "level": 3000,
+   "name": "Advanced Issues in Management Accounting",
+   "offeringPattern": {
+    "S1C": [
+     2021
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "text": "Students are assumed to have competency with the basic tools"
+       },
+       {
+        "args": [
+         {
+          "text": "techniques"
+         },
+         {
+          "text": "methods of cost"
+         },
+         {
+          "text": "management accounting"
+         },
+         {
+          "text": "an ability to analyse non-directed"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "text": "comprehensive business/accounting problems"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Students are assumed to have competency with the basic tools, techniques and methods of cost and management accounting and an ability to analyse non-directed, comprehensive business/accounting problems."
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ACCT2011"
+       },
+       {
+        "args": [
+         {
+          "unit": "ACCT2012"
+         },
+         {
+          "unit": "ACCT2019"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "ACCT2011 and (ACCT2012 or ACCT2019)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "ACCT3012"
+     },
+     "raw": "ACCT3012"
+    }
+   },
+   "sessions": []
+  },
+  "ACCT3031": {
+   "academicUnit": "Accounting, Governance and Regulation",
+   "code": "ACCT3031",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "International Corporate Governance",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Students are expected to have an understanding of the underlying principles"
+       },
+       {
+        "text": "rules of accounting"
+       },
+       {
+        "text": "be able to apply them in the context of business scenarios"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Students are expected to have an understanding of the underlying principles and rules of accounting and be able to apply them in the context of business scenarios."
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "BUSS1030"
+     },
+     "raw": "BUSS1030"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "ACCT3400": {
+   "academicUnit": "Accounting, Governance and Regulation",
+   "code": "ACCT3400",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Industry and Community Project",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S1CIFE": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CIAU": [
+     2023
+    ],
+    "S2CIJL": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CIOC": [
+     2023,
+     2024,
+     2025
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "BUSS1030"
+       },
+       {
+        "unit": "ACCT1006"
+       },
+       {
+        "args": [
+         {
+          "unit": "ACCT2011"
+         },
+         {
+          "unit": "ACCT2019"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "BUSS1030 and ACCT1006 and (ACCT2011 or ACCT2019)"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "cp": 72
+     },
+     "raw": "72 credit points"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "BUSS3110"
+       },
+       {
+        "unit": "BANK3400"
+       },
+       {
+        "unit": "CLAW3400"
+       },
+       {
+        "unit": "FINC3400"
+       },
+       {
+        "unit": "IBUS3400"
+       },
+       {
+        "unit": "INFS3400"
+       },
+       {
+        "unit": "MKTG3400"
+       },
+       {
+        "unit": "QBUS3400"
+       },
+       {
+        "unit": "SIEN3400"
+       },
+       {
+        "unit": "WORK3400"
+       },
+       {
+        "unit": "WORK3401"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "BUSS3110 or BANK3400 or CLAW3400 or FINC3400 or IBUS3400 or INFS3400 or MKTG3400 or QBUS3400 or SIEN3400 or WORK3400 or WORK3401"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "ACCT3600": {
+   "academicUnit": "Accounting, Governance and Regulation",
+   "code": "ACCT3600",
+   "creditPoints": 6,
+   "faculty": "Business (Business School)",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Accounting and Auditing in Practice",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "args": [
+         {
+          "text": "Students are expected to have an understanding of the key principles"
+         },
+         {
+          "text": "rules of specified auditing standards"
+         },
+         {
+          "text": "be able to apply them in the context of business scenarios. Students are also expected to comprehend the form"
+         },
+         {
+          "text": "content of published financial statements"
+         },
+         {
+          "text": "be able to explain their function. All other requirements for the major"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "text": "program associated with this capstone must be completed prior to"
+       },
+       {
+        "args": [
+         {
+          "text": "concurrently with"
+         },
+         {
+          "text": "if enrolment rules permit"
+         },
+         {
+          "text": "this unit of study. Capstones must be completed at the University of Sydney Business School only"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Students are expected to have an understanding of the key principles and rules of specified auditing standards, and be able to apply them in the context of business scenarios. Students are also expected to comprehend the form and content of published financial statements and be able to explain their function. All other requirements for the major or program associated with this capstone must be completed prior to or concurrently with (if enrolment rules permit) this unit of study. Capstones must be completed at the University of Sydney Business School only."
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "cp": 112
+       },
+       {
+        "args": [
+         {
+          "unit": "ACCT2012"
+         },
+         {
+          "unit": "ACCT2019"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "unit": "ACCT3011"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Completion of at least 112 credit points including (ACCT2012 or ACCT2019) and ACCT3011"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "ACCT3014"
+     },
+     "raw": "ACCT3014"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  }
+ }
+}

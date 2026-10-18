@@ -1,0 +1,188 @@
+{
+ "faculty": "science",
+ "handbookYear": 2026,
+ "id": "science/computer-science",
+ "kinds": {
+  "major": {
+   "name": "Computer Science major",
+   "requirements": [
+    {
+     "cp": 12,
+     "id": "i",
+     "label": "1000-level core",
+     "pool": {
+      "sections": [
+       "1000-level-core"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 18,
+     "id": "ii",
+     "label": "2000-level core",
+     "pool": {
+      "sections": [
+       "2000-level-core"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 6,
+     "id": "iii",
+     "label": "3000-level core",
+     "pool": {
+      "sections": [
+       "3000-level-core"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 6,
+     "id": "iv",
+     "label": "Interdisciplinary project",
+     "pool": {
+      "sections": [
+       "3000-level-interdisciplinary-projects"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 6,
+     "id": "v",
+     "label": "Major selective",
+     "pool": {
+      "sections": [
+       "3000-level-major-selective"
+      ]
+     },
+     "type": "cp"
+    }
+   ],
+   "totalCp": 48
+  },
+  "minor": {
+   "name": "Computer Science minor",
+   "requirements": [
+    {
+     "cp": 12,
+     "id": "i",
+     "label": "1000-level core",
+     "pool": {
+      "sections": [
+       "1000-level-core"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 18,
+     "id": "ii",
+     "label": "2000-level core",
+     "pool": {
+      "sections": [
+       "2000-level-core"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 6,
+     "id": "iii",
+     "label": "Minor selective",
+     "pool": {
+      "sections": [
+       "3000-level-minor-selective"
+      ]
+     },
+     "type": "cp"
+    }
+   ],
+   "totalCp": 36
+  }
+ },
+ "name": "Computer Science",
+ "preamble": [
+  "Computer Science major",
+  "Computer Science minor"
+ ],
+ "scrapedAt": "2026-10-18T12:20:08Z",
+ "sections": [
+  {
+   "id": "1000-level-core",
+   "label": "1000-level Core",
+   "level": 1000,
+   "units": [
+    "INFO1110",
+    "INFO1113",
+    "INFO1910"
+   ]
+  },
+  {
+   "id": "2000-level-core",
+   "label": "2000-level Core",
+   "level": 2000,
+   "units": [
+    "COMP2017",
+    "COMP2022",
+    "COMP2123",
+    "COMP2823",
+    "COMP2922"
+   ]
+  },
+  {
+   "id": "3000-level-core",
+   "label": "3000-level Core",
+   "level": 3000,
+   "units": [
+    "COMP3027",
+    "COMP3927"
+   ]
+  },
+  {
+   "id": "3000-level-interdisciplinary-projects",
+   "label": "3000-level Interdisciplinary projects",
+   "level": 3000,
+   "units": [
+    "COMP3888",
+    "COMP3988",
+    "SCPU3001"
+   ]
+  },
+  {
+   "id": "3000-level-major-selective",
+   "label": "3000-level Major selective",
+   "level": 3000,
+   "units": [
+    "COMP3109",
+    "COMP3221",
+    "COMP3308",
+    "COMP3419",
+    "COMP3520",
+    "COMP3530",
+    "COMP3608"
+   ]
+  },
+  {
+   "id": "3000-level-minor-selective",
+   "label": "3000-level Minor selective",
+   "level": 3000,
+   "units": [
+    "COMP3027",
+    "COMP3109",
+    "COMP3221",
+    "COMP3308",
+    "COMP3419",
+    "COMP3520",
+    "COMP3530",
+    "COMP3608",
+    "COMP3927"
+   ]
+  }
+ ],
+ "slug": "computer-science",
+ "sourceUrl": "https://www.sydney.edu.au/handbooks/science/table-a/subject-areas/computer-science/unit-of-study-table.html"
+}

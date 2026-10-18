@@ -1,0 +1,594 @@
+{
+ "prefix": "ENGP",
+ "units": {
+  "ENGP1001": {
+   "academicUnit": "Engineering",
+   "code": "ENGP1001",
+   "creditPoints": 0,
+   "faculty": "Details",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Professional Engagement Program 1A",
+   "offeringPattern": {
+    "S1C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S1CIMR": [
+     2021,
+     2022,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "ENGP1002": {
+   "academicUnit": "Engineering",
+   "code": "ENGP1002",
+   "creditPoints": 0,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Professional Engagement Program 1B",
+   "offeringPattern": {
+    "S1C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S1CIMR": [
+     2021,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "ENGP1001"
+     },
+     "raw": "ENGP1001"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ENGG4000"
+       },
+       {
+        "unit": "ENGG5217"
+       },
+       {
+        "unit": "ENGP1000"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ENGG4000 or ENGG5217 or ENGP1000"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "ENGP1003": {
+   "academicUnit": "Engineering",
+   "code": "ENGP1003",
+   "creditPoints": 0,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Professional Engagement Program 1C",
+   "offeringPattern": {
+    "S1C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S1CIMR": [
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ENGP1001"
+       },
+       {
+        "unit": "ENGP1002"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "ENGP1001 and ENGP1002"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ENGG4000"
+       },
+       {
+        "unit": "ENGG5217"
+       },
+       {
+        "unit": "ENGP1000"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ENGG4000 or ENGG5217 or ENGP1000"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "ENGP2001": {
+   "academicUnit": "Engineering",
+   "code": "ENGP2001",
+   "creditPoints": 0,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Professional Engagement Program 2A",
+   "offeringPattern": {
+    "S1C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S1CIMR": [
+     2021,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ENGP1000"
+       },
+       {
+        "unit": "ENGP1003"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ENGP1000 or ENGP1003"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ENGG4000"
+       },
+       {
+        "unit": "ENGG5217"
+       },
+       {
+        "unit": "ENGP2000"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ENGG4000 or ENGG5217 or ENGP2000"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "ENGP2002": {
+   "academicUnit": "",
+   "code": "ENGP2002",
+   "creditPoints": 0,
+   "faculty": "",
+   "landingPage": false,
+   "lastOffered": null,
+   "level": 2000,
+   "name": "Professional Engagement Program 2B",
+   "offeringPattern": null,
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "ENGP2001"
+     },
+     "raw": "ENGP2001"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ENGG4000"
+       },
+       {
+        "unit": "ENGG5217"
+       },
+       {
+        "unit": "ENGP2000"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ENGG4000 or ENGG5217 or ENGP2000"
+    }
+   },
+   "sessions": null
+  },
+  "ENGP2003": {
+   "academicUnit": "Engineering",
+   "code": "ENGP2003",
+   "creditPoints": 0,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Professional Engagement Program 2C",
+   "offeringPattern": {
+    "S1C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S1CIMR": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ENGP2001"
+       },
+       {
+        "unit": "ENGP2002"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "ENGP2001 and ENGP2002"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ENGG4000"
+       },
+       {
+        "unit": "ENGG5217"
+       },
+       {
+        "unit": "ENGP2000"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ENGG4000 or ENGG5217 or ENGP2000"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "ENGP3001": {
+   "academicUnit": "Engineering",
+   "code": "ENGP3001",
+   "creditPoints": 0,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Professional Engagement Program 3A",
+   "offeringPattern": {
+    "S1C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S1CIMR": [
+     2021,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CIJL": [
+     2025
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "text": "Passed ENGP2000"
+         },
+         {
+          "unit": "ENGP2000"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "unit": "ENGP2003"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Passed ENGP2000 or ENGP2003"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ENGG4000"
+       },
+       {
+        "unit": "ENGG5217"
+       },
+       {
+        "unit": "ENGP3000"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ENGG4000 or ENGG5217 or ENGP3000"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "ENGP3002": {
+   "academicUnit": "Engineering",
+   "code": "ENGP3002",
+   "creditPoints": 0,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Professional Engagement Program 3B",
+   "offeringPattern": {
+    "S1C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S1CIMR": [
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2CIJL": [
+     2025
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Must have passed all ENGP1XXX"
+       },
+       {
+        "unitPattern": "ENGP1XXX"
+       },
+       {
+        "unitPattern": "ENGP2XXX"
+       },
+       {
+        "text": "taken but not fail ENGP3001"
+       },
+       {
+        "unit": "ENGP3001"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Must have passed all ENGP1XXX and ENGP2XXX and taken but not fail ENGP3001"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ENGG4000"
+       },
+       {
+        "unit": "ENGG5217"
+       },
+       {
+        "unit": "ENGP3000"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ENGG4000 or ENGG5217 or ENGP3000"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  }
+ }
+}

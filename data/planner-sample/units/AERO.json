@@ -1,0 +1,81 @@
+{
+ "prefix": "AERO",
+ "units": {
+  "AERO1560": {
+   "academicUnit": "Aerospace, Mechanical and Mechatronic",
+   "code": "AERO1560",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 1000,
+   "name": "Introduction to Aerospace Engineering",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "ENGG1800"
+       },
+       {
+        "unit": "MECH1560"
+       },
+       {
+        "unitPattern": "MTRX1701"
+       },
+       {
+        "unit": "CIVL1900"
+       },
+       {
+        "unit": "CHNG1108"
+       },
+       {
+        "unit": "BMET1960"
+       },
+       {
+        "unit": "ENGG1960"
+       },
+       {
+        "unit": "ELEC1004"
+       },
+       {
+        "unit": "ELEC1005"
+       },
+       {
+        "unit": "ENVE1001"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "ENGG1800 or MECH1560 or MTRX1701 or CIVL1900 or CHNG1108 or BMET1960 or ENGG1960 or ELEC1004 or ELEC1005 or ENVE1001"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  }
+ }
+}

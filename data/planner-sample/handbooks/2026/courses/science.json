@@ -1,0 +1,141 @@
+{
+ "abbr": "BSc",
+ "choices": [
+  {
+   "id": "m",
+   "label": "Major",
+   "options": [
+    {
+     "component": "science/computer-science",
+     "id": "computer-science-major",
+     "kind": "major",
+     "name": "Computer Science"
+    },
+    {
+     "component": "science/mathematics",
+     "id": "mathematics-major",
+     "kind": "major",
+     "name": "Mathematics"
+    }
+   ],
+   "required": true
+  },
+  {
+   "id": "s",
+   "label": "Second major or minor",
+   "options": [
+    {
+     "component": "science/computer-science",
+     "id": "computer-science-minor",
+     "kind": "minor",
+     "name": "Computer Science"
+    },
+    {
+     "component": "science/computer-science",
+     "id": "computer-science-major",
+     "kind": "major",
+     "name": "Computer Science"
+    },
+    {
+     "component": "science/mathematics",
+     "id": "mathematics-minor",
+     "kind": "minor",
+     "name": "Mathematics"
+    },
+    {
+     "component": "science/mathematics",
+     "id": "mathematics-major",
+     "kind": "major",
+     "name": "Mathematics"
+    }
+   ],
+   "required": true
+  }
+ ],
+ "confidence": "high",
+ "faculty": "science",
+ "handbookYear": 2026,
+ "name": "Bachelor of Science",
+ "requirements": {
+  "children": [
+   {
+    "children": [
+     {
+      "cp": 12,
+      "id": "core-i",
+      "label": "Degree core units",
+      "pool": {
+       "pools": [
+        "science-degree-core"
+       ]
+      },
+      "type": "cp"
+     },
+     {
+      "cp": 12,
+      "id": "core-ii",
+      "label": "1000-level Table A units",
+      "pool": {
+       "exclude": {
+        "pools": [
+         "science-degree-core"
+        ]
+       },
+       "level": 1000,
+       "pools": [
+        "science-table-a"
+       ]
+      },
+      "type": "cp"
+     }
+    ],
+    "id": "core",
+    "label": "Degree core",
+    "share": true,
+    "type": "all"
+   },
+   {
+    "choice": "m",
+    "id": "maj",
+    "label": "Major",
+    "type": "choice"
+   },
+   {
+    "choice": "s",
+    "id": "sec",
+    "label": "Second major or minor",
+    "type": "choice"
+   },
+   {
+    "cp": 6,
+    "id": "ole",
+    "label": "Open Learning Environment",
+    "pool": {
+     "pools": [
+      "table-o"
+     ]
+    },
+    "type": "cp"
+   },
+   {
+    "cp": 0,
+    "fill": true,
+    "id": "elec",
+    "label": "Electives",
+    "pool": {
+     "any": true
+    },
+    "type": "cp"
+   }
+  ],
+  "cp": 144,
+  "id": "root",
+  "label": "Bachelor of Science",
+  "type": "all"
+ },
+ "sample": true,
+ "semesters": 6,
+ "slug": "science",
+ "sourceUrl": "https://www.sydney.edu.au/handbooks/science/coursework/science/course-resolutions.html",
+ "totalCp": 144
+}

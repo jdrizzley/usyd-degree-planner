@@ -1,0 +1,272 @@
+{
+ "prefix": "SOFT",
+ "units": {
+  "SOFT2201": {
+   "academicUnit": "Computer Science",
+   "code": "SOFT2201",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Software Construction and Design 1",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO1113"
+       },
+       {
+        "unit": "INFO1103"
+       },
+       {
+        "unit": "INFO1105"
+       },
+       {
+        "unit": "INFO1905"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO1113 or INFO1103 or INFO1105 or INFO1905"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO3220"
+       },
+       {
+        "unit": "COMP9201"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO3220 or COMP9201"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "SOFT2412": {
+   "academicUnit": "Computer Science",
+   "code": "SOFT2412",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Agile Software Development Practices",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO1113"
+       },
+       {
+        "unit": "INFO1103"
+       },
+       {
+        "unit": "INFO1105"
+       },
+       {
+        "unit": "INFO1905"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO1113 or INFO1103 or INFO1105 or INFO1905"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "COMP9412"
+     },
+     "raw": "COMP9412"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "SOFT3202": {
+   "academicUnit": "Computer Science",
+   "code": "SOFT3202",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Software Construction and Design 2",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "unit": "SOFT2201"
+     },
+     "raw": "SOFT2201"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "INFO3220"
+     },
+     "raw": "INFO3220"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "SOFT3888": {
+   "academicUnit": "Computer Science",
+   "code": "SOFT3888",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Software Development Project",
+   "offeringPattern": {
+    "S1C": [
+     2021
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "unit": "SOFT3202"
+     },
+     "raw": "SOFT3202"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "INFO1110"
+         },
+         {
+          "unit": "INFO1910"
+         },
+         {
+          "unit": "ENGG1810"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "unit": "INFO1113"
+       },
+       {
+        "args": [
+         {
+          "args": [
+           {
+            "text": "18 credit points 2000-level or above units from SOFT"
+           },
+           {
+            "cp": 18,
+            "level": 2000
+           }
+          ],
+          "op": "and"
+         },
+         {
+          "text": "COMP"
+         },
+         {
+          "text": "INFO"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "(INFO1110 or INFO1910 or ENGG1810) and INFO1113 and [18 credit points 2000-level or above units from SOFT or COMP or INFO]"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "SOFT3413"
+     },
+     "raw": "SOFT3413"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  }
+ }
+}

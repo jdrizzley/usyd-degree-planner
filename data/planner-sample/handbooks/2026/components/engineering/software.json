@@ -1,0 +1,139 @@
+{
+ "faculty": "engineering",
+ "handbookYear": 2026,
+ "id": "engineering/software",
+ "kinds": {
+  "stream": {
+   "name": "Software stream",
+   "requirements": [
+    {
+     "cp": 90,
+     "id": "a",
+     "label": "Stream core",
+     "pool": {
+      "sections": [
+       "stream-core-units"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 0,
+     "id": "b",
+     "label": "1000/2000-level stream electives",
+     "maxCp": 18,
+     "pool": {
+      "sections": [
+       "1000-2000-level-stream-elective-units"
+      ]
+     },
+     "type": "cp"
+    },
+    {
+     "cp": 12,
+     "id": "c",
+     "label": "3000+ level stream electives",
+     "maxCp": 30,
+     "pool": {
+      "sections": [
+       "3000-level-stream-elective-units"
+      ]
+     },
+     "type": "cp"
+    }
+   ],
+   "totalCp": 120
+  }
+ },
+ "name": "Software",
+ "preamble": [
+  "Software Engineering stream"
+ ],
+ "scrapedAt": "2026-10-18T12:20:08Z",
+ "sections": [
+  {
+   "id": "stream-core-units",
+   "label": "Stream Core units",
+   "level": null,
+   "units": [
+    "INFO1113",
+    "ELEC1601",
+    "COMP2017",
+    "COMP2123",
+    "COMP2823",
+    "MATH2069",
+    "INFO3616",
+    "ISYS2110",
+    "ISYS2120",
+    "SOFT2201",
+    "SOFT2412",
+    "SOFT3202",
+    "SOFT3888",
+    "ELEC3609",
+    "ELEC5618",
+    "ELEC5619"
+   ]
+  },
+  {
+   "id": "1000-2000-level-stream-elective-units",
+   "label": "1000/2000 Level Stream Elective units",
+   "level": null,
+   "units": [
+    "COMP2022",
+    "COMP2922",
+    "DATA1002",
+    "DATA2001",
+    "DATA2901",
+    "DATA2002",
+    "DATA2902",
+    "ISYS2160",
+    "ELEC2100",
+    "ELEC2103",
+    "ELEC2104",
+    "ELEC2302",
+    "ELEC2602",
+    "BUSS1030",
+    "MATH2061",
+    "MKTG1001",
+    "PHYS1001",
+    "PHYS1003",
+    "PHYS2213",
+    "STAT2011",
+    "STAT2911"
+   ]
+  },
+  {
+   "id": "3000-level-stream-elective-units",
+   "label": "3000+ Level Stream Elective Units",
+   "level": null,
+   "units": [
+    "COMP3027",
+    "COMP3221",
+    "COMP3308",
+    "COMP3419",
+    "COMP3520",
+    "COMP3608",
+    "COMP3927",
+    "DATA3404",
+    "DATA3406",
+    "INFO4994",
+    "ELEC3104",
+    "ELEC3203",
+    "ELEC3204",
+    "ELEC3206",
+    "ELEC3304",
+    "ELEC3305",
+    "ELEC3404",
+    "ELEC3405",
+    "ELEC3505",
+    "ELEC3506",
+    "ELEC3607",
+    "ELEC3608",
+    "ELEC3610",
+    "ELEC3612"
+   ]
+  }
+ ],
+ "slug": "software",
+ "sourceUrl": "https://www.sydney.edu.au/handbooks/engineering/engineering-honours/streams/software/unit-of-study-table.html"
+}

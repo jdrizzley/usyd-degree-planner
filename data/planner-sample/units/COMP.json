@@ -1,0 +1,1401 @@
+{
+ "prefix": "COMP",
+ "units": {
+  "COMP2017": {
+   "academicUnit": "Computer Science",
+   "code": "COMP2017",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Systems Programming",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2020
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Discrete mathematics"
+       },
+       {
+        "text": "probability"
+       },
+       {
+        "text": "e.g. MATH1064 or equivalent"
+       },
+       {
+        "unit": "MATH1064"
+       },
+       {
+        "text": "linear algebra"
+       },
+       {
+        "text": "e.g. MATH1061 or equivalent"
+       },
+       {
+        "unit": "MATH1061"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Discrete mathematics and probability (e.g. MATH1064 or equivalent); linear algebra (e.g. MATH1061 or equivalent)"
+    },
+    "corequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "COMP2123"
+       },
+       {
+        "unit": "COMP2823"
+       },
+       {
+        "unit": "INFO1105"
+       },
+       {
+        "unit": "INFO1905"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "COMP2123 or COMP2823 or INFO1105 or INFO1905"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO1113"
+       },
+       {
+        "unit": "INFO1105"
+       },
+       {
+        "unit": "INFO1905"
+       },
+       {
+        "unit": "INFO1103"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO1113 or INFO1105 or INFO1905 or INFO1103"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "COMP2129"
+       },
+       {
+        "unit": "COMP9017"
+       },
+       {
+        "unit": "COMP9129"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "COMP2129 or COMP9017 or COMP9129"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "COMP2022": {
+   "academicUnit": "Computer Science",
+   "code": "COMP2022",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Models of Computation",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Discrete mathematics"
+       },
+       {
+        "text": "e.g. MATH1064 or equivalent"
+       },
+       {
+        "unit": "MATH1064"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Discrete mathematics (e.g. MATH1064 or equivalent)"
+    },
+    "corequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "COMP2123"
+       },
+       {
+        "unit": "COMP2823"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "COMP2123 or COMP2823"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO1110"
+       },
+       {
+        "unit": "INFO1910"
+       },
+       {
+        "unit": "INFO1113"
+       },
+       {
+        "unit": "ENGG1810"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO1110 or INFO1910 or INFO1113 or ENGG1810"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "COMP2922"
+     },
+     "raw": "COMP2922"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "COMP2123": {
+   "academicUnit": "Computer Science",
+   "code": "COMP2123",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Data Structures and Algorithms",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "S2C": [
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Discrete mathematics"
+       },
+       {
+        "text": "probability"
+       },
+       {
+        "text": "e.g. MATH1064 or equivalent"
+       },
+       {
+        "unit": "MATH1064"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Discrete mathematics and probability (e.g. MATH1064 or equivalent)"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO1110"
+       },
+       {
+        "unit": "INFO1910"
+       },
+       {
+        "unit": "INFO1113"
+       },
+       {
+        "unit": "DATA1002"
+       },
+       {
+        "unit": "DATA1902"
+       },
+       {
+        "unit": "ENGG1810"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO1110 or INFO1910 or INFO1113 or DATA1002 or DATA1902 or ENGG1810"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO1105"
+       },
+       {
+        "unit": "INFO1905"
+       },
+       {
+        "unit": "COMP2823"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO1105 or INFO1905 or COMP2823"
+    }
+   },
+   "sessions": [
+    "S1",
+    "S2"
+   ]
+  },
+  "COMP2823": {
+   "academicUnit": "Computer Science",
+   "code": "COMP2823",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Data Structures and Algorithms (Adv)",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Discrete mathematics"
+       },
+       {
+        "text": "probability"
+       },
+       {
+        "text": "e.g. MATH1064 or equivalent"
+       },
+       {
+        "unit": "MATH1064"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Discrete mathematics and probability (e.g. MATH1064 or equivalent)"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Distinction level results in"
+       },
+       {
+        "args": [
+         {
+          "unit": "INFO1110"
+         },
+         {
+          "unit": "INFO1910"
+         },
+         {
+          "unit": "INFO1113"
+         },
+         {
+          "unit": "DATA1002"
+         },
+         {
+          "unit": "DATA1902"
+         },
+         {
+          "unit": "ENGG1810"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Distinction level results in (INFO1110 or INFO1910 or INFO1113 or DATA1002 or DATA1902 or ENGG1810)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO1105"
+       },
+       {
+        "unit": "INFO1905"
+       },
+       {
+        "unit": "COMP2123"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO1105 or INFO1905 or COMP2123"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "COMP2922": {
+   "academicUnit": "Computer Science",
+   "code": "COMP2922",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 2000,
+   "name": "Models of Computation (Adv)",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2023,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Discrete mathematics"
+       },
+       {
+        "text": "e.g. MATH1064 or equivalent"
+       },
+       {
+        "unit": "MATH1064"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Discrete mathematics (e.g. MATH1064 or equivalent)"
+    },
+    "corequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "COMP2123"
+       },
+       {
+        "unit": "COMP2823"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "COMP2123 or COMP2823"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "INFO1110"
+         },
+         {
+          "unit": "INFO1910"
+         },
+         {
+          "unit": "INFO1113"
+         },
+         {
+          "unit": "ENGG1810"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "args": [
+           {
+            "text": "Distinction level results in INFO1110"
+           },
+           {
+            "unit": "INFO1110"
+           }
+          ],
+          "op": "and"
+         },
+         {
+          "unit": "INFO1910"
+         },
+         {
+          "unit": "INFO1113"
+         },
+         {
+          "unit": "ENGG1810"
+         },
+         {
+          "unit": "MATH1064"
+         },
+         {
+          "unit": "MATH1964"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "(INFO1110 or INFO1910 or INFO1113 or ENGG1810) and (Distinction level results in INFO1110 or INFO1910 or INFO1113 or ENGG1810 or MATH1064 or MATH1964)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "COMP2022"
+     },
+     "raw": "COMP2022"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "COMP3027": {
+   "academicUnit": "Computer Science",
+   "code": "COMP3027",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Algorithm Design",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Discrete mathematics"
+       },
+       {
+        "text": "probability"
+       },
+       {
+        "text": "e.g. MATH1064 or equivalent"
+       },
+       {
+        "unit": "MATH1064"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Discrete mathematics and probability (e.g. MATH1064 or equivalent)"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "COMP2123"
+       },
+       {
+        "unit": "COMP2823"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "COMP2123 or COMP2823"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "COMP2007"
+       },
+       {
+        "unit": "COMP2907"
+       },
+       {
+        "unit": "COMP3927"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "COMP2007 or COMP2907 or COMP3927"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "COMP3109": {
+   "academicUnit": "Computer Science",
+   "code": "COMP3109",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2020,
+   "level": 3000,
+   "name": "Programming Languages and Paradigms",
+   "offeringPattern": {
+    "S2C": [
+     2020
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "COMP2017"
+       },
+       {
+        "unit": "COMP2022"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "COMP2017 AND COMP2022"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": []
+  },
+  "COMP3221": {
+   "academicUnit": "Computer Science",
+   "code": "COMP3221",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Distributed Systems",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO1105"
+       },
+       {
+        "unit": "INFO1905"
+       },
+       {
+        "args": [
+         {
+          "args": [
+           {
+            "unit": "INFO1103"
+           },
+           {
+            "unit": "INFO1113"
+           }
+          ],
+          "op": "or"
+         },
+         {
+          "args": [
+           {
+            "unit": "COMP2123"
+           },
+           {
+            "unit": "COMP2823"
+           }
+          ],
+          "op": "or"
+         }
+        ],
+        "op": "and"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "(INFO1105 or INFO1905) or ((INFO1103 or INFO1113) and (COMP2123 or COMP2823))"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "COMP2121"
+     },
+     "raw": "COMP2121"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "COMP3308": {
+   "academicUnit": "Computer Science",
+   "code": "COMP3308",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Introduction to Artificial Intelligence",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "args": [
+         {
+          "text": "Data structures"
+         },
+         {
+          "text": "algorithms as covered in COMP2123"
+         },
+         {
+          "unit": "COMP2123"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "unit": "COMP2823"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Data structures and algorithms as covered in COMP2123 or COMP2823."
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO1110"
+       },
+       {
+        "unit": "INFO1910"
+       },
+       {
+        "unit": "ENGG1801"
+       },
+       {
+        "unit": "ENGG1810"
+       },
+       {
+        "unit": "DATA1002"
+       },
+       {
+        "unit": "DATA1902"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO1110 or INFO1910 or ENGG1801 or ENGG1810 or DATA1002 or DATA1902"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "COMP3608"
+     },
+     "raw": "COMP3608"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "COMP3419": {
+   "academicUnit": "Computer Science",
+   "code": "COMP3419",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Graphics and Multimedia",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "text": "Programming skills"
+     },
+     "raw": "Programming skills"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "COMP2123"
+       },
+       {
+        "unit": "COMP2823"
+       },
+       {
+        "unit": "INFO1105"
+       },
+       {
+        "unit": "INFO1905"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "COMP2123 or COMP2823 or INFO1105 or INFO1905"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "COMP3520": {
+   "academicUnit": "Computer Science",
+   "code": "COMP3520",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Operating Systems Internals",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "COMP2017"
+         },
+         {
+          "unit": "COMP2129"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "args": [
+         {
+          "unit": "COMP2123"
+         },
+         {
+          "unit": "COMP2823"
+         },
+         {
+          "unit": "INFO1105"
+         },
+         {
+          "unit": "INFO1905"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "(COMP2017 or COMP2129) and (COMP2123 or COMP2823 or INFO1105 or INFO1905)"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "COMP3530": {
+   "academicUnit": "Computer Science",
+   "code": "COMP3530",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2023,
+   "level": 3000,
+   "name": "Discrete Optimization",
+   "offeringPattern": {
+    "S2C": [
+     2021,
+     2023
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "COMP2123"
+       },
+       {
+        "unit": "COMP2823"
+       },
+       {
+        "unit": "COMP2007"
+       },
+       {
+        "unit": "COMP2907"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "COMP2123 OR COMP2823 OR COMP2007 OR COMP2907"
+    },
+    "prohibitions": {
+     "parsed": null,
+     "raw": "None"
+    }
+   },
+   "sessions": []
+  },
+  "COMP3608": {
+   "academicUnit": "Computer Science",
+   "code": "COMP3608",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Introduction to Artificial Intelligence (Adv)",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "args": [
+         {
+          "text": "Data structures"
+         },
+         {
+          "text": "algorithms as covered in COMP2123"
+         },
+         {
+          "unit": "COMP2123"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "unit": "COMP2823"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Data structures and algorithms as covered in COMP2123 or COMP2823."
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "ambiguous": true,
+      "args": [
+       {
+        "args": [
+         {
+          "args": [
+           {
+            "unit": "INFO1110"
+           },
+           {
+            "unit": "INFO1910"
+           },
+           {
+            "unit": "ENGG1810"
+           },
+           {
+            "unit": "DATA1002"
+           },
+           {
+            "unit": "DATA1902"
+           }
+          ],
+          "op": "or"
+         },
+         {
+          "text": "distinction-level results in at least one 2000-level COMP"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "text": "MATH"
+       },
+       {
+        "text": "SOFT unit"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "(INFO1110 or INFO1910 or ENGG1810 or DATA1002 or DATA1902) and distinction-level results in at least one 2000-level COMP or MATH or SOFT unit"
+    },
+    "prohibitions": {
+     "parsed": {
+      "unit": "COMP3308"
+     },
+     "raw": "COMP3308"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "COMP3888": {
+   "academicUnit": "Computer Science",
+   "code": "COMP3888",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Computer Science Project",
+   "offeringPattern": {
+    "S1C": [
+     2021
+    ],
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "INFO1110"
+         },
+         {
+          "unit": "INFO1910"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "unit": "INFO1113"
+       },
+       {
+        "args": [
+         {
+          "unit": "COMP2123"
+         },
+         {
+          "unit": "COMP2823"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "unit": "COMP2017"
+       },
+       {
+        "args": [
+         {
+          "unit": "COMP2022"
+         },
+         {
+          "unit": "COMP2922"
+         }
+        ],
+        "op": "or"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "(INFO1110 or INFO1910) and INFO1113 and (COMP2123 or COMP2823) and COMP2017 and (COMP2022 or COMP2922)"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO3600"
+       },
+       {
+        "unit": "COMP3600"
+       },
+       {
+        "unit": "COMP3615"
+       },
+       {
+        "unit": "COMP3988"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO3600 or COMP3600 or COMP3615 or COMP3988"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  },
+  "COMP3927": {
+   "academicUnit": "Computer Science",
+   "code": "COMP3927",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Algorithm Design (Adv)",
+   "offeringPattern": {
+    "S1C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": {
+      "args": [
+       {
+        "text": "Discrete mathematics"
+       },
+       {
+        "text": "probability"
+       },
+       {
+        "text": "e.g. MATH1064 or equivalent"
+       },
+       {
+        "unit": "MATH1064"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "Discrete mathematics and probability (e.g. MATH1064 or equivalent)"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "text": "Distinction level results in COMP2123"
+         },
+         {
+          "unit": "COMP2123"
+         }
+        ],
+        "op": "and"
+       },
+       {
+        "unit": "COMP2823"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "Distinction level results in COMP2123 or COMP2823"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "COMP2007"
+       },
+       {
+        "unit": "COMP2907"
+       },
+       {
+        "unit": "COMP3027"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "COMP2007 or COMP2907 or COMP3027"
+    }
+   },
+   "sessions": [
+    "S1"
+   ]
+  },
+  "COMP3988": {
+   "academicUnit": "Computer Science",
+   "code": "COMP3988",
+   "creditPoints": 6,
+   "faculty": "Engineering",
+   "landingPage": true,
+   "lastOffered": 2026,
+   "level": 3000,
+   "name": "Computer Science Project (Advanced)",
+   "offeringPattern": {
+    "S2C": [
+     2020,
+     2021,
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ]
+   },
+   "rules": {
+    "assumedKnowledge": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "corequisites": {
+     "parsed": null,
+     "raw": "None"
+    },
+    "prerequisites": {
+     "parsed": {
+      "args": [
+       {
+        "args": [
+         {
+          "unit": "INFO1110"
+         },
+         {
+          "unit": "INFO1910"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "unit": "INFO1113"
+       },
+       {
+        "args": [
+         {
+          "unit": "COMP2123"
+         },
+         {
+          "unit": "COMP2823"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "unit": "COMP2017"
+       },
+       {
+        "args": [
+         {
+          "unit": "COMP2022"
+         },
+         {
+          "unit": "COMP2922"
+         }
+        ],
+        "op": "or"
+       },
+       {
+        "text": "with Distinction level results in at least one of these units"
+       }
+      ],
+      "op": "and"
+     },
+     "raw": "(INFO1110 or INFO1910) and INFO1113 and (COMP2123 or COMP2823) and COMP2017 and (COMP2022 or COMP2922) with Distinction level results in at least one of these units"
+    },
+    "prohibitions": {
+     "parsed": {
+      "args": [
+       {
+        "unit": "INFO3600"
+       },
+       {
+        "unit": "COMP3615"
+       },
+       {
+        "unit": "COMP3600"
+       },
+       {
+        "unit": "COMP3888"
+       }
+      ],
+      "op": "or"
+     },
+     "raw": "INFO3600 or COMP3615 or COMP3600 or COMP3888"
+    }
+   },
+   "sessions": [
+    "S2"
+   ]
+  }
+ }
+}

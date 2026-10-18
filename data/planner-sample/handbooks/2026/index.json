@@ -1,0 +1,39 @@
+{
+ "components": [
+  "business-school/accounting",
+  "business-school/finance",
+  "engineering/core",
+  "engineering/software",
+  "science/computer-science",
+  "science/mathematics"
+ ],
+ "courses": [
+  {
+   "abbr": "BCom",
+   "confidence": "high",
+   "faculty": "business-school",
+   "name": "Bachelor of Commerce",
+   "slug": "commerce"
+  },
+  {
+   "abbr": "BE(Hons)",
+   "confidence": "high",
+   "faculty": "engineering",
+   "name": "Bachelor of Engineering Honours",
+   "slug": "engineering-honours"
+  },
+  {
+   "abbr": "BSc",
+   "confidence": "high",
+   "faculty": "science",
+   "name": "Bachelor of Science",
+   "slug": "science"
+  }
+ ],
+ "handbookYear": 2026,
+ "pools": [
+  "science-degree-core",
+  "science-table-a",
+  "table-o"
+ ]
+}
