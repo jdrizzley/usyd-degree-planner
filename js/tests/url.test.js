@@ -81,3 +81,10 @@ test("storageKey doesn't depend on key order", () => {
   assert.equal(storageKey("science", 2026, { m: "a", s: "b" }), storageKey("science", 2026, { s: "b", m: "a" }));
   assert.equal(storageKey("science", 2026, {}), "dp:v1:science:2026:");
 });
+
+test("choices, plan and version come out in that order and parse back", () => {
+  const params = { m: "computer-science-major", s: "mathematics-minor", p: "INFO1110!,~maj:v.COMP2017", v: "1" };
+  const hash = buildHash({ page: "requirements", course: "science", year: 2026, params: { v: 1, p: params.p, m: params.m, s: params.s } });
+  assert.equal(hash, "#/science/2026/requirements?m=computer-science-major&s=mathematics-minor&p=INFO1110!,~maj:v.COMP2017&v=1");
+  assert.deepEqual(parseRoute(hash).params, params);
+});
