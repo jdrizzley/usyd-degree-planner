@@ -1,7 +1,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
-  addSemester, addUnit, removeCell, removeLastSemester, replacePlaceholder, toggleTaken, undoRemove,
+  addSemester, addUnit, moveCell, removeCell, removeLastSemester, replacePlaceholder, stepTarget, targetAt,
+  toggleTaken, undoRemove,
 } from "../engine/edit.js";
 import { generate } from "../engine/generate.js";
 import { MAX_SEMESTERS } from "../engine/plan.js";
@@ -100,4 +101,83 @@ test("unknown codes are placed without a session check", () => {
 test("a completely full plan is refused", () => {
   const full = { semesters: Array.from({ length: MAX_SEMESTERS }, () => [1, 2, 3, 4].map((n) => ({ ph: `x${n}` }))) };
   assert.equal(addUnit(bsc, full, "DATA1001").error, "Your plan is full. Remove a unit first.");
+});
+
+// ---------------------------------------------------------------- moving (phase 5)
+
+const cell = (s, i) => ({ kind: "cell", s, i });
+const sem = (s) => ({ kind: "semester", s });
+const at = (plan, s, i) => plan.semesters[s][i].code ?? `~${plan.semesters[s][i].ph}`;
+
+test("swap across semesters", () => {
+  const r = moveCell(bsc, G, { s: 2, i: 1 }, cell(4, 1));
+  assert.equal(at(r.plan, 4, 1), "COMP2017");
+  assert.equal(at(r.plan, 2, 1), "~maj:v");
+  assert.deepEqual(r.at, { s: 4, i: 1 });
+  unchanged();
+});
+
+test("swap within a semester", () => {
+  const r = moveCell(bsc, G, { s: 2, i: 0 }, cell(2, 1));
+  assert.deepEqual([at(r.plan, 2, 0), at(r.plan, 2, 1)], ["COMP2017", "COMP2123"]);
+});
+
+test("a full semester refuses a move", () => {
+  assert.deepEqual(moveCell(bsc, G, { s: 2, i: 1 }, sem(4)), { error: "Year 3 · Semester 1 is full." });
+});
+
+test("move to an empty semester", () => {
+  const r = moveCell(bsc, addSemester(G), { s: 2, i: 1 }, sem(6));
+  assert.deepEqual(r.at, { s: 6, i: 0 });
+  assert.equal(r.plan.semesters[2].length, 3);
+  assert.equal(at(r.plan, 6, 0), "COMP2017");
+});
+
+test("same semester moves to the end; onto itself does nothing", () => {
+  const r = moveCell(bsc, G, { s: 2, i: 0 }, sem(2));
+  assert.deepEqual(r.at, { s: 2, i: 3 });
+  assert.equal(at(r.plan, 2, 3), "COMP2123");
+  assert.deepEqual(moveCell(bsc, G, { s: 2, i: 1 }, cell(2, 1)), { same: true });
+  unchanged();
+});
+
+test("0 cp pills never swap", () => {
+  const p = generate(be, { st: "software-stream" });
+  const pillAt = (k) => p.semesters[k].findIndex((c) => c.code?.startsWith("ENGP"));
+  const unitAt = (k) => p.semesters[k].findIndex((c) => !c.code?.startsWith("ENGP"));
+  // A pill dropped on a unit in a full semester joins that semester.
+  const r = moveCell(be, p, { s: 0, i: pillAt(0) }, cell(1, unitAt(1)));
+  assert.equal(r.plan.semesters[1].filter((c) => c.code?.startsWith("ENGP")).length, 2);
+  assert.equal(r.plan.semesters[0].length, p.semesters[0].length - 1);
+  // A unit dropped on a pill in a full semester is refused.
+  assert.equal(moveCell(be, p, { s: 0, i: unitAt(0) }, cell(1, pillAt(1))).error, "Year 1 · Semester 2 is full.");
+});
+
+test("moves change rule checks", () => {
+  const r = moveCell(bsc, G, { s: 2, i: 1 }, cell(0, 0)); // COMP2017 <-> INFO1110
+  const broken = (plan) => checkPlan(bsc, plan, CS_MATHS).cells.flat().filter((c) => c.status === "broken").length;
+  assert.equal(at(r.plan, 0, 0), "COMP2017");
+  assert.ok(broken(r.plan) > 0);
+  const back = moveCell(bsc, r.plan, { s: 0, i: 0 }, cell(2, 1));
+  assert.equal(broken(back.plan), 0);
+});
+
+test("keyboard targets", () => {
+  assert.deepEqual(targetAt(bsc, G, 2, 1), cell(2, 1));
+  const three = planFrom("INFO1110,MATH1061,MATH1062");
+  assert.deepEqual(targetAt(bsc, three, 0, 3), sem(0));
+  // BE: the pill doesn't take a row.
+  const p = generate(be, { st: "software-stream" });
+  const rows = [0, 1, 2, 3].map((r) => targetAt(be, p, 0, r));
+  assert.ok(rows.every((t) => t.kind === "cell" && be.unit(p.semesters[0][t.i].code).cp > 0));
+  assert.equal(new Set(rows.map((t) => t.i)).size, 4);
+});
+
+test("arrow keys clamp to the grid", () => {
+  assert.deepEqual(stepTarget(bsc, G, { s: 0, row: 0 }, "ArrowLeft"), { s: 0, row: 0 });
+  assert.deepEqual(stepTarget(bsc, G, { s: 0, row: 0 }, "ArrowUp"), { s: 0, row: 0 });
+  assert.deepEqual(stepTarget(bsc, G, { s: 5, row: 3 }, "ArrowRight"), { s: 5, row: 3 });
+  assert.deepEqual(stepTarget(bsc, G, { s: 5, row: 3 }, "ArrowDown"), { s: 5, row: 3 });
+  assert.deepEqual(stepTarget(bsc, G, { s: 2, row: 1 }, "ArrowRight"), { s: 3, row: 1 });
+  assert.deepEqual(stepTarget(bsc, G, { s: 2, row: 1 }, "x"), { s: 2, row: 1 });
 });

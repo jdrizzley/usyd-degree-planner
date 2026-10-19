@@ -688,3 +688,47 @@ a { color: inherit; }
 .tooltip-title { font-size: 14px; font-weight: 600; }
 .tooltip-line, .tooltip-note { color: var(--ink-muted); }
 .tooltip-reason { color: var(--ink); }
+
+/* ---------------------------------------------------------------- drag (phase 5) */
+
+.tile {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+}
+
+.drag-ghost {
+  position: fixed;
+  z-index: 60;
+  margin: 0;
+  opacity: 0.9;
+  pointer-events: none;
+  box-shadow: var(--shadow-focus);
+  will-change: transform;
+}
+.drag-ghost.outside { opacity: 0.4; }
+.drag-ghost.sliding { transition: transform 150ms var(--ease), opacity 150ms var(--ease); }
+
+.drag-source { opacity: 0.35; }
+
+.plan-body.dragging, .plan-body.dragging * { cursor: grabbing !important; }
+
+.drop-ok { outline: 1px dashed var(--ink); outline-offset: -1px; }
+.drop-over { outline: 1px solid var(--ink); outline-offset: -1px; }
+.pill-strip.drop-ok, .pill-strip.drop-over { min-height: 22px; border-radius: 11px; }
+
+.drag-caption {
+  position: fixed;
+  z-index: 61;
+  margin: 0;
+  padding: 4px 10px;
+  transform: translateX(-50%);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--ink-muted);
+  font-size: 13px;
+  pointer-events: none;
+  white-space: nowrap;
+}

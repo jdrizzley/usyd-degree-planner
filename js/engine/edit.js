@@ -82,3 +82,50 @@ export function addUnit(catalog, plan, code, target = null) {
   }
   return { error: "Your plan is full. Remove a unit first." };
 }
+
+// ---------------------------------------------------------------- moving (phase 5)
+
+// to: { kind: "cell", s, i } (another tile) or { kind: "semester", s }.
+export function moveCell(catalog, plan, from, to) {
+  if (to.kind === "cell" && to.s === from.s && to.i === from.i) return { same: true };
+  const src = plan.semesters[from.s]?.[from.i];
+  if (!src) return { same: true };
+  const dst = to.kind === "cell" ? plan.semesters[to.s]?.[to.i] : null;
+
+  // Swap two slot-taking tiles.
+  if (dst && takesSlot(catalog, src) && takesSlot(catalog, dst)) {
+    const out = copy(plan);
+    out.semesters[from.s][from.i] = { ...dst };
+    out.semesters[to.s][to.i] = { ...src };
+    return { plan: out, at: { s: to.s, i: to.i } };
+  }
+
+  // Otherwise it goes to the end of the target semester (pills never swap).
+  const s = to.s;
+  const out = copy(plan);
+  if (s !== from.s && takesSlot(catalog, src) && slotsUsed(catalog, out.semesters[s]) >= MAX_SLOTS) {
+    return { error: `${semesterLabel(s)} is full.` };
+  }
+  const [cell] = out.semesters[from.s].splice(from.i, 1);
+  out.semesters[s].push(cell);
+  return { plan: out, at: { s, i: out.semesters[s].length - 1 } };
+}
+
+// What's at row `row` of column s: the slot-taking cells fill rows from the top.
+export function targetAt(catalog, plan, s, row) {
+  const slotted = [];
+  (plan.semesters[s] ?? []).forEach((c, i) => takesSlot(catalog, c) && slotted.push(i));
+  return row < slotted.length ? { kind: "cell", s, i: slotted[row] } : { kind: "semester", s };
+}
+
+// Arrow keys move a keyboard target around the grid, clamped to its edges.
+export function stepTarget(catalog, plan, { s, row }, key) {
+  const last = plan.semesters.length - 1;
+  const rows = (k) => Math.max(MAX_SLOTS, slotsUsed(catalog, plan.semesters[k] ?? []));
+  if (key === "ArrowLeft") s = Math.max(0, s - 1);
+  else if (key === "ArrowRight") s = Math.min(last, s + 1);
+  else if (key === "ArrowUp") row = Math.max(0, row - 1);
+  else if (key === "ArrowDown") row = Math.min(rows(s) - 1, row + 1);
+  else return { s, row };
+  return { s, row: Math.min(row, rows(s) - 1) };
+}

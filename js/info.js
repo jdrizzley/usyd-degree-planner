@@ -4,6 +4,7 @@ import { h } from "./dom.js";
 const TEXT = [
   "Click a unit to mark it as taken. Drag units to move them between semesters. Drag a unit off the plan to remove it. Use + Unit to add one, + Semester to add a semester.",
   "Red means a unit's rules aren't met. Hover it to see why. When you hover a unit, its prerequisites show in red and the units it unlocks show in green.",
+  "With a keyboard: Space marks a unit as taken, Enter picks it up, the arrow keys move it, Enter drops it, and Delete removes it.",
   "Your plan is saved in the page address. Bookmark it to come back.",
   "Unofficial. Data comes from the University of Sydney handbook and may be out of date.",
 ];

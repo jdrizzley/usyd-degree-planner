@@ -4,8 +4,10 @@
 import { loadCourse, notFound, notes, numbers, topbar } from "./dashboard.js";
 import { h } from "./dom.js";
 import { placeholderLabel, unitSummary } from "./engine/describe.js";
+import { attachDrag } from "./drag.js";
 import {
-  addSemester, addUnit, removeCell, removeLastSemester, replacePlaceholder, toggleTaken, undoRemove,
+  addSemester, addUnit, moveCell, removeCell, removeLastSemester, replacePlaceholder, stepTarget, targetAt,
+  toggleTaken, undoRemove,
 } from "./engine/edit.js";
 import { leafMatches, leavesUnder } from "./engine/expand.js";
 import { MAX_SLOTS, MAX_SEMESTERS, calendarYear, cellCp, semesterLabel, takesSlot, yearOf } from "./engine/plan.js";
@@ -22,6 +24,10 @@ const WRITE_DELAY = 150;
 const UNDO_TIME = 5000;
 const FROM_PAGES = new Set(["dashboard", "requirements"]);
 
+// The previous plan page's drag listeners, removed when a new one renders.
+let detachPrevious = null;
+const reducedMotion = () => globalThis.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+
 export async function renderPlan(ctx) {
   let state = await loadCourse(ctx);
   if (!state.course) return notFound(state);
@@ -32,7 +38,8 @@ export async function renderPlan(ctx) {
   const sheetHost = h("div", { class: "sheet-host" });
   const bodyHost = h("div", { class: "plan-body" });
   const undoHost = h("div", { class: "undo-host", "aria-live": "polite" });
-  const root = h("div", { class: "plan-page" }, headerHost, sheetHost, bodyHost, undoHost);
+  const live = h("p", { class: "visually-hidden", "aria-live": "assertive" });
+  const root = h("div", { class: "plan-page" }, headerHost, sheetHost, bodyHost, undoHost, live);
 
   let edited = false;
   let writeTimer = null;
@@ -40,6 +47,12 @@ export async function renderPlan(ctx) {
   let cells = new Map(); // "s:i" -> element
   let hoverTimer = null;
   let leaveTimer = null;
+  let carry = null; // keyboard move: { from: {s, i}, at: {s, row}, el }
+
+  const announce = (text) => {
+    live.textContent = "";
+    setTimeout(() => { live.textContent = text; }, 30);
+  };
 
   // ------------------------------------------------------------ editing
 
@@ -139,6 +152,7 @@ export async function renderPlan(ctx) {
   }
 
   function hoverStart(el, s, i, immediate) {
+    if (carry || bodyHost.classList.contains("dragging")) return;
     clearTimeout(leaveTimer);
     clearTimeout(hoverTimer);
     const run = () => {
@@ -164,6 +178,123 @@ export async function renderPlan(ctx) {
       clearHighlights();
       hideTooltip();
     }, LEAVE_DELAY);
+  }
+
+  // ------------------------------------------------------------ moving
+
+  const isValid = (from, target) => {
+    const r = moveCell(state.catalog, state.plan, from, target);
+    return !r.error && !r.same;
+  };
+
+  const nameOf = (cell) => (cell.ph ? placeholderLabel(state.catalog, state.expanded, cell.ph).short : cell.code);
+
+  // Do a move and say what happened. Returns false if it was refused.
+  function doMove(from, target) {
+    const cell = state.plan.semesters[from.s][from.i];
+    const other = target.kind === "cell" ? state.plan.semesters[target.s][target.i] : null;
+    const r = moveCell(state.catalog, state.plan, from, target);
+    if (r.error) {
+      announce(r.error);
+      return false;
+    }
+    if (r.same) return false;
+    const swapped = other && takesSlot(state.catalog, cell) && takesSlot(state.catalog, other);
+    apply(r.plan);
+    announce(swapped ? `Swapped ${nameOf(cell)} and ${nameOf(other)}.` : `Moved ${nameOf(cell)} to ${semesterLabel(r.at.s)}.`);
+    const moved = cell.code ? bodyHost.querySelector(`[data-key="cell-${cell.code}"]`) : cells.get(`${r.at.s}:${r.at.i}`);
+    moved?.focus();
+    return true;
+  }
+
+  function rowOf(s, i) {
+    const sem = state.plan.semesters[s];
+    if (!takesSlot(state.catalog, sem[i])) return 0;
+    return sem.slice(0, i).filter((c) => takesSlot(state.catalog, c)).length;
+  }
+
+  // The element a keyboard target points at, for the outline.
+  function targetEl(t) {
+    if (t.kind === "cell") return cells.get(`${t.s}:${t.i}`);
+    return bodyHost.querySelector(`[data-key="cell-${t.s}-slot-${carry.at.row}"]`)
+      ?? [...bodyHost.querySelectorAll(".tile.empty")].find((e) => Number(e.dataset.s) === t.s)
+      ?? null;
+  }
+
+  function showCarryTarget() {
+    for (const e of bodyHost.querySelectorAll(".drop-over")) e.classList.remove("drop-over");
+    const t = targetAt(state.catalog, state.plan, carry.at.s, carry.at.row);
+    targetEl(t)?.classList.add("drop-over");
+    const where = `${semesterLabel(carry.at.s)}, row ${carry.at.row + 1}`;
+    if (t.kind === "cell" && !(t.s === carry.from.s && t.i === carry.from.i)) {
+      announce(`${where}, swap with ${nameOf(state.plan.semesters[t.s][t.i])}`);
+    } else if (t.kind === "cell") {
+      announce(`${where}, where it started`);
+    } else {
+      announce(`${where}, empty`);
+    }
+    return t;
+  }
+
+  function pickUp(el, s, i) {
+    hideTooltip();
+    clearHighlights();
+    carry = { from: { s, i }, at: { s, row: rowOf(s, i) }, el };
+    el.classList.add("drag-source");
+    bodyHost.classList.add("carrying");
+    for (const t of bodyHost.querySelectorAll("[data-drop]")) {
+      if (t !== el && isValid(carry.from, t.dataset.drop === "cell"
+        ? { kind: "cell", s: Number(t.dataset.s), i: Number(t.dataset.i) }
+        : { kind: "semester", s: Number(t.dataset.s) })) t.classList.add("drop-ok");
+    }
+    announce(`Picked up ${nameOf(state.plan.semesters[s][i])}. Arrow keys to move, Enter to drop, Escape to cancel.`);
+  }
+
+  function endCarry() {
+    if (!carry) return;
+    carry.el.classList.remove("drag-source");
+    bodyHost.classList.remove("carrying");
+    for (const e of bodyHost.querySelectorAll(".drop-ok, .drop-over")) e.classList.remove("drop-ok", "drop-over");
+    carry = null;
+  }
+
+  function cancelCarry() {
+    if (!carry) return;
+    endCarry();
+    announce("Move cancelled.");
+  }
+
+  function onTileKey(e, el, s, i) {
+    if (carry && carry.el === el) {
+      if (e.key.startsWith("Arrow")) {
+        e.preventDefault();
+        carry.at = stepTarget(state.catalog, state.plan, carry.at, e.key);
+        showCarryTarget();
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        const t = targetAt(state.catalog, state.plan, carry.at.s, carry.at.row);
+        const from = carry.from;
+        if (t.kind === "cell" && t.s === from.s && t.i === from.i) return cancelCarry();
+        const r = moveCell(state.catalog, state.plan, from, t);
+        if (r.error) return announce(r.error);
+        endCarry();
+        doMove(from, t);
+      } else if (e.key === "Escape") {
+        e.preventDefault();
+        cancelCarry();
+      } else if (e.key === " " || e.key === "Delete" || e.key === "Backspace" || e.key === "Tab") {
+        if (e.key !== "Tab") e.preventDefault();
+        else cancelCarry();
+      }
+      return;
+    }
+    if (e.key === "Delete" || e.key === "Backspace") {
+      e.preventDefault();
+      remove(s, i);
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      pickUp(el, s, i);
+    }
   }
 
   // ------------------------------------------------------------ drawing
@@ -213,24 +344,30 @@ export async function renderPlan(ctx) {
       content = [h("span", { class: "tile-code" }, cell.code), unknown ? h("span", { class: "tile-unknown" }, "?") : null];
     }
     const key = cell.code ? `cell-${cell.code}` : `cell-${s}-ph-${i}`;
-    const el = h("button", { type: "button", class: cls.join(" "), "data-key": key, "aria-label": cellLabel(cell, check) }, content);
+    const el = h("button", {
+      type: "button",
+      class: cls.join(" "),
+      "data-key": key,
+      "aria-label": cellLabel(cell, check),
+      "data-drag": "",
+      "data-drop": "cell",
+      "data-s": s,
+      "data-i": i,
+    }, content);
     el.addEventListener("click", () => {
+      if (!el.isConnected) return; // a tile from before the last re-draw
       hideTooltip();
       if (cell.ph) choosePlaceholder(s, i, el);
       else apply(toggleTaken(state.plan, s, i));
     });
-    el.addEventListener("keydown", (e) => {
-      if (e.key === "Delete" || e.key === "Backspace") {
-        e.preventDefault();
-        remove(s, i);
-      } else if (e.key === "Enter" && cell.code) {
-        e.preventDefault(); // Enter picks a unit up in phase 5.
-      }
-    });
+    el.addEventListener("keydown", (e) => onTileKey(e, el, s, i));
     el.addEventListener("mouseenter", () => hoverStart(el, s, i, false));
     el.addEventListener("mouseleave", hoverEnd);
     el.addEventListener("focus", () => hoverStart(el, s, i, true));
-    el.addEventListener("blur", hoverEnd);
+    el.addEventListener("blur", () => {
+      hoverEnd();
+      if (carry?.el === el) cancelCarry();
+    });
     cells.set(`${s}:${i}`, el);
     return el;
   }
@@ -240,6 +377,9 @@ export async function renderPlan(ctx) {
       type: "button",
       class: "tile empty",
       "data-key": `cell-${s}-slot-${row}`,
+      "data-drop": "semester",
+      "data-s": s,
+      "data-row": row,
       "aria-label": `Empty slot, ${semesterLabel(s)}`,
     });
     el.addEventListener("click", () => addToSemester(s, el));
@@ -280,7 +420,7 @@ export async function renderPlan(ctx) {
         else pills.push(tile(cell, s, i, { pill: true }));
       });
       for (let r = row; r < MAX_SLOTS; r++) items.push(at(emptySlot(s, r), 2 + r));
-      items.push(at(h("div", { class: "pill-strip" }, pills), 2 + rows));
+      items.push(at(h("div", { class: "pill-strip", "data-drop": "semester", "data-s": s }, pills), 2 + rows));
     });
     const g = h("div", { class: "grid", role: "group", "aria-label": "Study plan" }, items);
     g.style.gridTemplateColumns = `repeat(${sems.length}, var(--col))`;
@@ -288,6 +428,8 @@ export async function renderPlan(ctx) {
   }
 
   function draw() {
+    carry = null;
+    bodyHost.classList.remove("carrying");
     const key = document.activeElement?.dataset?.key;
     const scroll = bodyHost.querySelector(".grid-scroll")?.scrollLeft ?? 0;
     hideTooltip();
@@ -306,5 +448,19 @@ export async function renderPlan(ctx) {
   }
 
   draw();
+
+  detachPrevious?.();
+  detachPrevious = attachDrag(bodyHost, {
+    isValid,
+    onStart: () => {
+      cancelCarry();
+      hideTooltip();
+      clearTimeout(hoverTimer);
+      clearHighlights();
+    },
+    onDrop: (from, target) => doMove(from, target),
+    onRemove: (from) => remove(from.s, from.i),
+    reducedMotion,
+  });
   return { node: root, title: `Study plan · ${course.name} · Degree Planner` };
 }
