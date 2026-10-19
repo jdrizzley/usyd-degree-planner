@@ -1,4 +1,5 @@
-// One shared tooltip for plan tiles (phase 4 brief §6). Not interactive.
+// One shared pop-up for plan tiles. Only conflicts get one, and it only
+// lists the reasons (the user's call, 2026-10-19). Not interactive.
 import { h } from "./dom.js";
 
 const ID = "plan-tooltip";
@@ -17,12 +18,12 @@ function ensure() {
 
 const noteText = (n) => (/^(Also|Assumed)/.test(n) ? n : `Also: ${n}`);
 
-export function showTooltip(target, { title, lines = [], reasons = [], notes = [] }) {
+export function showTooltip(target, { title = null, lines = [], reasons = [], notes = [] }) {
   const tip = ensure();
   hideTooltip();
   // replaceChildren doesn't flatten arrays (h() does), so spread them.
   tip.replaceChildren(
-    h("p", { class: "tooltip-title" }, title),
+    ...(title ? [h("p", { class: "tooltip-title" }, title)] : []),
     ...lines.map((t) => h("p", { class: "tooltip-line" }, t)),
     ...reasons.map((t) => h("p", { class: "tooltip-reason" }, t)),
     ...notes.map((t) => h("p", { class: "tooltip-note" }, noteText(t))),

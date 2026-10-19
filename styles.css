@@ -732,3 +732,41 @@ a { color: inherit; }
   pointer-events: none;
   white-space: nowrap;
 }
+
+/* ---------------------------------------------------------------- tile hover: code slides up, name appears */
+
+.tile.unit { position: relative; overflow: hidden; }
+.tile.unit .tile-code {
+  transition: transform 200ms var(--ease);
+}
+.tile-name {
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  bottom: 5px;
+  font-size: 10.5px;
+  line-height: 12px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--ink);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 200ms var(--ease), transform 200ms var(--ease);
+  pointer-events: none;
+}
+@media (hover: hover) {
+  .tile.unit:hover .tile-code { transform: translateY(-12px); }
+  .tile.unit:hover .tile-name { opacity: 1; transform: translateY(0); }
+}
+.tile.unit:focus-visible .tile-code { transform: translateY(-12px); }
+.tile.unit:focus-visible .tile-name { opacity: 1; transform: translateY(0); }
+/* Keep tiles still while something is being dragged or carried. */
+.plan-body.dragging .tile.unit .tile-code,
+.plan-body.carrying .tile.unit .tile-code { transform: none; }
+.plan-body.dragging .tile.unit .tile-name,
+.plan-body.carrying .tile.unit .tile-name { opacity: 0; }
+.drag-ghost .tile-name { display: none; }

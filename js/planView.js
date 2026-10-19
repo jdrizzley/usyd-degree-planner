@@ -3,7 +3,7 @@
 // instead of reloading through the router.
 import { loadCourse, notFound, notes, numbers, topbar } from "./dashboard.js";
 import { h } from "./dom.js";
-import { placeholderLabel, unitSummary } from "./engine/describe.js";
+import { placeholderLabel } from "./engine/describe.js";
 import { attachDrag } from "./drag.js";
 import {
   addSemester, addUnit, moveCell, removeCell, removeLastSemester, replacePlaceholder, stepTarget, targetAt,
@@ -161,10 +161,9 @@ export async function renderPlan(ctx) {
       if (cell.code) {
         for (const p of prereqsOf(state.catalog, state.plan, s, i)) cells.get(`${p.s}:${p.i}`)?.classList.add("pre");
         for (const p of unlocks(state.catalog, state.plan, s, i)) cells.get(`${p.s}:${p.i}`)?.classList.add("unlock");
-        showTooltip(el, unitSummary(state.catalog, cell.code, state.checks.cells[s][i]));
-      } else {
-        const { full } = placeholderLabel(state.catalog, state.expanded, cell.ph);
-        showTooltip(el, { title: full, lines: ["Click to choose a unit"] });
+        // The pop-up is only for conflicts, and only says why.
+        const check = state.checks.cells[s][i];
+        if (check?.status === "broken") showTooltip(el, { reasons: check.reasons });
       }
     };
     if (immediate) run();
@@ -340,8 +339,12 @@ export async function renderPlan(ctx) {
       cls.push(pill ? "pill" : "unit");
       if (cell.taken) cls.push("taken");
       if (check?.status === "broken") cls.push("broken");
-      const unknown = !state.catalog.unit(cell.code);
-      content = [h("span", { class: "tile-code" }, cell.code), unknown ? h("span", { class: "tile-unknown" }, "?") : null];
+      const unit = state.catalog.unit(cell.code);
+      const code = h("span", { class: "tile-code" }, cell.code, unit ? null : h("span", { class: "tile-unknown" }, " ?"));
+      // Hover slides the code up and shows the name underneath (styles.css).
+      const name = pill ? null : h("span", { class: "tile-name", "aria-hidden": "true" },
+        unit ? unit.name : `Not in the ${state.catalog.year} unit list`);
+      content = [code, name];
     }
     const key = cell.code ? `cell-${cell.code}` : `cell-${s}-ph-${i}`;
     const el = h("button", {
