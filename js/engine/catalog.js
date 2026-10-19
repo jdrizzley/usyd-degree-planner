@@ -98,6 +98,19 @@ export async function loadCatalog(loadJSON, { year, slug }) {
     return u;
   }
 
+  // Every unit in the index, for the add-unit search (no rules loaded).
+  let listed = null;
+  function listUnits() {
+    listed ??= rows.map((r) => ({
+      code: r.c,
+      name: r.n,
+      cp: r.cp,
+      level: r.lv ?? Number(r.c[4]) * 1000,
+      sessions: r.s ?? null,
+    }));
+    return listed;
+  }
+
   return {
     year,
     course,
@@ -106,5 +119,6 @@ export async function loadCatalog(loadJSON, { year, slug }) {
     unit,
     hasUnit: (code) => index.has(code),
     ensureUnits,
+    listUnits,
   };
 }

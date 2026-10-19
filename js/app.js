@@ -1,18 +1,20 @@
 // Entry point: hash router. Each page renderer takes ctx and returns
 // { node, title, focus? }.
 //
-//   ctx = { meta, route, from, replace }
+//   ctx = { meta, route, from, replace, write }
 //   from     the route shown before this one (null on first load)
 //   replace  edit within a page: swap the address without a history entry, then re-render
+//   write    swap the address only (the page has already re-drawn itself)
 import { loadMeta } from "./data.js";
-import { message, renderDashboard, renderPlanHolder, topbar } from "./dashboard.js";
+import { message, renderDashboard, topbar } from "./dashboard.js";
 import { h } from "./dom.js";
+import { renderPlan } from "./planView.js";
 import { renderRequirements } from "./requirements.js";
 import { renderHome } from "./search.js";
 import { parseRoute } from "./url.js";
 
 const app = document.getElementById("app");
-const PAGES = { dashboard: renderDashboard, requirements: renderRequirements, plan: renderPlanHolder };
+const PAGES = { dashboard: renderDashboard, requirements: renderRequirements, plan: renderPlan };
 let metaPromise = null;
 let current = 0;
 let shown = null; // the route on screen now
@@ -40,7 +42,13 @@ async function route({ replaced = false } = {}) {
   try {
     metaPromise ??= loadMeta();
     const meta = await metaPromise;
-    const ctx = { meta, route: r, from, replace };
+    const write = (hash) => {
+      // A late write from a page the user has already left must not land.
+      if (token !== current) return;
+      history.replaceState(null, "", hash);
+      shown = parseRoute(hash);
+    };
+    const ctx = { meta, route: r, from, replace, write };
     const view = r.page === "home" ? await renderHome(meta) : await PAGES[r.page](ctx);
     if (token !== current) return;
 

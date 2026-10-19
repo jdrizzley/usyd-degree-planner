@@ -116,3 +116,50 @@ export function requirementRows(catalog, prog) {
 
   return (tree.children ?? []).filter((c) => !hidden(c)).map((c) => ({ ...row(c, 0), rows: descendants(c, 1, []) }));
 }
+
+// ---------------------------------------------------------------- plan grid
+
+// Tile and tooltip text for a placeholder: { short: "3000 selective",
+// full: "Second major or minor · Mathematics · 3000-level selective" }.
+export function placeholderLabel(catalog, expanded, id) {
+  const node = expanded?.byId[id];
+  if (!node) return { short: id, full: id };
+  const label = node.label ?? id;
+  let short;
+  if (node.fill) short = "Elective";
+  else if (/^open learning environment$/i.test(label)) short = "OLE";
+  else if (node.choice) short = label.split(" · ")[0];
+  else short = label.replace(/-level\b/i, "");
+
+  let full = label;
+  if (!node.choice) {
+    for (let p = expanded.parents[id]; p; p = expanded.parents[p]) {
+      const anc = expanded.byId[p];
+      if (anc?.choice) {
+        full = `${anc.label} · ${label}`;
+        break;
+      }
+    }
+  }
+  return { short, full };
+}
+
+function sessionText(sessions) {
+  if (!Array.isArray(sessions)) return null;
+  if (!sessions.length) return "Not offered recently";
+  const nums = [...sessions].sort().map((s) => s.slice(1));
+  return `Semester ${nums.join(" and ")}`;
+}
+
+// Tooltip text for a unit cell. cellStatus is the checkPlan cell.
+export function unitSummary(catalog, code, cellStatus = null) {
+  const u = catalog.unit(code);
+  if (!u) return { title: code, lines: [`Not in the ${catalog.year} unit list`], reasons: [], notes: [] };
+  const session = sessionText(u.sessions);
+  return {
+    title: `${code} · ${u.name}`,
+    lines: [[`${u.cp} cp`, session].filter(Boolean).join(" · ")],
+    reasons: cellStatus?.reasons ?? [],
+    notes: cellStatus?.notes ?? [],
+  };
+}

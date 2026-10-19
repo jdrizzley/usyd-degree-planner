@@ -156,3 +156,24 @@ test("hashes round-trip for every sample degree and page", async () => {
     }
   }
 });
+
+test("editing makes the plan the user's own", async () => {
+  const { editPlan } = await import("../state.js");
+  const { toggleTaken } = await import("../engine/edit.js");
+  const storage = fakeStorage();
+  const store = makeStore(storage);
+  const s = await load("#/science/2026?m=computer-science-major&s=mathematics-minor", { store });
+  assert.equal(s.planSource, "generated");
+  const { state, hash } = editPlan(s, toggleTaken(s.plan, 0, 0), { store });
+  assert.equal(state.planSource, "url");
+  assert.ok(hash.includes("p=INFO1110!,") && hash.endsWith("&v=1"), hash);
+  assert.equal(storage.map.get(storageKey("science", 2026, CS_MATHS)), encodePlan(state.plan));
+  assert.equal(state.progress.takenCp, 6);
+  assert.equal(state.checks.cells[0][0].status, "ok");
+});
+
+test("units outside the course lists get their rules loaded", async () => {
+  const s = await load("#/science/2026?p=ELEC2302&v=1");
+  assert.equal(s.catalog.unit("ELEC2302").loaded, true);
+  assert.ok(s.checks.cells[0][0]);
+});

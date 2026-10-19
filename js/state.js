@@ -1,9 +1,11 @@
 // Everything a course page needs, built from the route (phase 3 brief §3).
 // DOM-free: loadJSON and the store are passed in, so tests run in Node.
 import { loadCatalog } from "./engine/catalog.js";
+import { expand } from "./engine/expand.js";
 import { generate } from "./engine/generate.js";
 import { mergePlan } from "./engine/merge.js";
 import { progress } from "./engine/progress.js";
+import { checkPlan } from "./engine/rules.js";
 import { FORMAT_VERSION, buildHash, decodePlan, encodePlan, readChoices, storageKey } from "./url.js";
 
 // Nearest available handbook year; ties go to the newer year.
@@ -20,9 +22,18 @@ async function courseFor(loadJSON, year, slug) {
 
 const userPlan = (state) => state.planSource !== "generated";
 
-function withProgress(state) {
-  return { ...state, progress: progress(state.catalog, state.choices, state.plan) };
+// Everything worked out from the plan: numbers, rule checks, requirement tree.
+function withDerived(state) {
+  const { catalog, choices, plan } = state;
+  return {
+    ...state,
+    progress: progress(catalog, choices, plan),
+    checks: checkPlan(catalog, plan, choices),
+    expanded: expand(catalog, choices),
+  };
 }
+
+const planCodes = (plan) => plan.semesters.flat().filter((c) => c.code).map((c) => c.code);
 
 export async function loadState({ loadJSON, store, meta, route }) {
   const year = resolveYear(meta.handbookYears, route.year);
@@ -62,8 +73,10 @@ export async function loadState({ loadJSON, store, meta, route }) {
     }
   }
   if (!plan) plan = generate(catalog, choices);
+  // Units added by hand (or in a pasted link) may be outside the course's lists.
+  await catalog.ensureUnits(planCodes(plan));
 
-  return withProgress({ ...base, formatNote, course, catalog, choices, plan, planSource });
+  return withDerived({ ...base, formatNote, course, catalog, choices, plan, planSource });
 }
 
 // Choices in course order, then the plan (only when it's the user's own).
@@ -99,4 +112,12 @@ export async function changeYear(state, year, { loadJSON, store }) {
   const next = { ...state, year, catalog, course: catalog.course, choices };
   if (userPlan(state)) store.set(storageKey(state.slug, year, choices), encodePlan(state.plan));
   return hashFor(next);
+}
+
+// Every edit makes the plan the user's own. Storage is written at once; the
+// caller writes the returned hash to the address (debounced).
+export function editPlan(state, plan, { store }) {
+  const next = withDerived({ ...state, plan, planSource: "url" });
+  store.set(storageKey(state.slug, state.year, state.choices), encodePlan(plan));
+  return { state: next, hash: hashFor(next) };
 }

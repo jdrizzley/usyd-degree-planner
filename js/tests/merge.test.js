@@ -35,11 +35,14 @@ test("taken cells keep their place, nothing doubles, slots stay ≤ 4", () => {
   }
 });
 
-test("nothing taken: same as the new default plan", () => {
+// Each semester's cells as a sorted list, so order within a semester doesn't matter.
+const bySemester = (plan) => plan.semesters.map((sem) => sem.map((c) => c.code ?? `~${c.ph}`).sort());
+
+test("nothing taken: same semesters as the new default plan", () => {
   for (const [cat, from, to] of cases) {
     const fresh = generate(cat, to);
-    const merged = mergePlan(cat, generate(cat, from), fresh, to);
-    assert.equal(encodePlan(merged), encodePlan(fresh));
+    assert.deepEqual(bySemester(mergePlan(cat, generate(cat, from), fresh, to)), bySemester(fresh));
+    assert.equal(encodePlan(mergePlan(cat, { semesters: [] }, fresh, to)), encodePlan(fresh));
   }
 });
 
@@ -64,4 +67,14 @@ test("deterministic", () => {
   const old = allTaken(generate(bcom, FIN_ACC));
   assert.deepEqual(mergePlan(bcom, old, generate(bcom, FIN_ACC_MAJ), FIN_ACC_MAJ),
     mergePlan(bcom, old, generate(bcom, FIN_ACC_MAJ), FIN_ACC_MAJ));
+});
+
+test("untaken units that still count are kept in place; elective-only ones are dropped", () => {
+  const fresh = generate(bsc, CS_MATHS_MAJ);
+  // DATA1001 counts toward the degree core, so it stays; ELEC2302 only counts as an elective.
+  const merged = mergePlan(bsc, planFrom("INFO1110!....COMP3221,DATA1001.ELEC2302"), fresh, CS_MATHS_MAJ);
+  assert.deepEqual(merged.semesters[4][0], { code: "COMP3221", taken: false });
+  assert.equal(count(merged, "maj:v"), 0);
+  assert.ok(codes(merged).includes("DATA1001"));
+  assert.ok(!codes(merged).includes("ELEC2302"));
 });

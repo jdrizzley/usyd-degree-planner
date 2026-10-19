@@ -1,14 +1,20 @@
 // Keep what the user has done when their choices change (phase 3 brief §3.5).
 //
-// The old plan's taken units stay exactly where they are. The new default
-// plan's units go in around them, then placeholders are counted again so
-// requirements the taken units already cover don't get extra slots.
-import { expand } from "./expand.js";
+// The old plan's taken units, and untaken ones that still count, stay exactly
+// where they are. The new default plan's units go in around them, then
+// placeholders are counted again so requirements the kept units already
+// cover don't get extra slots.
+import { expand, leafMatches } from "./expand.js";
 import { MAX_SEMESTERS, MAX_SLOTS, PLACEHOLDER_CP, cellCp, takesSlot, slotsUsed } from "./plan.js";
 import { progress } from "./progress.js";
 
 export function mergePlan(catalog, oldPlan, newPlan, choices = {}) {
-  const semesters = oldPlan.semesters.map((sem) => sem.filter((c) => c.code && c.taken).map((c) => ({ ...c })));
+  const ex = expand(catalog, choices);
+  // Untaken units stay too if they still count toward a requirement other
+  // than electives (phase 4 brief §3.3).
+  const counts = (code) => ex.leaves.some((l) => !l.fill && leafMatches(catalog, l, code));
+  const keepCell = (c) => c.code && (c.taken || counts(c.code));
+  const semesters = oldPlan.semesters.map((sem) => sem.filter(keepCell).map((c) => ({ ...c })));
   while (semesters.length < newPlan.semesters.length) semesters.push([]);
   const present = new Set(semesters.flat().map((c) => c.code));
 
@@ -36,7 +42,6 @@ export function mergePlan(catalog, oldPlan, newPlan, choices = {}) {
   const newCount = new Map();
   for (const sem of newPlan.semesters) for (const c of sem) if (c.ph) newCount.set(c.ph, (newCount.get(c.ph) ?? 0) + 1);
 
-  const ex = expand(catalog, choices);
   const nodes = progress(catalog, choices, { semesters }).nodes;
   const isFill = (id) => !!ex.byId[id]?.fill;
   const keep = new Map();

@@ -95,3 +95,31 @@ test("every unit of the default plan taken: units rows met, planned becomes take
     }
   }
 });
+
+test("placeholder labels", async () => {
+  const { placeholderLabel } = await import("../engine/describe.js");
+  const ex = expand(bsc, CS_MATHS);
+  const short = (cat, e, id) => placeholderLabel(cat, e, id).short;
+  assert.equal(short(bsc, ex, "elec"), "Elective");
+  assert.equal(short(bsc, ex, "ole"), "OLE");
+  assert.equal(short(bsc, ex, "sec:iv"), "3000 selective");
+  assert.equal(short(bsc, ex, "maj:v"), "Major selective");
+  assert.equal(short(be, expand(be, SOFT), "stream"), "Stream");
+  assert.equal(placeholderLabel(bsc, ex, "maj:v").full, "Major · Computer Science · Major selective");
+  assert.equal(placeholderLabel(bsc, ex, "ole").full, "Open Learning Environment");
+});
+
+test("unit tooltip text", async () => {
+  const { unitSummary } = await import("../engine/describe.js");
+  const { checkPlan } = await import("../engine/rules.js");
+  const cell = checkPlan(bsc, { semesters: [[{ code: "COMP2017", taken: false }]] }, CS_MATHS).cells[0][0];
+  const s = unitSummary(bsc, "COMP2017", cell);
+  assert.equal(s.title, "COMP2017 · Systems Programming");
+  assert.equal(s.lines[0], "6 cp · Semester 1");
+  assert.equal(s.reasons.length, 2);
+  assert.ok(s.notes.some((n) => n.startsWith("Assumed knowledge")));
+  assert.equal(unitSummary(bsc, "COMP3109").lines[0], "6 cp · Not offered recently");
+  assert.equal(unitSummary(bsc, "DATA1001").lines[0], "6 cp · Semester 1 and 2");
+  assert.equal(unitSummary(bcom, "BUSS1000").lines[0], "6 cp");
+  assert.deepEqual(unitSummary(bsc, "ZZZZ1234").lines, ["Not in the 2026 unit list"]);
+});

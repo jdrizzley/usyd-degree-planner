@@ -117,16 +117,3 @@ export async function renderDashboard(ctx) {
   );
   return { node, title: `${course.name} · Degree Planner` };
 }
-
-// Phase 4 builds the grid; until then the plan route says so.
-export async function renderPlanHolder(ctx) {
-  const state = await loadCourse(ctx);
-  if (!state.course) return notFound(state);
-  const back = h("a", { class: "back", href: hashFor(state, "dashboard") }, `← ${state.course.name}`);
-  return {
-    node: h("div", {},
-      topbar(back, infoButton()),
-      message("The study plan is coming in the next update.", h("a", { href: hashFor(state, "dashboard") }, "Back to the dashboard"))),
-    title: `Study plan · ${state.course.name} · Degree Planner`,
-  };
-}
