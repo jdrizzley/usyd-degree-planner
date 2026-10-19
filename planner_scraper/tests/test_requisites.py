@@ -28,6 +28,36 @@ U = lambda c: {"unit": c}  # noqa: E731
             {"op": "and", "args": [{"cp": 112}, U("FINC2011"), U("FINC2012")]},
         ),
         ("MATH1X61 or MATH1971", {"op": "or", "args": [{"unitPattern": "MATH1X61"}, U("MATH1971")]}),
+        # MATH2069: the bracket after "except" is excluded, not required.
+        (
+            "6 credit points of MATH1XXX except (MATH1XX5 or MATH1050 or MATH1111)",
+            {"cp": 6, "pattern": "MATH1XXX",
+             "exclude": [{"unitPattern": "MATH1XX5"}, U("MATH1050"), U("MATH1111")]},
+        ),
+        (
+            "6 credit points of MATH1XXX except MATH1050 or MATH1111",
+            {"cp": 6, "pattern": "MATH1XXX", "exclude": [U("MATH1050"), U("MATH1111")]},
+        ),
+        # SOFT3888: "units from A or B or C" is a prefix list, not three alternatives.
+        (
+            "(INFO1110 or INFO1910 or ENGG1810) and INFO1113 and "
+            "[18 credit points 2000-level or above units from SOFT or COMP or INFO]",
+            {"op": "and", "args": [
+                {"op": "or", "args": [U("INFO1110"), U("INFO1910"), U("ENGG1810")]},
+                U("INFO1113"),
+                {"cp": 18, "minLevel": 2000, "prefixes": ["SOFT", "COMP", "INFO"]},
+            ]},
+        ),
+        # ELEC4712: "3000- or higher level" is a minimum level; "BE units" stays as text.
+        (
+            "36 credit points of 3000- or higher level BE units of study",
+            {"op": "and", "args": [
+                {"text": "36 credit points of 3000- or higher level BE units of study"},
+                {"cp": 36, "minLevel": 3000},
+            ]},
+        ),
+        ("12 credit points of 3000-level or higher units", {"cp": 12, "minLevel": 3000}),
+        ("12 credit points of 2000-level units", {"cp": 12, "level": 2000}),
     ],
 )
 def test_parse(raw, expected):

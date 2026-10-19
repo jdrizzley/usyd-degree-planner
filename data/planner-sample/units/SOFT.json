@@ -230,27 +230,13 @@
         "unit": "INFO1113"
        },
        {
-        "args": [
-         {
-          "args": [
-           {
-            "text": "18 credit points 2000-level or above units from SOFT"
-           },
-           {
-            "cp": 18,
-            "level": 2000
-           }
-          ],
-          "op": "and"
-         },
-         {
-          "text": "COMP"
-         },
-         {
-          "text": "INFO"
-         }
-        ],
-        "op": "or"
+        "cp": 18,
+        "minLevel": 2000,
+        "prefixes": [
+         "SOFT",
+         "COMP",
+         "INFO"
+        ]
        }
       ],
       "op": "and"

@@ -14,6 +14,8 @@ from pathlib import Path
 EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
 CODE = re.compile(r"^[A-Z]{4}\d{4}$")
 PATTERN = re.compile(r"^[A-Z]{4}[0-9X]{4}$")
+PREFIX = re.compile(r"^[A-Z]{4}$")
+CP_KEYS = {"cp", "level", "minLevel", "pattern", "prefixes", "exclude"}
 REQ_TYPES = {"all", "cp", "units", "choice"}
 POOL_KEYS = {"units", "component", "sections", "pools", "level", "prefix", "exclude", "any"}
 SESSIONS = {"S1", "S2"}
@@ -65,8 +67,23 @@ class Checker:
             if not PATTERN.match(node["unitPattern"]):
                 self.err(where, f"bad unit pattern {node['unitPattern']!r}")
         elif "cp" in node:
-            if not isinstance(node["cp"], int):
-                self.err(where, f"cp must be an int: {node}")
+            extra = set(node) - CP_KEYS
+            if extra:
+                self.err(where, f"unknown cp node keys {sorted(extra)}: {node}")
+            for k in ("cp", "level", "minLevel"):
+                if k in node and not isinstance(node[k], int):
+                    self.err(where, f"{k} must be an int: {node}")
+            if "pattern" in node and not PATTERN.match(node["pattern"]):
+                self.err(where, f"bad pattern {node['pattern']!r}")
+            if "prefixes" in node and not (
+                node["prefixes"] and all(isinstance(x, str) and PREFIX.match(x) for x in node["prefixes"])
+            ):
+                self.err(where, f"bad prefixes {node['prefixes']!r}")
+            for ex in node.get("exclude", []):
+                if not (isinstance(ex, dict) and ("unit" in ex or "unitPattern" in ex)):
+                    self.err(where, f"exclude must list unit / unitPattern nodes: {ex!r}")
+                else:
+                    self.check_tree(where, ex)
         elif "text" not in node:
             self.err(where, f"unknown rule node: {node}")
 

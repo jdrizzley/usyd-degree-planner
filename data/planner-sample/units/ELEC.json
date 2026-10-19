@@ -1746,7 +1746,8 @@
         "text": "36 credit points of 3000- or higher level BE units of study"
        },
        {
-        "cp": 36
+        "cp": 36,
+        "minLevel": 3000
        }
       ],
       "op": "and"

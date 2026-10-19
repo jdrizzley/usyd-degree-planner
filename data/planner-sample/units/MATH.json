@@ -1587,30 +1587,19 @@
     },
     "prerequisites": {
      "parsed": {
-      "args": [
+      "cp": 6,
+      "exclude": [
        {
-        "text": "6 credit points of MATH1XXX except"
+        "unitPattern": "MATH1XX5"
        },
        {
-        "cp": 6,
-        "pattern": "MATH1XXX"
+        "unit": "MATH1050"
        },
        {
-        "args": [
-         {
-          "unitPattern": "MATH1XX5"
-         },
-         {
-          "unit": "MATH1050"
-         },
-         {
-          "unit": "MATH1111"
-         }
-        ],
-        "op": "or"
+        "unit": "MATH1111"
        }
       ],
-      "op": "and"
+      "pattern": "MATH1XXX"
      },
      "raw": "6 credit points of MATH1XXX except (MATH1XX5 or MATH1050 or MATH1111)"
     },
