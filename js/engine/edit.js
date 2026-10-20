@@ -1,14 +1,32 @@
 // Pure plan edits (phase 4 brief §2). Every function returns a new plan and
 // never changes the one it was given. Positions are (s, i): semester index,
 // cell index within that semester.
-import { MAX_SEMESTERS, MAX_SLOTS, semesterLabel, sessionOf, slotsUsed, takesSlot } from "./plan.js";
+import { MAX_SEMESTERS, canAdd, isOverfull, rowsFor, semesterLabel, sessionOf } from "./plan.js";
 
 const copy = (plan) => ({ semesters: plan.semesters.map((sem) => sem.map((c) => ({ ...c }))) });
 
+// Click: taken <-> not taken. A failed unit becomes taken (passed after all).
 export function toggleTaken(plan, s, i) {
   const out = copy(plan);
   const cell = out.semesters[s]?.[i];
-  if (cell?.code) cell.taken = !cell.taken;
+  if (!cell?.code) return out;
+  if (cell.failed) {
+    delete cell.failed;
+    cell.taken = true;
+  } else {
+    cell.taken = !cell.taken;
+  }
+  return out;
+}
+
+// Shift-click / F: failed <-> normal. A failed unit is never taken.
+export function toggleFailed(plan, s, i) {
+  const out = copy(plan);
+  const cell = out.semesters[s]?.[i];
+  if (!cell?.code) return out;
+  if (cell.failed) delete cell.failed;
+  else cell.failed = true;
+  cell.taken = false;
   return out;
 }
 
@@ -46,9 +64,10 @@ export function replacePlaceholder(plan, s, i, code) {
   return out;
 }
 
+// Where the code is on the plan, ignoring failed attempts (a retake is allowed).
 function findCode(plan, code) {
   for (let s = 0; s < plan.semesters.length; s++) {
-    if (plan.semesters[s].some((c) => c.code === code)) return s;
+    if (plan.semesters[s].some((c) => c.code === code && !c.failed)) return s;
   }
   return -1;
 }
@@ -61,8 +80,7 @@ export function addUnit(catalog, plan, code, target = null) {
   const out = copy(plan);
   const cell = { code, taken: false };
   const unit = catalog.unit(code);
-  const needsSlot = takesSlot(catalog, cell);
-  const hasRoom = (k) => !needsSlot || slotsUsed(catalog, out.semesters[k]) < MAX_SLOTS;
+  const hasRoom = (k) => canAdd(catalog, out.semesters[k], cell);
 
   if (target) {
     while (out.semesters.length <= target.s) out.semesters.push([]);
@@ -92,18 +110,23 @@ export function moveCell(catalog, plan, from, to) {
   if (!src) return { same: true };
   const dst = to.kind === "cell" ? plan.semesters[to.s]?.[to.i] : null;
 
-  // Swap two slot-taking tiles.
-  if (dst && takesSlot(catalog, src) && takesSlot(catalog, dst)) {
+  // Swap two tiles, unless that leaves a semester with too many credit-point units.
+  if (dst) {
     const out = copy(plan);
     out.semesters[from.s][from.i] = { ...dst };
     out.semesters[to.s][to.i] = { ...src };
+    for (const k of [to.s, from.s]) {
+      if (isOverfull(catalog, out.semesters[k]) && !isOverfull(catalog, plan.semesters[k])) {
+        return { error: `${semesterLabel(k)} is full.` };
+      }
+    }
     return { plan: out, at: { s: to.s, i: to.i } };
   }
 
-  // Otherwise it goes to the end of the target semester (pills never swap).
+  // Otherwise it goes to the end of the target semester.
   const s = to.s;
   const out = copy(plan);
-  if (s !== from.s && takesSlot(catalog, src) && slotsUsed(catalog, out.semesters[s]) >= MAX_SLOTS) {
+  if (s !== from.s && !canAdd(catalog, out.semesters[s], src)) {
     return { error: `${semesterLabel(s)} is full.` };
   }
   const [cell] = out.semesters[from.s].splice(from.i, 1);
@@ -111,17 +134,15 @@ export function moveCell(catalog, plan, from, to) {
   return { plan: out, at: { s, i: out.semesters[s].length - 1 } };
 }
 
-// What's at row `row` of column s: the slot-taking cells fill rows from the top.
+// What's at row `row` of column s: cells fill rows from the top.
 export function targetAt(catalog, plan, s, row) {
-  const slotted = [];
-  (plan.semesters[s] ?? []).forEach((c, i) => takesSlot(catalog, c) && slotted.push(i));
-  return row < slotted.length ? { kind: "cell", s, i: slotted[row] } : { kind: "semester", s };
+  return row < (plan.semesters[s]?.length ?? 0) ? { kind: "cell", s, i: row } : { kind: "semester", s };
 }
 
 // Arrow keys move a keyboard target around the grid, clamped to its edges.
 export function stepTarget(catalog, plan, { s, row }, key) {
   const last = plan.semesters.length - 1;
-  const rows = (k) => Math.max(MAX_SLOTS, slotsUsed(catalog, plan.semesters[k] ?? []));
+  const rows = (k) => Math.max(rowsFor(catalog), plan.semesters[k]?.length ?? 0);
   if (key === "ArrowLeft") s = Math.max(0, s - 1);
   else if (key === "ArrowRight") s = Math.min(last, s + 1);
   else if (key === "ArrowUp") row = Math.max(0, row - 1);

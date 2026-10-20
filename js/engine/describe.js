@@ -163,3 +163,64 @@ export function unitSummary(catalog, code, cellStatus = null) {
     notes: cellStatus?.notes ?? [],
   };
 }
+
+// ---------------------------------------------------------------- valid plan (phase 5b)
+
+// Is the plan as it stands (taken + planned real units, not failed, no
+// placeholders) enough to graduate? Returns { valid, requirements, placeholders,
+// overfull, conflicts }, each a list of plain sentences / items for the pop-up.
+export function planValidity(catalog, { progress: prog, checks, plan, expanded }) {
+  const { nodes, tree } = prog;
+  const where = (k) => `${catalog.year + Math.floor(k / 2)} · S${(k % 2) + 1}`;
+  const fullLabel = (n) => placeholderLabel(catalog, expanded, n.id).full;
+
+  const requirements = [];
+  (function walk(n) {
+    const r = nodes[n.id];
+    if (!r) return;
+    if (n.type === "choice") {
+      requirements.push(`Choose your ${(n.label ?? "").toLowerCase()}`);
+      return;
+    }
+    if (n.type === "units") {
+      if (!r.plannedMet) {
+        const missing = n.units.filter((c) => !r.plannedUnits.includes(c));
+        requirements.push(`${fullLabel(n)}: still needs ${missing.join(", ")}`);
+      }
+      return;
+    }
+    if (n.type === "cp") {
+      if (!r.plannedMet) requirements.push(`${fullLabel(n)}: ${r.plannedCp} of ${r.needCp} credit points planned`);
+      return;
+    }
+    (n.children ?? []).forEach(walk);
+    // A block that needs more than its parts (e.g. a 120 cp stream), when the parts are all fine.
+    const partsOk = (n.children ?? []).every((c) => nodes[c.id]?.plannedMet);
+    if (n !== tree && n.cp != null && partsOk && !r.plannedMet) {
+      requirements.push(`${fullLabel(n)}: ${r.plannedCp} of ${n.cp} credit points planned`);
+    }
+  })(tree);
+  const total = prog.takenCp + prog.plannedCp;
+  if (total < prog.requiredCp) requirements.push(`The plan has ${total} of ${prog.requiredCp} credit points`);
+
+  const counts = new Map();
+  for (const sem of plan.semesters) {
+    for (const c of sem) {
+      if (!c.ph) continue;
+      const label = placeholderLabel(catalog, expanded, c.ph).short;
+      counts.set(label, (counts.get(label) ?? 0) + 1);
+    }
+  }
+  const placeholders = [...counts].map(([label, n]) => (n > 1 ? `${label} ×${n}` : label));
+
+  const overfull = checks.overfull.map((k) => `${where(k)} has too many units`);
+
+  const conflicts = [];
+  plan.semesters.forEach((sem, k) => sem.forEach((c, i) => {
+    const check = checks.cells[k]?.[i];
+    if (check?.status === "broken") conflicts.push({ code: c.code, where: where(k), reasons: check.reasons });
+  }));
+
+  const valid = !requirements.length && !placeholders.length && !overfull.length && !conflicts.length;
+  return { valid, requirements, placeholders, overfull, conflicts };
+}

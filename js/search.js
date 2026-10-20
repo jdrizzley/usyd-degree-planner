@@ -61,7 +61,7 @@ export async function renderHome(meta) {
   const box = h("div", { class: "search" }, input, h("div", { class: "suggestions-wrap" }, list));
 
   function go(course) {
-    if (course) location.hash = buildHash({ page: "dashboard", course: course.slug, year });
+    if (course) location.hash = buildHash({ page: "setup", course: course.slug, year });
   }
 
   function setActive(i) {

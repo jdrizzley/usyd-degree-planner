@@ -1,13 +1,14 @@
 // Hash routes (build guide §6) and, from phase 2, plan state encoding (§8).
 //
 //   #/                                  home
-//   #/{course}/{year}                   dashboard
+//   #/{course}/{year}/setup             setup: majors/minors/stream and start year
+//   #/{course}/{year}                   the plan page ("dashboard" route: numbers + grid)
 //   #/{course}/{year}/requirements      requirements view
-//   #/{course}/{year}/plan              study plan
+//   #/{course}/{year}/plan              old study plan link: redirects to the plan page
 //
 // Anything after "?" inside the hash is query state (choices, plan, version).
 
-const SUBPAGES = { requirements: "requirements", plan: "plan" };
+const SUBPAGES = { requirements: "requirements", plan: "plan", setup: "setup" };
 
 export function parseRoute(hash = "") {
   const raw = hash.replace(/^#/, "");
@@ -58,13 +59,13 @@ export function buildHash({ page = "home", course, year, params = {} } = {}) {
 export const FORMAT_VERSION = 1;
 const MAX_SEMESTERS = 16;
 const MAX_CELLS = 12;
-const CELL = /^([A-Z]{4}\d{4})(!?)$|^~([a-z0-9:-]+)$/;
+const CELL = /^([A-Z]{4}\d{4})([!x]?)$|^~([a-z0-9:-]+)$/;
 
 // Semesters joined by ".", cells by ",". "COMP2017", taken "COMP2017!",
-// placeholder "~maj:v". Empty semesters are empty segments.
+// failed "COMP2017x", placeholder "~maj:v". Empty semesters are empty segments.
 export function encodePlan(plan) {
   return plan.semesters
-    .map((sem) => sem.map((c) => (c.ph ? `~${c.ph}` : `${c.code}${c.taken ? "!" : ""}`)).join(","))
+    .map((sem) => sem.map((c) => (c.ph ? `~${c.ph}` : `${c.code}${c.failed ? "x" : c.taken ? "!" : ""}`)).join(","))
     .join(".");
 }
 
@@ -82,7 +83,9 @@ export function decodePlan(text) {
     for (const part of parts) {
       const m = CELL.exec(part);
       if (!m) return null;
-      sem.push(m[3] ? { ph: m[3] } : { code: m[1], taken: m[2] === "!" });
+      if (m[3]) sem.push({ ph: m[3] });
+      else if (m[2] === "x") sem.push({ code: m[1], taken: false, failed: true });
+      else sem.push({ code: m[1], taken: m[2] === "!" });
     }
     semesters.push(sem);
   }

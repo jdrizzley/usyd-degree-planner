@@ -1,6 +1,7 @@
 // Everything a course page needs, built from the route (phase 3 brief §3).
 // DOM-free: loadJSON and the store are passed in, so tests run in Node.
 import { loadCatalog } from "./engine/catalog.js";
+import { planValidity } from "./engine/describe.js";
 import { expand } from "./engine/expand.js";
 import { generate } from "./engine/generate.js";
 import { mergePlan } from "./engine/merge.js";
@@ -25,12 +26,12 @@ const userPlan = (state) => state.planSource !== "generated";
 // Everything worked out from the plan: numbers, rule checks, requirement tree.
 function withDerived(state) {
   const { catalog, choices, plan } = state;
-  return {
-    ...state,
+  const derived = {
     progress: progress(catalog, choices, plan),
     checks: checkPlan(catalog, plan, choices),
     expanded: expand(catalog, choices),
   };
+  return { ...state, ...derived, validity: planValidity(catalog, { ...derived, plan }) };
 }
 
 const planCodes = (plan) => plan.semesters.flat().filter((c) => c.code).map((c) => c.code);
@@ -120,4 +121,37 @@ export function editPlan(state, plan, { store }) {
   const next = withDerived({ ...state, plan, planSource: "url" });
   store.set(storageKey(state.slug, state.year, state.choices), encodePlan(plan));
   return { state: next, hash: hashFor(next) };
+}
+
+// The setup page's Continue: new year and/or choices. A plan the user has
+// edited is kept (taken units stay put via mergePlan when the choices change).
+export async function applySetup(state, { year, choices }, { loadJSON, store }) {
+  let next = state;
+  if (year !== state.year) {
+    const catalog = await courseFor(loadJSON, year, state.slug);
+    if (!catalog) return buildHash({ page: "setup", course: state.slug, year });
+    next = { ...state, year, catalog, course: catalog.course };
+  }
+  const picked = readChoices(choices, next.course);
+  const same = (a, b) => JSON.stringify(Object.entries(a).sort()) === JSON.stringify(Object.entries(b).sort());
+  if (userPlan(state)) {
+    let plan = state.plan;
+    if (!same(picked, state.choices)) plan = mergePlan(next.catalog, plan, generate(next.catalog, picked), picked);
+    store.set(storageKey(state.slug, next.year, picked), encodePlan(plan));
+    next = { ...next, plan };
+  }
+  return hashFor({ ...next, choices: picked }, "dashboard");
+}
+
+// Required choices not picked yet (the plan page sends you to setup).
+export const missingRequired = (state) =>
+  (state.course.choices ?? []).filter((ch) => ch.required !== false && !state.choices[ch.id]).map((ch) => ch.id);
+
+// "Computer Science major · Mathematics minor"
+export function choiceSummary(state) {
+  return (state.course.choices ?? [])
+    .map((ch) => ch.options.find((o) => o.id === state.choices[ch.id]))
+    .filter(Boolean)
+    .map((o) => `${o.name} ${o.kind}`)
+    .join(" · ");
 }

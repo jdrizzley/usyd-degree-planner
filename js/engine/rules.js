@@ -1,6 +1,6 @@
 // Per-cell rule checks, reasons and hover relations (phase 2 brief §4).
 import { expand, levelOf, placeholderRange } from "./expand.js";
-import { MAX_SLOTS, cellCp, semesterLabel, sessionOf, slotsUsed } from "./plan.js";
+import { cellCp, isOverfull, semesterLabel, sessionOf } from "./plan.js";
 
 // "MATH1X61" matches MATH1061, MATH1961, ... (X = any digit).
 export function matchPattern(pattern, code) {
@@ -22,6 +22,7 @@ export function entriesFor(catalog, cells, phRange = () => null) {
   const seen = new Set();
   const out = [];
   for (const cell of cells) {
+    if (cell.failed) continue; // a failed attempt satisfies nothing
     if (cell.ph) {
       out.push({ ph: cell.ph, cp: cellCp(catalog, cell), range: phRange(cell.ph) });
     } else if (!seen.has(cell.code)) {
@@ -164,6 +165,7 @@ export function checkPlan(catalog, plan, choices = {}) {
 
   const cells = sems.map((sem, k) => sem.map((cell, i) => {
     if (cell.ph) return { status: "placeholder", reasons: [], notes: [] };
+    if (cell.failed) return { status: "failed", reasons: [], notes: [] };
     const unit = catalog.unit(cell.code);
     if (!unit) return { status: "unknown", reasons: [`Not in the ${catalog.year} unit list`], notes: [] };
 
@@ -178,7 +180,7 @@ export function checkPlan(catalog, plan, choices = {}) {
     reasons.push(...requireReasons(co?.parsed, upTo, "same"));
 
     if (no?.parsed) {
-      const others = sems.flatMap((s2, k2) => s2.filter((c, j) => c.code && !(k2 === k && j === i)));
+      const others = sems.flatMap((s2, k2) => s2.filter((c, j) => c.code && !c.failed && !(k2 === k && j === i)));
       const otherCodes = [...new Set(others.map((c) => c.code).filter((c) => c !== cell.code))];
       const entries = entriesFor(catalog, otherCodes.map((code) => ({ code })));
       if (evaluate(no.parsed, entries, "prohibit")) {
@@ -195,7 +197,7 @@ export function checkPlan(catalog, plan, choices = {}) {
       }
     }
 
-    const dup = sems.findIndex((s2, k2) => s2.some((c, j) => c.code === cell.code && (k2 < k || (k2 === k && j < i))));
+    const dup = sems.findIndex((s2, k2) => s2.some((c, j) => c.code === cell.code && !c.failed && (k2 < k || (k2 === k && j < i))));
     if (dup !== -1) reasons.push(`Already in your plan in ${semesterLabel(dup)}`);
 
     collectNotes(pre, notes);
@@ -205,7 +207,7 @@ export function checkPlan(catalog, plan, choices = {}) {
     return { status: reasons.length ? "broken" : "ok", reasons, notes: [...new Set(notes)] };
   }));
 
-  const overfull = sems.map((s, k) => (slotsUsed(catalog, s) > MAX_SLOTS ? k : -1)).filter((k) => k !== -1);
+  const overfull = sems.map((s, k) => (isOverfull(catalog, s) ? k : -1)).filter((k) => k !== -1);
   return { cells, overfull };
 }
 
@@ -220,20 +222,20 @@ function positions(plan, keep) {
 // Cells this unit depends on (shown red on hover).
 export function prereqsOf(catalog, plan, s, i) {
   const cell = plan.semesters[s]?.[i];
-  const unit = cell?.code && catalog.unit(cell.code);
+  const unit = cell?.code && !cell.failed && catalog.unit(cell.code);
   if (!unit) return [];
   const pre = unit.rules.prerequisites?.parsed;
   const co = unit.rules.corequisites?.parsed;
-  return positions(plan, (c, s2, i2) => c.code && !(s2 === s && i2 === i) && c.code !== cell.code && (
+  return positions(plan, (c, s2, i2) => c.code && !c.failed && !(s2 === s && i2 === i) && c.code !== cell.code && (
     (s2 < s && mentions(pre, c.code)) || (s2 <= s && mentions(co, c.code))));
 }
 
 // Later cells that depend on this unit (shown green on hover).
 export function unlocks(catalog, plan, s, i) {
   const cell = plan.semesters[s]?.[i];
-  if (!cell?.code || !catalog.unit(cell.code)) return [];
+  if (!cell?.code || cell.failed || !catalog.unit(cell.code)) return [];
   return positions(plan, (c, s2, i2) => {
-    if (!c.code || (s2 === s && i2 === i) || c.code === cell.code) return false;
+    if (!c.code || c.failed || (s2 === s && i2 === i) || c.code === cell.code) return false;
     const u = catalog.unit(c.code);
     if (!u) return false;
     return (s2 > s && mentions(u.rules.prerequisites?.parsed, cell.code))

@@ -1,28 +1,30 @@
-// Study plan page (build guide §6.4, phase 4 brief §4). The page keeps its
-// state in memory: edits re-draw in place and write the address after 150 ms,
-// instead of reloading through the router.
-import { loadCourse, notFound, notes, numbers, topbar } from "./dashboard.js";
+// The plan page (build guide §6.4, phase 4 brief §4, phase 5b): degree title,
+// the four numbers, the grid and + Semester / + Unit, all centred. The page
+// keeps its state in memory: edits re-draw in place and write the address
+// after 150 ms, instead of reloading through the router.
+import { footer, loadCourse, lowConfidenceNote, notFound, notes, numbers, topbar } from "./dashboard.js";
 import { h } from "./dom.js";
 import { placeholderLabel } from "./engine/describe.js";
 import { attachDrag } from "./drag.js";
 import {
   addSemester, addUnit, moveCell, removeCell, removeLastSemester, replacePlaceholder, stepTarget, targetAt,
-  toggleTaken, undoRemove,
+  toggleFailed, toggleTaken, undoRemove,
 } from "./engine/edit.js";
 import { leafMatches, leavesUnder } from "./engine/expand.js";
-import { MAX_SLOTS, MAX_SEMESTERS, calendarYear, cellCp, semesterLabel, takesSlot, yearOf } from "./engine/plan.js";
+import { MAX_SEMESTERS, calendarYear, rowsFor, semesterLabel } from "./engine/plan.js";
 import { prereqsOf, unlocks } from "./engine/rules.js";
 import { infoButton } from "./info.js";
+import { openModal } from "./modal.js";
 import { openSheet } from "./sheet.js";
-import { editPlan, hashFor } from "./state.js";
+import { choiceSummary, editPlan, hashFor, missingRequired } from "./state.js";
 import { browserStore } from "./store.js";
 import { hideTooltip, showTooltip } from "./tooltip.js";
 
 const HOVER_DELAY = 120;
-const LEAVE_DELAY = 80;
+const LEAVE_DELAY = 80; // highlights only; the conflict pop-up hides at once
 const WRITE_DELAY = 150;
 const UNDO_TIME = 5000;
-const FROM_PAGES = new Set(["dashboard", "requirements"]);
+const FROM_PAGES = new Set(["setup"]);
 
 // The previous plan page's drag listeners, removed when a new one renders.
 let detachPrevious = null;
@@ -31,10 +33,15 @@ const reducedMotion = () => globalThis.matchMedia?.("(prefers-reduced-motion: re
 export async function renderPlan(ctx) {
   let state = await loadCourse(ctx);
   if (!state.course) return notFound(state);
+  // Old /plan links, and links missing a required choice, go elsewhere.
+  if (ctx.route.page === "plan" || missingRequired(state).length) {
+    ctx.replace(hashFor(state, missingRequired(state).length ? "setup" : "dashboard"));
+    return { node: h("div"), title: "Degree Planner" };
+  }
   const store = browserStore();
   const course = state.course;
 
-  const headerHost = h("div", { class: "plan-header-host" });
+  const headerHost = h("div", { class: "plan-top" });
   const sheetHost = h("div", { class: "sheet-host" });
   const bodyHost = h("div", { class: "plan-body" });
   const undoHost = h("div", { class: "undo-host", "aria-live": "polite" });
@@ -64,6 +71,15 @@ export async function renderPlan(ctx) {
     draw();
     clearTimeout(writeTimer);
     writeTimer = setTimeout(() => ctx.write(r.hash), WRITE_DELAY);
+  }
+
+  // Shift-click / F: failed <-> normal. Focus stays on the tile.
+  function fail(s, i) {
+    const cell = state.plan.semesters[s][i];
+    if (!cell?.code) return;
+    apply(toggleFailed(state.plan, s, i));
+    cells.get(`${s}:${i}`)?.focus();
+    announce(`${cell.code} ${cell.failed ? "is no longer marked failed" : "marked failed"}.`);
   }
 
   function remove(s, i) {
@@ -157,6 +173,7 @@ export async function renderPlan(ctx) {
     clearTimeout(hoverTimer);
     const run = () => {
       clearHighlights();
+      hideTooltip();
       const cell = state.plan.semesters[s][i];
       if (cell.code) {
         for (const p of prereqsOf(state.catalog, state.plan, s, i)) cells.get(`${p.s}:${p.i}`)?.classList.add("pre");
@@ -173,10 +190,8 @@ export async function renderPlan(ctx) {
   function hoverEnd() {
     clearTimeout(hoverTimer);
     clearTimeout(leaveTimer);
-    leaveTimer = setTimeout(() => {
-      clearHighlights();
-      hideTooltip();
-    }, LEAVE_DELAY);
+    hideTooltip(); // the conflict pop-up never outlives the pointer leaving its tile
+    leaveTimer = setTimeout(clearHighlights, LEAVE_DELAY);
   }
 
   // ------------------------------------------------------------ moving
@@ -198,7 +213,7 @@ export async function renderPlan(ctx) {
       return false;
     }
     if (r.same) return false;
-    const swapped = other && takesSlot(state.catalog, cell) && takesSlot(state.catalog, other);
+    const swapped = !!other;
     apply(r.plan);
     announce(swapped ? `Swapped ${nameOf(cell)} and ${nameOf(other)}.` : `Moved ${nameOf(cell)} to ${semesterLabel(r.at.s)}.`);
     const moved = cell.code ? bodyHost.querySelector(`[data-key="cell-${cell.code}"]`) : cells.get(`${r.at.s}:${r.at.i}`);
@@ -206,11 +221,7 @@ export async function renderPlan(ctx) {
     return true;
   }
 
-  function rowOf(s, i) {
-    const sem = state.plan.semesters[s];
-    if (!takesSlot(state.catalog, sem[i])) return 0;
-    return sem.slice(0, i).filter((c) => takesSlot(state.catalog, c)).length;
-  }
+  const rowOf = (s, i) => i; // cells fill rows from the top
 
   // The element a keyboard target points at, for the outline.
   function targetEl(t) {
@@ -290,6 +301,9 @@ export async function renderPlan(ctx) {
     if (e.key === "Delete" || e.key === "Backspace") {
       e.preventDefault();
       remove(s, i);
+    } else if ((e.key === "f" || e.key === "F") && !e.metaKey && !e.ctrlKey && !e.altKey) {
+      e.preventDefault();
+      fail(s, i);
     } else if (e.key === "Enter") {
       e.preventDefault();
       pickUp(el, s, i);
@@ -298,8 +312,9 @@ export async function renderPlan(ctx) {
 
   // ------------------------------------------------------------ drawing
 
-  function header() {
-    const back = h("a", { class: "back", href: hashFor(state, "dashboard") }, `← ${course.name}`);
+  // ← goes to setup (pre-filled), where majors/minors and the start year live.
+  function top() {
+    const back = h("a", { class: "back", href: hashFor(state, "setup") }, "← Setup");
     back.addEventListener("click", (e) => {
       // Going back in history is only right while the earlier page's address is current.
       const from = ctx.from;
@@ -308,27 +323,56 @@ export async function renderPlan(ctx) {
         history.back();
       }
     });
+    return topbar(back, infoButton());
+  }
+
+  function intro() {
+    const summary = choiceSummary(state);
+    const change = h("a", { class: "change-link", href: hashFor(state, "setup"), "data-key": "change-setup" }, "Change");
+    const suggestion = state.planSource === "generated"
+      ? h("p", { class: "note" }, "This is a suggested plan. Click units you've done to mark them as taken.")
+      : null;
+    return h("div", { class: "plan-intro" },
+      h("h1", { class: "page-title" }, course.name),
+      h("p", { class: "plan-subtitle" }, [summary, `Starting ${state.year}`].filter(Boolean).join(" · "), " · ", change),
+      notes(state), suggestion, lowConfidenceNote(course));
+  }
+
+  function actions() {
     const addSem = h("button", { type: "button", class: "text-button", "data-key": "add-semester" }, "+ Semester");
     addSem.disabled = state.plan.semesters.length >= MAX_SEMESTERS;
     addSem.addEventListener("click", () => apply(addSemester(state.plan)));
     const addU = h("button", { type: "button", class: "text-button", "data-key": "add-unit" }, "+ Unit");
     addU.addEventListener("click", () => addAnywhere(addU));
-    return h("header", { class: "plan-header" },
-      h("div", { class: "plan-header-start" }, back),
-      numbers(state, true),
-      h("div", { class: "plan-header-actions" }, addSem, addU, infoButton()));
+    return h("div", { class: "plan-actions" }, addSem, addU);
+  }
+
+  // The reasons the plan isn't valid yet, in a centred pop-up.
+  function showInvalid() {
+    const v = state.validity;
+    const section = (title, items) => (items.length
+      ? [h("h3", { class: "modal-section" }, title), h("ul", { class: "modal-list" }, items.map((t) => h("li", {}, t)))]
+      : []);
+    const body = [
+      ...section("Requirements not met", v.requirements),
+      ...section("Still to choose", v.placeholders.length ? [`${v.placeholders.join(", ")}`] : []),
+      ...section("Too many units", v.overfull),
+      ...section("Conflicts", v.conflicts.flatMap((c) => c.reasons.map((r) => `${c.code} (${c.where}): ${r}`))),
+    ];
+    openModal({ title: "Why this plan isn't valid yet", body, opener: bodyHost.querySelector('[data-key="num-valid"]') });
   }
 
   function cellLabel(cell, check) {
     if (cell.ph) return `${placeholderLabel(state.catalog, state.expanded, cell.ph).short}, to choose`;
     const u = state.catalog.unit(cell.code);
     const parts = [cell.code, u?.name ?? "not in the unit list"];
+    if (cell.failed) parts.push("failed");
     if (cell.taken) parts.push("taken");
     if (check?.status === "broken") parts.push("rules not met");
     return parts.join(", ");
   }
 
-  function tile(cell, s, i, { pill = false } = {}) {
+  function tile(cell, s, i) {
     const check = state.checks.cells[s]?.[i];
     const cls = ["tile"];
     let content;
@@ -336,17 +380,19 @@ export async function renderPlan(ctx) {
       cls.push("placeholder");
       content = h("span", { class: "tile-ph" }, placeholderLabel(state.catalog, state.expanded, cell.ph).short);
     } else {
-      cls.push(pill ? "pill" : "unit");
+      cls.push("unit");
+      if (cell.failed) cls.push("failed");
       if (cell.taken) cls.push("taken");
       if (check?.status === "broken") cls.push("broken");
       const unit = state.catalog.unit(cell.code);
       const code = h("span", { class: "tile-code" }, cell.code, unit ? null : h("span", { class: "tile-unknown" }, " ?"));
       // Hover slides the code up and shows the name underneath (styles.css).
-      const name = pill ? null : h("span", { class: "tile-name", "aria-hidden": "true" },
+      const name = h("span", { class: "tile-name", "aria-hidden": "true" },
         unit ? unit.name : `Not in the ${state.catalog.year} unit list`);
       content = [code, name];
     }
-    const key = cell.code ? `cell-${cell.code}` : `cell-${s}-ph-${i}`;
+    // Codes are unique on a plan except for failed attempts (a retake can follow).
+    const key = cell.ph ? `cell-${s}-ph-${i}` : cell.failed ? `cell-${cell.code}-failed-${s}` : `cell-${cell.code}`;
     const el = h("button", {
       type: "button",
       class: cls.join(" "),
@@ -357,10 +403,11 @@ export async function renderPlan(ctx) {
       "data-s": s,
       "data-i": i,
     }, content);
-    el.addEventListener("click", () => {
+    el.addEventListener("click", (e) => {
       if (!el.isConnected) return; // a tile from before the last re-draw
       hideTooltip();
       if (cell.ph) choosePlaceholder(s, i, el);
+      else if (e.shiftKey) fail(s, i);
       else apply(toggleTaken(state.plan, s, i));
     });
     el.addEventListener("keydown", (e) => onTileKey(e, el, s, i));
@@ -389,24 +436,20 @@ export async function renderPlan(ctx) {
     return el;
   }
 
+  // One bold line: "2026 · S1".
   function columnHeader(sem, s, last) {
-    const cp = sem.reduce((sum, c) => sum + cellCp(state.catalog, c), 0);
-    const over = sem.filter((c) => takesSlot(state.catalog, c)).length > MAX_SLOTS;
-    const label = semesterLabel(s);
+    const label = `${calendarYear(state.catalog, s)} · S${(s % 2) + 1}`;
     const remove = last && !sem.length && s > 0
       ? h("button", { type: "button", class: "sem-remove", "aria-label": `Remove ${label}`, "data-key": `remove-sem-${s}` }, "×")
       : null;
     remove?.addEventListener("click", () => apply(removeLastSemester(state.plan)));
-    return h("div", { class: "sem-head" },
-      h("p", { class: "sem-title" }, `Year ${yearOf(s)} · S${(s % 2) + 1}`, remove),
-      h("p", { class: "sem-sub" }, `${calendarYear(state.catalog, s)} · ${cp} cp`),
-      over ? h("p", { class: "sem-sub" }, "Over 4 units") : null);
+    return h("div", { class: "sem-head" }, h("p", { class: "sem-title" }, label, remove));
   }
 
   function grid() {
     cells = new Map();
     const sems = state.plan.semesters;
-    const rows = Math.max(MAX_SLOTS, ...sems.map((sem) => sem.filter((c) => takesSlot(state.catalog, c)).length));
+    const rows = rowsFor(state.catalog);
     const items = [];
     sems.forEach((sem, s) => {
       const col = s + 1;
@@ -416,14 +459,8 @@ export async function renderPlan(ctx) {
         return el;
       };
       items.push(at(columnHeader(sem, s, s === sems.length - 1), 1));
-      let row = 0;
-      const pills = [];
-      sem.forEach((cell, i) => {
-        if (takesSlot(state.catalog, cell)) items.push(at(tile(cell, s, i), 2 + row++));
-        else pills.push(tile(cell, s, i, { pill: true }));
-      });
-      for (let r = row; r < MAX_SLOTS; r++) items.push(at(emptySlot(s, r), 2 + r));
-      items.push(at(h("div", { class: "pill-strip", "data-drop": "semester", "data-s": s }, pills), 2 + rows));
+      sem.forEach((cell, i) => items.push(at(tile(cell, s, i), 2 + i)));
+      for (let r = sem.length; r < rows; r++) items.push(at(emptySlot(s, r), 2 + r));
     });
     const g = h("div", { class: "grid", role: "group", "aria-label": "Study plan" }, items);
     g.style.gridTemplateColumns = `repeat(${sems.length}, var(--col))`;
@@ -437,11 +474,8 @@ export async function renderPlan(ctx) {
     const scroll = bodyHost.querySelector(".grid-scroll")?.scrollLeft ?? 0;
     hideTooltip();
     clearTimeout(hoverTimer);
-    headerHost.replaceChildren(header());
-    const suggestion = state.planSource === "generated"
-      ? h("p", { class: "note" }, "This is a suggested plan. Click units you've done to mark them as taken.")
-      : null;
-    bodyHost.replaceChildren(h("div", { class: "plan-notes" }, notes(state), suggestion), grid());
+    headerHost.replaceChildren(top());
+    bodyHost.replaceChildren(intro(), numbers(state, { onInvalid: showInvalid }), grid(), actions(), footer(course));
     const scroller = bodyHost.querySelector(".grid-scroll");
     if (scroller) {
       scroller.scrollLeft = scroll;
@@ -465,5 +499,6 @@ export async function renderPlan(ctx) {
     onRemove: (from) => remove(from.s, from.i),
     reducedMotion,
   });
-  return { node: root, title: `Study plan · ${course.name} · Degree Planner` };
+  const summary = choiceSummary(state);
+  return { node: root, title: [course.name, summary, String(state.year), "Degree Planner"].filter(Boolean).join(" · ") };
 }

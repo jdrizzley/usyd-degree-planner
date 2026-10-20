@@ -5,7 +5,7 @@
 // placeholders are counted again so requirements the kept units already
 // cover don't get extra slots.
 import { expand, leafMatches } from "./expand.js";
-import { MAX_SEMESTERS, MAX_SLOTS, PLACEHOLDER_CP, cellCp, takesSlot, slotsUsed } from "./plan.js";
+import { MAX_SEMESTERS, PLACEHOLDER_CP, canAdd, cellCp } from "./plan.js";
 import { progress } from "./progress.js";
 
 export function mergePlan(catalog, oldPlan, newPlan, choices = {}) {
@@ -13,17 +13,17 @@ export function mergePlan(catalog, oldPlan, newPlan, choices = {}) {
   // Untaken units stay too if they still count toward a requirement other
   // than electives (phase 4 brief §3.3).
   const counts = (code) => ex.leaves.some((l) => !l.fill && leafMatches(catalog, l, code));
-  const keepCell = (c) => c.code && (c.taken || counts(c.code));
+  const keepCell = (c) => c.code && (c.taken || c.failed || counts(c.code));
   const semesters = oldPlan.semesters.map((sem) => sem.filter(keepCell).map((c) => ({ ...c })));
   while (semesters.length < newPlan.semesters.length) semesters.push([]);
-  const present = new Set(semesters.flat().map((c) => c.code));
+  // Failed attempts don't count as having the unit: the new plan may still add it.
+  const present = new Set(semesters.flat().filter((c) => !c.failed).map((c) => c.code));
 
-  const hasRoom = (j) => slotsUsed(catalog, semesters[j]) < MAX_SLOTS;
   // Semester k if it has room, else the next one that does. Placeholders can
   // also go in an earlier free slot before the plan grows a semester.
   function place(cell, k) {
     while (semesters.length <= k) semesters.push([]);
-    if (!takesSlot(catalog, cell)) return semesters[k].push(cell);
+    const hasRoom = (j) => canAdd(catalog, semesters[j], cell);
     for (let j = k; j < semesters.length; j++) if (hasRoom(j)) return semesters[j].push(cell);
     if (cell.ph) for (let j = k - 1; j >= 0; j--) if (hasRoom(j)) return semesters[j].push(cell);
     if (semesters.length < MAX_SEMESTERS) return semesters.push([cell]);

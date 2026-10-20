@@ -6,15 +6,17 @@
 //   replace  edit within a page: swap the address without a history entry, then re-render
 //   write    swap the address only (the page has already re-drawn itself)
 import { loadMeta } from "./data.js";
-import { message, renderDashboard, topbar } from "./dashboard.js";
+import { message, topbar } from "./dashboard.js";
 import { h } from "./dom.js";
 import { renderPlan } from "./planView.js";
 import { renderRequirements } from "./requirements.js";
+import { renderSetup } from "./setup.js";
 import { renderHome } from "./search.js";
 import { parseRoute } from "./url.js";
 
 const app = document.getElementById("app");
-const PAGES = { dashboard: renderDashboard, requirements: renderRequirements, plan: renderPlan };
+// "dashboard" is the plan page; "plan" (old links) redirects to it.
+const PAGES = { setup: renderSetup, dashboard: renderPlan, plan: renderPlan, requirements: renderRequirements };
 let metaPromise = null;
 let current = 0;
 let shown = null; // the route on screen now

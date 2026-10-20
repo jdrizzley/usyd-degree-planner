@@ -141,16 +141,38 @@ test("same semester moves to the end; onto itself does nothing", () => {
   unchanged();
 });
 
-test("0 cp pills never swap", () => {
+test("0 cp units are ordinary tiles, but a semester keeps at most 4 credit-point units", () => {
   const p = generate(be, { st: "software-stream" });
-  const pillAt = (k) => p.semesters[k].findIndex((c) => c.code?.startsWith("ENGP"));
+  const engpAt = (k) => p.semesters[k].findIndex((c) => c.code?.startsWith("ENGP"));
   const unitAt = (k) => p.semesters[k].findIndex((c) => !c.code?.startsWith("ENGP"));
-  // A pill dropped on a unit in a full semester joins that semester.
-  const r = moveCell(be, p, { s: 0, i: pillAt(0) }, cell(1, unitAt(1)));
-  assert.equal(r.plan.semesters[1].filter((c) => c.code?.startsWith("ENGP")).length, 2);
-  assert.equal(r.plan.semesters[0].length, p.semesters[0].length - 1);
-  // A unit dropped on a pill in a full semester is refused.
-  assert.equal(moveCell(be, p, { s: 0, i: unitAt(0) }, cell(1, pillAt(1))).error, "Year 1 · Semester 2 is full.");
+  // Two ENGP units swap fine.
+  const r = moveCell(be, p, { s: 0, i: engpAt(0) }, cell(1, engpAt(1)));
+  assert.ok(r.plan, r.error);
+  assert.equal(r.plan.semesters[0][engpAt(0)].code, p.semesters[1][engpAt(1)].code);
+  // Swapping an ENGP unit for a 6 cp unit would give Year 1 S1 five credit-point units.
+  assert.equal(moveCell(be, p, { s: 0, i: engpAt(0) }, cell(1, unitAt(1))).error, "Year 1 · Semester 1 is full.");
+  // A full 5-row semester takes nothing more.
+  assert.equal(moveCell(be, p, { s: 0, i: engpAt(0) }, sem(1)).error, "Year 1 · Semester 2 is full.");
+});
+
+test("failed units", async () => {
+  const { toggleFailed } = await import("../engine/edit.js");
+  const f = toggleFailed(toggleTaken(G, 2, 1), 2, 1);
+  assert.deepEqual(f.semesters[2][1], { code: "COMP2017", taken: false, failed: true });
+  assert.ok(encodePlan(f).includes("COMP2017x"));
+  // A retake is allowed once the earlier attempt failed.
+  const r = addUnit(bsc, addSemester(f), "COMP2017");
+  assert.ok(r.plan, r.error);
+  const checks = checkPlan(bsc, r.plan, CS_MATHS).cells;
+  assert.equal(checks[2][1].status, "failed");
+  assert.equal(checks[r.s][r.i].status, "ok");
+  // The failed attempt satisfies nothing: COMP3888 (needs COMP2017) is now broken in Year 3 S2.
+  assert.equal(checkPlan(bsc, f, CS_MATHS).cells[5][0].status, "broken");
+  assert.equal(progress(bsc, CS_MATHS, f).plannedCp, progress(bsc, CS_MATHS, G).plannedCp - 6);
+  // Click on a failed unit = passed; shift-click again = normal.
+  assert.deepEqual(toggleTaken(f, 2, 1).semesters[2][1], { code: "COMP2017", taken: true });
+  assert.deepEqual(toggleFailed(f, 2, 1).semesters[2][1], { code: "COMP2017", taken: false });
+  unchanged();
 });
 
 test("moves change rule checks", () => {
@@ -166,11 +188,10 @@ test("keyboard targets", () => {
   assert.deepEqual(targetAt(bsc, G, 2, 1), cell(2, 1));
   const three = planFrom("INFO1110,MATH1061,MATH1062");
   assert.deepEqual(targetAt(bsc, three, 0, 3), sem(0));
-  // BE: the pill doesn't take a row.
+  // BE: 5 rows, the 0 cp unit included.
   const p = generate(be, { st: "software-stream" });
-  const rows = [0, 1, 2, 3].map((r) => targetAt(be, p, 0, r));
-  assert.ok(rows.every((t) => t.kind === "cell" && be.unit(p.semesters[0][t.i].code).cp > 0));
-  assert.equal(new Set(rows.map((t) => t.i)).size, 4);
+  assert.deepEqual([0, 1, 2, 3, 4].map((r) => targetAt(be, p, 0, r)), [0, 1, 2, 3, 4].map((i) => cell(0, i)));
+  assert.deepEqual(stepTarget(be, p, { s: 0, row: 3 }, "ArrowDown"), { s: 0, row: 4 });
 });
 
 test("arrow keys clamp to the grid", () => {

@@ -1,7 +1,7 @@
 // Default plan for a course and its choices (phase 2 brief §7).
 import { decodePlan } from "../url.js";
 import { expand, leafMatches, leafNeedCp, minCp, placeholderRange, poolCandidates } from "./expand.js";
-import { MAX_SEMESTERS, MAX_SLOTS, PLACEHOLDER_CP, sessionOf, slotsUsed, takesSlot, yearOf } from "./plan.js";
+import { MAX_SEMESTERS, PLACEHOLDER_CP, canAdd, sessionOf, yearOf } from "./plan.js";
 import { entriesFor, evaluate, matchPattern, mentions } from "./rules.js";
 
 const ADVANCED = /\((Adv|Advanced|SSP)\)\s*$/i;
@@ -140,7 +140,7 @@ export function generate(catalog, choices = {}) {
     const earlier = entriesFor(catalog, placed, phRange);
     const fits = (c) => {
       const u = unit(c);
-      if (takesSlot(catalog, { code: c }) && slotsUsed(catalog, sem) >= MAX_SLOTS) return false;
+      if (!canAdd(catalog, sem, { code: c })) return false;
       if (Array.isArray(u.sessions) && u.sessions.length && !u.sessions.includes(sessionOf(k))) return false;
       if (!yearOk(u.level, k)) return false;
       if (!ready(u.rules.prerequisites?.parsed, earlier)) return false;
@@ -160,7 +160,7 @@ export function generate(catalog, choices = {}) {
     // Then placeholders, in the earliest slots whose year suits them.
     const rest = [];
     for (const ph of queue) {
-      if (slotsUsed(catalog, sem) < MAX_SLOTS && yearOk(phRange(ph)?.min, k)) sem.push({ ph });
+      if (canAdd(catalog, sem, { ph }) && yearOk(phRange(ph)?.min, k)) sem.push({ ph });
       else rest.push(ph);
     }
     queue = rest;
@@ -171,7 +171,7 @@ export function generate(catalog, choices = {}) {
   const leftovers = [...todo.map((code) => ({ code, taken: false })), ...queue.map((ph) => ({ ph }))];
   for (const cell of leftovers) {
     let last = semesters[semesters.length - 1];
-    if (!last || slotsUsed(catalog, last) >= MAX_SLOTS) semesters.push((last = []));
+    if (!last || !canAdd(catalog, last, cell)) semesters.push((last = []));
     last.push(cell);
   }
   while (semesters.length < target) semesters.push([]);

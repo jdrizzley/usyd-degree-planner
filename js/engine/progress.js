@@ -99,7 +99,8 @@ function allocate(catalog, ex, codes) {
 
 export function progress(catalog, choices = {}, plan = { semesters: [] }) {
   const ex = expand(catalog, choices);
-  const cells = planUnits(plan).map((x) => x.cell).filter((c) => c.code && catalog.unit(c.code));
+  // Failed attempts count for nothing.
+  const cells = planUnits(plan).map((x) => x.cell).filter((c) => c.code && !c.failed && catalog.unit(c.code));
   const taken = [...new Set(cells.filter((c) => c.taken).map((c) => c.code))];
   const all = [...new Set(cells.map((c) => c.code))];
   const sum = (codes) => codes.reduce((s, c) => s + catalog.unit(c).cp, 0);

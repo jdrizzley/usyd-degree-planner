@@ -39,3 +39,39 @@ export function planUnits(plan) {
   plan.semesters.forEach((sem, s) => sem.forEach((cell, i) => out.push({ s, i, cell })));
   return out;
 }
+
+// ---------------------------------------------------------------- rows (phase 5b)
+//
+// Every cell is a tile in a row. A semester holds at most MAX_SLOTS cells
+// with credit points (slotsUsed), and at most rowsFor(catalog) cells in all:
+// 5 for degrees whose requirements include 0 cp units (BE's ENGP program),
+// else 4. So the 5th row only ever holds a 0 cp unit.
+
+function zeroCpRequired(catalog) {
+  const codes = [];
+  const walk = (n) => {
+    if (!n) return;
+    if (n.type === "units") codes.push(...n.units);
+    n.children?.forEach(walk);
+  };
+  walk(catalog.course?.requirements);
+  for (const comp of Object.values(catalog.components ?? {})) {
+    for (const kind of Object.values(comp.kinds ?? {})) kind.requirements?.forEach(walk);
+  }
+  return codes.some((c) => catalog.unit(c)?.cp === 0);
+}
+
+const rowsCache = new WeakMap();
+export function rowsFor(catalog) {
+  if (!rowsCache.has(catalog)) rowsCache.set(catalog, zeroCpRequired(catalog) ? MAX_SLOTS + 1 : MAX_SLOTS);
+  return rowsCache.get(catalog);
+}
+
+export function canAdd(catalog, semester, cell) {
+  if (semester.length >= rowsFor(catalog)) return false;
+  return !takesSlot(catalog, cell) || slotsUsed(catalog, semester) < MAX_SLOTS;
+}
+
+export function isOverfull(catalog, semester) {
+  return semester.length > rowsFor(catalog) || slotsUsed(catalog, semester) > MAX_SLOTS;
+}

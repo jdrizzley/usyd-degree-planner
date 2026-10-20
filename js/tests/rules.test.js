@@ -118,9 +118,10 @@ test("duplicates: only the later copy is flagged", () => {
   assert.deepEqual(res.cells[1][0].reasons, ["Already in your plan in Year 1 · Semester 1"]);
 });
 
-test("0 cp units don't take a slot", () => {
-  assert.deepEqual(checkPlan(be, planFrom("INFO1110,MATH1061,MATH1062,ELEC1005,ENGP1001,ENGP1002")).overfull, []);
-  assert.deepEqual(checkPlan(be, planFrom("INFO1110,MATH1061,MATH1062,ELEC1005,ENGG2112,ENGP1001")).overfull, [0]);
+test("BE gets a 5th row, only for 0 cp units", () => {
+  assert.deepEqual(checkPlan(be, planFrom("INFO1110,MATH1061,MATH1062,ELEC1005,ENGP1001")).overfull, []);
+  assert.deepEqual(checkPlan(be, planFrom("INFO1110,MATH1061,MATH1062,ELEC1005,ENGP1001,ENGP1002")).overfull, [0]);
+  assert.deepEqual(checkPlan(be, planFrom("INFO1110,MATH1061,MATH1062,ELEC1005,ENGG2112")).overfull, [0]);
 });
 
 test("except: excluded units don't count", () => {
