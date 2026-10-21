@@ -116,7 +116,8 @@ export async function renderPlan(ctx) {
 
   function sheet({ title, filter = null, place, opener }) {
     hideTooltip();
-    const onPlan = new Set(state.plan.semesters.flat().filter((c) => c.code).map((c) => c.code));
+    // Failed attempts don't count: the retake can still be added.
+    const onPlan = new Set(state.plan.semesters.flat().filter((c) => c.code && !c.failed).map((c) => c.code));
     const openerKey = opener?.dataset.key;
     openSheet(sheetHost, {
       catalog: state.catalog,
@@ -164,7 +165,8 @@ export async function renderPlan(ctx) {
   // ------------------------------------------------------------ hover
 
   function clearHighlights() {
-    for (const el of cells.values()) el.classList.remove("pre", "unlock");
+    for (const el of cells.values()) el.classList.remove("pre", "unlock", "spot-src");
+    bodyHost.classList.remove("spotlight");
   }
 
   function hoverStart(el, s, i, immediate) {
@@ -176,8 +178,15 @@ export async function renderPlan(ctx) {
       hideTooltip();
       const cell = state.plan.semesters[s][i];
       if (cell.code) {
-        for (const p of prereqsOf(state.catalog, state.plan, s, i)) cells.get(`${p.s}:${p.i}`)?.classList.add("pre");
-        for (const p of unlocks(state.catalog, state.plan, s, i)) cells.get(`${p.s}:${p.i}`)?.classList.add("unlock");
+        const pre = prereqsOf(state.catalog, state.plan, s, i);
+        const after = unlocks(state.catalog, state.plan, s, i);
+        for (const p of pre) cells.get(`${p.s}:${p.i}`)?.classList.add("pre");
+        for (const p of after) cells.get(`${p.s}:${p.i}`)?.classList.add("unlock");
+        // Spotlight: linked tiles get a thick ring, everything else fades (styles.css).
+        if (pre.length || after.length) {
+          el.classList.add("spot-src");
+          bodyHost.classList.add("spotlight");
+        }
         // The pop-up is only for conflicts, and only says why.
         const check = state.checks.cells[s][i];
         if (check?.status === "broken") showTooltip(el, { reasons: check.reasons });

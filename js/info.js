@@ -3,7 +3,7 @@ import { h } from "./dom.js";
 
 const TEXT = [
   "Click a unit to mark it as taken. Drag units to move them between semesters. Drag a unit off the plan to remove it. Use + Unit to add one, + Semester to add a semester.",
-  "Red means a unit's rules aren't met. Hover it to see why. When you hover a unit, its prerequisites show in red and the units it unlocks show in green.",
+  "Red means a unit's rules aren't met. Hover it to see why. When you hover a unit, its prerequisites and the units it unlocks get a thick outline and everything else fades.",
   "Failed a unit? Shift-click it (or press F) to mark it as failed. It counts for nothing, so add the retake to a later semester with + Unit.",
   "With a keyboard: Space marks a unit as taken, F marks it as failed, Enter picks it up, the arrow keys move it, Enter drops it, and Delete removes it.",
   "Your plan is saved in the page address. Bookmark it to come back.",

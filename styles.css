@@ -12,8 +12,6 @@
   --tile-taken: #d2d2d7;
   --red-tint: #fdecec;
   --red-line: #f0b4b0;
-  --green-tint: #e9f6ed;
-  --green-line: #a8d5b5;
   --green-ink: #1e8e3e;
   --taken-broken: #daada9;  /* taken but rules not met: lighter, same warm red family as --red-line */
   --tile-failed: #a1a1a6;   /* failed attempt */
@@ -543,7 +541,8 @@ button.num { border: 0; background: transparent; font: inherit; cursor: pointer;
   background: var(--bg);
   color: var(--ink);
   cursor: pointer;
-  transition: background-color var(--fast) var(--ease), border-color var(--fast) var(--ease);
+  transition: background-color var(--fast) var(--ease), border-color var(--fast) var(--ease),
+    box-shadow var(--fast) var(--ease), opacity var(--fast) var(--ease);
 }
 .tile.unit { border-color: var(--line-ink); }
 .tile.unit:hover { background: var(--tile-hover); }
@@ -552,10 +551,11 @@ button.num { border: 0; background: transparent; font: inherit; cursor: pointer;
 .tile.broken:hover { background: var(--red-tint); }
 /* Taken but still in conflict: stronger fill, black border, so it stands out. */
 .tile.taken.broken, .tile.taken.broken:hover { background: var(--taken-broken); border-color: var(--line-ink); }
-.tile.pre { border-color: var(--red-line); }
-.tile.pre:not(.taken) { background: var(--red-tint); }
-.tile.unlock { border-color: var(--green-line); }
-.tile.unlock:not(.taken):not(.broken) { background: var(--green-tint); }
+/* Hover spotlight: units linked to the hovered one (prerequisites before it,
+   units it unlocks after it) get a thick black ring; everything else fades.
+   Fills are untouched, so taken and conflict tiles still look like themselves. */
+.tile.pre, .tile.unlock { border-color: var(--line-ink); box-shadow: inset 0 0 0 2px var(--line-ink); }
+.plan-body.spotlight .tile:not(.pre):not(.unlock):not(.spot-src) { opacity: 0.35; }
 
 .tile.failed, .tile.failed:hover { background: var(--tile-failed); border-color: var(--line-ink); }
 .tile.failed .tile-code { text-decoration: line-through; text-decoration-thickness: 1.5px; }

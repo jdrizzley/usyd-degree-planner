@@ -219,7 +219,7 @@ function positions(plan, keep) {
   return out;
 }
 
-// Cells this unit depends on (shown red on hover).
+// Cells this unit depends on (outlined on hover).
 export function prereqsOf(catalog, plan, s, i) {
   const cell = plan.semesters[s]?.[i];
   const unit = cell?.code && !cell.failed && catalog.unit(cell.code);
@@ -230,7 +230,7 @@ export function prereqsOf(catalog, plan, s, i) {
     (s2 < s && mentions(pre, c.code)) || (s2 <= s && mentions(co, c.code))));
 }
 
-// Later cells that depend on this unit (shown green on hover).
+// Later cells that depend on this unit (outlined on hover).
 export function unlocks(catalog, plan, s, i) {
   const cell = plan.semesters[s]?.[i];
   if (!cell?.code || cell.failed || !catalog.unit(cell.code)) return [];
